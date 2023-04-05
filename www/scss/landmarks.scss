@@ -1,0 +1,106 @@
+
+
+.ld{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+   
+}
+#ld-head{
+        position: absolute;
+        top: 200px;
+        left: 100px;
+        font-family: LM;
+    }
+.ld-map{
+    height: 600px;
+    width: 500px;
+    
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+
+    #ld-map{
+        height: 100%;
+        width: 100%;
+        background-color: aqua;
+    }
+}
+.ld-body-head{
+        height: 30px;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+.ld-sites{
+    height: 600px;
+    width: 500px;
+    
+    display: flex;
+    flex-direction: column;
+
+    #site1{
+        width: 100%;
+        height: 200px;
+        
+        #site1-img{
+            height: 150px;
+            background-color: red;
+        }
+        
+        
+    }
+.ld-site-head{
+          height: 25px;
+          
+          font-size: 20px;
+        }
+.ld-site-add{
+    height: 25px;
+    
+}
+    #site2{
+        width: 100%;
+        height: 200px;
+        #site2-img{
+            height: 150px;
+            background-color: red;
+        }
+    }
+
+    #site3{
+        width: 100%;
+        height: 200px;
+        #site3-img{
+            height: 150px;
+            background-color: red;
+        }
+    }
+}
+
+@media (max-width: 600px){
+    
+    .containter-landmarks{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #ld-head{
+        top: 100px;
+    }
+
+    .ld{
+        flex-direction: column;
+
+        .ld-map{
+            height: 300px;
+            width: 350px;
+        }
+
+        .ld-sites{
+            height: 100%;
+            width: 350px;
+        }
+    }
+}

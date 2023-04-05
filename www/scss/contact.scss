@@ -1,0 +1,54 @@
+.contact{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.contact-info{
+    height: 600px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+
+    h1{
+        font-family: LM;
+    }
+
+    #contact-para{
+        margin-top: 50px;
+        width: 400px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    
+}
+.contact-form{
+        height: 600px;
+        width: 500px;
+        display: flex;
+        flex-direction: column;
+
+        .contact-input{
+            height: 60px;
+            width: 529px;
+            padding: 10px;
+            outline: none;
+            box-sizing: border-box;
+            margin-top: 30px;
+            
+        }
+        .contact-input2{
+            height: 199px;
+            width: 529px;
+            padding: 10px;
+            outline: none;
+            box-sizing: border-box;
+            margin-top: 30px;
+            
+        }
+
+    }

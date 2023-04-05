@@ -1,0 +1,72 @@
+.home-sites{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    #sites-head{
+        color: rgb(11, 3, 45);
+        font-family: LM;
+        font-size: 50px;
+    }
+}
+
+.site{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 471px;
+    height: 517px;
+    background-color: red;
+
+    #site-img{
+        height: 359px;
+        width: 471px;
+        background-color: antiquewhite;
+    }
+
+    #site-name{
+        width: 471px;
+        height: 79px;
+        background-color: black;
+    }
+
+    #site-add{
+        width: 471px;
+        height: 79px;
+        background-color: aquamarine;
+    }
+}
+
+@media (max-width: 600px){
+    
+    .home-sites{
+        margin-top: 50px;
+
+        #sites-head{
+            font-size: 40px;
+        }
+
+        .site{
+            width: 100%;
+            #site-img{
+                height: 300px;
+                width: 100%;
+            }
+            #site-name{
+                width: 100%;
+            }
+            #site-add{
+                width: 100%;
+            }
+        }
+        
+        
+    }
+    
+    
+}
+
+
+
