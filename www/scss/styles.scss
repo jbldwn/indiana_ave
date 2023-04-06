@@ -1,9 +1,24 @@
-@import "nav";
-@import "hero";
-@import "fonts";
-@import "about";
-@import "sites";
-@import "footer";
+@import "_variables.scss";
+@import "_structure.scss";
+
+
+
+/*pages*/
 @import "landmarks";
 @import "login";
 @import "contact";
+
+//is this the individual location page?
+@import "sites";
+
+//home page?
+@import "hero";
+@import "about";
+
+
+
+/*partials*/
+@import "nav";
+@import "fonts";
+@import "footer";
+

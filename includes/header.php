@@ -25,6 +25,7 @@
             <nav>
                 <div class="links">
                     <a href="home.html">Home</a>
+                    <a href="#about">About</a>
                     <a href="landmarks.html">Landmarks</a>
                     <a href="contact.html">Contact Us</a>
                 </div>
@@ -54,12 +55,17 @@
         <div class="cen-content">
             <h1>Indiana Avenue</h1>
         </div>
-        <div class="hero-images">
-            <div id="image1"></div>
-            <div id="image2"></div>
-        </div>
+        <div class="collage">
+            <!-- space for images -->
+            <div class="hero-images">
+                <div id="image1"></div>
+                <div id="image2"></div>
+            </div>
         <div id="image3"></div>
         <h1 class="hero-text">Our history remembered</h1>
+        </div>
+        
+
     </div>
 
 </div>

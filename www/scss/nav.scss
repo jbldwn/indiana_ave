@@ -1,22 +1,22 @@
 .nav-wrapper{
-    height: 90px;
     width: 100%;
     display:contents;
+
     
     
     nav{
-    width: 100%;
-    height: 130px;
+    // width: 100%;
+    padding: 15px;
     border-bottom: solid 2px white;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
 
 
     .logo{
-        width: 200px;
-        height: 100px;
-        background-image: url(../Logo/IndianaAveLogo-wht.png);
+        width: 119px;
+        height: 60px;
+        background-image: url(../assets/logo/IndianaAveLogo-wht.png);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -38,8 +38,54 @@
             font-family: LMB;
         }
         }
+    }
+}
 
-        
+
+.login{
+    padding:15px;
+    margin-top: -75px;
+    display: flex;
+    justify-content: end;
+
+    visibility: visible;
+
+    a{
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+        font-family: LM;
+    }
+
+    
+}
+
+.login:hover{
+    a{
+        font-family: LMB;
+    }
+    
+}
+
+
+
+.login-black{
+    position: absolute;
+    top: 150px;
+    width: 100px;
+    right: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    visibility: visible;
+
+    a{
+        text-decoration: none;
+        color: black;
+        font-family: LM;
+        font-size: 20px;
     }
 }
 
@@ -56,12 +102,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+        
 
     .logo{
-        width: 200px;
-        height: 100px;
-        background-image: url(../Logo/IndianaAveLogo-blk.png);
+        width: 119px;
+        height: 60px;
+        background-image: url(../assets/logo/IndianaAveLogo-blk.png);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -95,8 +141,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-
 }
 
 .mobile-icon{

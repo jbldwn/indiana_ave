@@ -1,0 +1,20 @@
+{
+  "name": "indiana_ave",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass www/scss/styles.scss www/css/styles.css -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jbldwn/indiana_ave.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jbldwn/indiana_ave/issues"
+  },
+  "homepage": "https://github.com/jbldwn/indiana_ave#readme"
+}
