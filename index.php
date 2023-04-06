@@ -36,8 +36,15 @@ require_once('includes/header.php');
 
 <div class="footer">
     <div class="logo"></div>
-    <div class="footer-con"></div>
-    <div class="footer-con"></div>
+    <div class="footer-con">
+        <h3>Site Map:</h3>
+        <a href="index.php">Home</a>
+        <a href="index.php/#about">About</a>
+        <a href="landmarks.php">Landmarks</a>
+        <a href="contact.php">Contact</a>
+        <a href="login.php">Maintenance</a>
+
+    </div>
     <div class="footer-icons">
         <div id="icon"></div>
         <div id="icon"></div>

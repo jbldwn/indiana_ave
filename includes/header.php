@@ -49,9 +49,9 @@
             <div class="mobile-icon"></div>
 
         </div>
-        <div class="login">
-            <a href="login.html">Login</a>
-        </div>
+<!--        <div class="login">-->
+<!--            <a href="login.html">Login</a>-->
+<!--        </div>-->
         <div class="cen-content">
             <h1>Indiana Avenue</h1>
         </div>
