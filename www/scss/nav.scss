@@ -1,13 +1,11 @@
 .nav-wrapper{
     width: 100%;
     display:contents;
-
-    
     
     nav{
     // width: 100%;
     padding: 15px;
-    border-bottom: solid 2px white;
+    border-bottom: solid 2px $siteWhite;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
@@ -20,17 +18,17 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        margin-right: 20px;
+        // margin-right: 20px;
     }
 
 
     .links{
         width: 350px;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         a{
             text-decoration: none;
-            color: white;
+            color: $siteWhite;
             font-size: 20px;
         }
 
@@ -38,54 +36,6 @@
             font-family: LMB;
         }
         }
-    }
-}
-
-
-.login{
-    padding:15px;
-    margin-top: -75px;
-    display: flex;
-    justify-content: end;
-
-    visibility: visible;
-
-    a{
-        text-decoration: none;
-        color: white;
-        font-size: 20px;
-        font-family: LM;
-    }
-
-    
-}
-
-.login:hover{
-    a{
-        font-family: LMB;
-    }
-    
-}
-
-
-
-.login-black{
-    position: absolute;
-    top: 150px;
-    width: 100px;
-    right: 0;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    visibility: visible;
-
-    a{
-        text-decoration: none;
-        color: black;
-        font-family: LM;
-        font-size: 20px;
     }
 }
 
@@ -98,7 +48,7 @@
     nav{
     width: 100%;
     height: 130px;
-    border-bottom: solid 2px black;
+    border-bottom: solid 2px $siteBlack;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -121,7 +71,7 @@
         justify-content: space-around;
         a{
             text-decoration: none;
-            color: black;
+            color: $siteBlack;
             font-size: 20px;
         }
         a:hover{
@@ -137,38 +87,39 @@
     visibility: hidden;
     height: 74px;
     width: 100%;
-    background-color: #D2BFA1;
+    background-color: $ltBrn;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
+    #ham-icon{
+        float: right;
+        display: block;
 
-.mobile-icon{
-    height: 50px;
-    width: 100px;
-    margin-right: 10px;
-    background-image: url(../Logo/IndianaAveLogo-blk.png);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-}
-
-#ham-icon{
-    float: right;
-    display: none;
-    cursor: pointer;
+        cursor: pointer;
+        
+        div{
+            width: 55px;
+            height: 10px;
+            border-radius: 38px;
+            background-color: $drkBrn;
+            margin: 10px 0;
+            transition: 0.4s;
+            margin-left: 10px;
+        }
+    }
+    .mobile-icon{
+        height: 51px;
+        width: 100px;
+        margin-right: 10px;
+        background-image: url(../assets/Logo/IndianaAveLogo-blk.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+    }
     
 }
 
-#ham-icon div{
-    width: 55px;
-    height: 10px;
-    border-radius: 38px;
-    background-color: #644536;
-    margin: 10px 0;
-    transition: 0.4s;
-    margin-left: 10px;
-}
+
 
 
 .open .mobile-menu {
@@ -186,14 +137,14 @@
     left: 0;
     height: 0px;
     width: 100%;
-    background-color: #9BBE55;
+    background-color: $mdGrn;
     z-index:99;
     li{
         list-style-type: none;
         margin: 20px;
     }
     a{
-        color: white;
+        color: $siteWhite;
         font-size: 20px;
         font-family: LM;
         text-decoration: none;
@@ -207,31 +158,21 @@
 
 
 
-@media (max-width: 600px){
+@media (max-width: $mobileWidth){
     
     .nav-wrapper{
         display: none;
+        margin: -20px;
     }
 
     .nav-wrapper-black{
         display: none;
     }
     
-}
 
-@media (max-width: 600px){
     
     .nav-mobile-wrapper{
         visibility: visible;
-       
     }
     
 }
-
-#ham-icon{
-    display: block;
-}
-
-
-
- 

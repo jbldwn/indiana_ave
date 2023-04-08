@@ -10,11 +10,16 @@ html, body {
 h1, h2, h3, h4, h5, h6, p {
   margin-bottom: 16px; }
 
-.containter {
+.container {
   margin: 0 auto;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   width: 1000px; }
+
+@media (max-width: 600px) {
+  .container {
+    width: 100vw; } }
 
 /*pages*/
 .ld {
@@ -259,147 +264,146 @@ h1, h2, h3, h4, h5, h6, p {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative; }
-
-.cen-content {
-  padding: 15px; }
-  .cen-content h1 {
-    color: white;
-    font-family: LM;
-    font-size: 50px; }
-
-.collage {
-  display: flex;
-  justify-content: left;
-  padding: 0 30px; }
-  .collage .hero-images {
-    text-align: center;
+  position: relative;
+  margin-bottom: 90px; }
+  .hero .cen-content {
+    padding: 0 25px; }
+    .hero .cen-content h1 {
+      color: #FFF;
+      font-family: LM;
+      font-size: 50px; }
+  .hero .collage {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 225px; }
-    .collage .hero-images #image1 {
-      height: 152px;
-      width: 100%;
-      background-image: linear-gradient(to bottom, rgba(187, 214, 134, 0.5), rgba(187, 214, 134, 0.5)), url(../assets/images/CJ.jpg);
+    justify-content: left;
+    padding: 0 40px;
+    height: 248px;
+    width: 500px; }
+    .hero .collage .hero-images {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 38%; }
+      .hero .collage .hero-images .image {
+        height: 152px;
+        width: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover; }
+        .hero .collage .hero-images .image-Top {
+          background-image: linear-gradient(rgba(187, 214, 134, 0.5), rgba(187, 214, 134, 0.5)), url(../assets/images/CJ.jpg); }
+        .hero .collage .hero-images .image-Bottom {
+          background-image: linear-gradient(rgba(11, 3, 45, 0.5), rgba(11, 3, 45, 0.5)), url(../assets/images/People.png); }
+    .hero .collage .image3 {
+      width: 62%;
+      height: 100%;
+      background-image: linear-gradient(rgba(100, 69, 54, 0.5), rgba(100, 69, 54, 0.5)), url(../assets/images/MWT.jpg);
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover; }
-    .collage .hero-images #image2 {
-      height: 152px;
-      width: 100%;
-      background-image: linear-gradient(rgba(11, 3, 45, 0.5), rgba(11, 3, 45, 0.5)), url(../assets/images/People.png);
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover; }
-  .collage #image3 {
-    width: 361px;
-    height: 304px;
-    background-image: linear-gradient(to bottom, rgba(100, 69, 54, 0.5), rgba(100, 69, 54, 0.5)), url(../assets/images/MWT.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; }
-  .collage .hero-text {
+  .hero .hero-text {
     position: absolute;
-    top: 385px;
-    right: -335px;
-    width: 700px;
+    top: 285px;
+    right: 30px;
+    width: 500px;
     font-family: LM;
-    font-size: 50px; }
+    font-size: 50px;
+    text-align: right; }
+    .hero .hero-text span {
+      font-family: LMI; }
 
 @media (max-width: 600px) {
   .hero {
-    height: 399px;
-    width: 100%; }
-  .cen-content {
-    height: 53px;
-    width: 272px;
-    top: 100px;
-    left: 0px; }
-    .cen-content h1 {
-      font-size: 20px; }
-  .login {
-    visibility: hidden; }
-  .hero-images {
-    top: 399px;
-    width: 100px; }
-    .hero-images #image1 {
-      width: 260px;
-      height: 100px; }
-    .hero-images #image2 {
-      width: 260px;
-      height: 100px; }
-  #image3 {
-    left: 180px;
-    top: 399px;
-    width: 213px;
-    height: 201px; }
-  .hero-text {
-    font-size: 20px;
-    top: 350px;
-    right: 0px;
-    height: 40px;
-    width: 327px;
-    color: white; } }
+    height: 240px;
+    margin: 10px auto;
+    width: 95vw;
+    margin-bottom: 150px; }
+    .hero .cen-content {
+      width: 100%;
+      text-align: center;
+      padding: 0; }
+      .hero .cen-content h1 {
+        font-size: 40px; }
+    .hero .collage {
+      margin: 100px auto 0;
+      width: 90vw;
+      padding: 0;
+      height: 200px; }
+    .hero .hero-text {
+      margin: -235px auto 0;
+      width: 100%;
+      position: relative;
+      font-size: 25px;
+      top: 0;
+      right: 0;
+      text-align: center;
+      color: #FFF;
+      filter: drop-shadow(0 5px 10px #0b032d); } }
 
-.about {
-  display: flex;
+#about {
   width: 100%;
-  background-color: #534981;
-  height: 624px;
-  margin-top: 350px;
-  margin-bottom: 0px;
-  margin-right: 0px;
-  margin-left: 0px; }
-
-.about-img {
-  background-color: aqua;
-  height: 623px;
-  width: 960px;
-  background-image: linear-gradient(to bottom, rgba(83, 73, 129, 0.5), rgba(83, 73, 129, 0.5)), url(../www/assets/images/street.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; }
-
-.about-con {
-  height: 623px;
-  width: 960px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
-  .about-con #about-head {
-    color: white;
-    font-family: LM;
-    font-size: 50px;
-    position: absolute;
-    top: 900px;
-    left: 850px; }
-  .about-con #about-para {
-    color: white;
-    font-family: LM;
-    width: 688px;
-    height: 195px;
-    font-size: 15px;
-    margin-right: 100px; }
-  .about-con #about-button {
-    width: 234px;
-    height: 79px;
-    border-radius: 38px;
-    background-color: #F48026;
-    border-color: #F48026;
-    color: white;
-    font-family: LM;
-    margin-left: 350px; }
+  background-color: #534981; }
+  #about .about {
+    display: flex;
+    justify-content: space-between; }
+    #about .about-img {
+      width: 44%;
+      background-image: linear-gradient(rgba(83, 73, 129, 0.5), rgba(83, 73, 129, 0.5)), url(../assets/images/street.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    #about .about-con {
+      width: 54%;
+      position: relative;
+      margin: 20px 0 100px; }
+      #about .about-con-header {
+        color: #534981;
+        font-family: LM;
+        font-size: 75px;
+        filter: drop-shadow(0 5px 10px #0b032d); }
+      #about .about-con-para {
+        color: #FFF;
+        font-family: LM;
+        font-size: 12px;
+        padding-left: 15px; }
+      #about .about-con a {
+        position: absolute;
+        right: 0; }
+        #about .about-con a .about-button {
+          width: 230px;
+          height: 50px;
+          border-radius: 38px;
+          background-color: #f48026;
+          border: none;
+          color: #FFF;
+          font-family: LM;
+          margin: 15px 0; }
 
 @media (max-width: 600px) {
-  .about {
-    margin-top: 250px;
+  #about .about {
     flex-direction: column; }
-    .about .about-img {
+    #about .about-img {
       width: 100%;
-      height: 180px; }
+      height: 150px; }
+    #about .about-con {
+      margin: -25px 0 15px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      #about .about-con-header {
+        font-size: 55px;
+        text-align: center;
+        filter: drop-shadow(0 -2px 10px #0b032d); }
+      #about .about-con-para {
+        padding: 0 30px;
+        text-align: justify; }
+      #about .about-con a {
+        position: relative;
+        right: auto;
+        margin: 0 auto; }
   .about-con {
     width: 100%; }
     .about-con #about-head {
@@ -423,7 +427,7 @@ h1, h2, h3, h4, h5, h6, p {
   display: contents; }
   .nav-wrapper nav {
     padding: 15px;
-    border-bottom: solid 2px white;
+    border-bottom: solid 2px #FFF;
     display: flex;
     justify-content: space-between;
     align-items: baseline; }
@@ -433,50 +437,17 @@ h1, h2, h3, h4, h5, h6, p {
       background-image: url(../assets/logo/IndianaAveLogo-wht.png);
       background-position: center;
       background-repeat: no-repeat;
-      background-size: cover;
-      margin-right: 20px; }
+      background-size: cover; }
     .nav-wrapper nav .links {
       width: 350px;
       display: flex;
-      justify-content: space-around; }
+      justify-content: space-between; }
       .nav-wrapper nav .links a {
         text-decoration: none;
-        color: white;
+        color: #FFF;
         font-size: 20px; }
       .nav-wrapper nav .links a:hover {
         font-family: LMB; }
-
-.login {
-  padding: 15px;
-  margin-top: -75px;
-  display: flex;
-  justify-content: end;
-  visibility: visible; }
-  .login a {
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
-    font-family: LM; }
-
-.login:hover a {
-  font-family: LMB; }
-
-.login-black {
-  position: absolute;
-  top: 150px;
-  width: 100px;
-  right: 0;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  visibility: visible; }
-  .login-black a {
-    text-decoration: none;
-    color: black;
-    font-family: LM;
-    font-size: 20px; }
 
 .nav-wrapper-black {
   height: 90px;
@@ -485,7 +456,7 @@ h1, h2, h3, h4, h5, h6, p {
   .nav-wrapper-black nav {
     width: 100%;
     height: 130px;
-    border-bottom: solid 2px black;
+    border-bottom: solid 2px #000;
     display: flex;
     justify-content: space-between;
     align-items: center; }
@@ -503,7 +474,7 @@ h1, h2, h3, h4, h5, h6, p {
       justify-content: space-around; }
       .nav-wrapper-black nav .links a {
         text-decoration: none;
-        color: black;
+        color: #000;
         font-size: 20px; }
       .nav-wrapper-black nav .links a:hover {
         font-family: LMB; }
@@ -512,33 +483,30 @@ h1, h2, h3, h4, h5, h6, p {
   visibility: hidden;
   height: 74px;
   width: 100%;
-  background-color: #D2BFA1;
+  background-color: #d2bfa1;
   display: flex;
   justify-content: space-between;
   align-items: center; }
-
-.mobile-icon {
-  height: 50px;
-  width: 100px;
-  margin-right: 10px;
-  background-image: url(../Logo/IndianaAveLogo-blk.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; }
-
-#ham-icon {
-  float: right;
-  display: none;
-  cursor: pointer; }
-
-#ham-icon div {
-  width: 55px;
-  height: 10px;
-  border-radius: 38px;
-  background-color: #644536;
-  margin: 10px 0;
-  transition: 0.4s;
-  margin-left: 10px; }
+  .nav-mobile-wrapper #ham-icon {
+    float: right;
+    display: block;
+    cursor: pointer; }
+    .nav-mobile-wrapper #ham-icon div {
+      width: 55px;
+      height: 10px;
+      border-radius: 38px;
+      background-color: #644536;
+      margin: 10px 0;
+      transition: 0.4s;
+      margin-left: 10px; }
+  .nav-mobile-wrapper .mobile-icon {
+    height: 51px;
+    width: 100px;
+    margin-right: 10px;
+    background-image: url(../assets/Logo/IndianaAveLogo-blk.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; }
 
 .open .mobile-menu {
   display: flex;
@@ -554,13 +522,13 @@ h1, h2, h3, h4, h5, h6, p {
   left: 0;
   height: 0px;
   width: 100%;
-  background-color: #9BBE55;
+  background-color: #a9cb67;
   z-index: 99; }
   .mobile-menu li {
     list-style-type: none;
     margin: 20px; }
   .mobile-menu a {
-    color: white;
+    color: #FFF;
     font-size: 20px;
     font-family: LM;
     text-decoration: none; }
@@ -569,16 +537,12 @@ h1, h2, h3, h4, h5, h6, p {
 
 @media (max-width: 600px) {
   .nav-wrapper {
-    display: none; }
+    display: none;
+    margin: -20px; }
   .nav-wrapper-black {
-    display: none; } }
-
-@media (max-width: 600px) {
+    display: none; }
   .nav-mobile-wrapper {
     visibility: visible; } }
-
-#ham-icon {
-  display: block; }
 
 @font-face {
   font-family: LM;
@@ -587,6 +551,10 @@ h1, h2, h3, h4, h5, h6, p {
 @font-face {
   font-family: LMB;
   src: url(fonts/lemon_milk/LEMONMILK-Bold.otf); }
+
+@font-face {
+  font-family: LMI;
+  src: url(fonts/lemon_milk/LEMONMILK-LightItalic.otf); }
 
 .footer {
   width: 100%;

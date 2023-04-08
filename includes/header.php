@@ -19,7 +19,21 @@
     <link rel="stylesheet" href="www/css/styles.css">
 </head>
 <body>
-<div class="containter">
+<div class="container">
+    <div class="nav-mobile-wrapper">
+        <div id="ham-icon" onclick="toggleMenu(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+            <ul class="mobile-menu">
+                <li><a href="index.php">Home</a></li>
+                <li><a href="landmarks.php">Landmarks</a></li>
+                <li><a href="contact.php">Contact</a></li>
+                <li><a href="login.php">Login</a></li>
+            </ul>
+        </div>
+        <div class="mobile-icon"></div>
+    </div>
     <div class="hero">
         <div class="nav-wrapper">
             <nav>
@@ -34,36 +48,18 @@
 
             </nav>
         </div>
-        <div class="nav-mobile-wrapper">
-            <div id="ham-icon" onclick="toggleMenu(this)">
-                <div class="bar1"></div>
-                <div class="bar2"></div>
-                <div class="bar3"></div>
-                <ul class="mobile-menu">
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="landmarks.php">Landmarks</a></li>
-                    <li><a href="contact.php">Contact</a></li>
-                    <li><a href="login.php">Login</a></li>
-                </ul>
-            </div>
-            <div class="mobile-icon"></div>
-
-        </div>
-<!--        <div class="login">-->
-<!--            <a href="login.html">Login</a>-->
-<!--        </div>-->
         <div class="cen-content">
             <h1>Indiana Avenue</h1>
         </div>
         <div class="collage">
             <!-- space for images -->
             <div class="hero-images">
-                <div id="image1"></div>
-                <div id="image2"></div>
+                <div class="image image-Top"></div>
+                <div class="image image-Bottom"></div>
             </div>
-        <div id="image3"></div>
-        <h1 class="hero-text">Our history remembered</h1>
+            <div class="image3"></div>
         </div>
+        <div class="hero-text">Our history <span>remembered</span></div>
         
 
     </div>

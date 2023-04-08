@@ -1,146 +1,114 @@
 .hero{
-     height: 450px; 
-     width: 100%;
-     background-image: linear-gradient($btOrgA, $btOrgA),
-     url(../assets/images/Hero.jpg);
-     background-position: center;
-     background-repeat: no-repeat;
-     background-size: cover;
-     position: relative;
- }
+    height: 450px; 
+    width: 100%;
+    background-image: linear-gradient($btOrgA, $btOrgA), url(../assets/images/Hero.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 
- .cen-content{
-    padding: 15px;
-
-    h1{
-        color: white;
-        font-family: LM;
-        font-size: 50px;
+    margin-bottom: 90px;
+    
+    .cen-content{
+        padding: 0 25px;
+    
+        h1{
+            color: $siteWhite;
+            font-family: LM;
+            font-size: 50px;
+        }
     }
-}
-
-
-
-
-
-.collage{
-    display: flex;
-    justify-content: left;
-    padding: 0 30px;
-
-    .hero-images{
-        text-align: center;
+    .collage{
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 225px;
-        
-        #image1{
-            height: 152px;
-            width: 100%;
-            background-image: linear-gradient(
-            to bottom, 
-            $ltGrnA,
-            $ltGrnA
-            ),
-            url(../assets/images/CJ.jpg);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
+        justify-content: left;
+        padding: 0 40px;
+        height: 248px;
+        width: 500px;
+    
+        .hero-images{
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 38%;
             
-            
-        }
-        #image2{
-            height: 152px;
-            width: 100%;
-            background-image: linear-gradient($drkBluA, $drkBluA),
-            url(../assets/images/People.png);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            
-        }
-    }
+            .image{
+                height: 152px;
+                width: 100%;
 
-    #image3{
-        width: 361px;
-        height: 304px;
-        background-image: linear-gradient(
-        to bottom, 
-        rgba(100, 69, 54, 0.5),
-        rgba(100, 69, 54, 0.5)
-        ),
-        url(../assets/images/MWT.jpg);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                &-Top{
+                    background-image: linear-gradient($ltGrnA, $ltGrnA),
+                    url(../assets/images/CJ.jpg);    
+                }
+                &-Bottom{
+                    background-image: linear-gradient($drkBluA,$drkBluA), url(../assets/images/People.png);
+                }
+            }
+        }  
+        .image3{
+            width: 62%;
+            height: 100%;
+            background-image: linear-gradient($drkBrnA,$drkBrnA), url(../assets/images/MWT.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+            
+        }
         
     }
     .hero-text{
         position: absolute;
-        top: 385px;
-        right: -335px;
+        top: 285px;
+        right: 30px;
     
-        width: 700px;
+        width: 500px;
         font-family: LM;
         font-size: 50px;
+        text-align: right;
+        span{
+            font-family: LMI;
+        }
     }
 }
 
-
-@media (max-width: 600px){
+@media (max-width: $mobileWidth){
     
     .hero{
-        height: 399px; 
-        width: 100%;
-    }
+        height: 240px; 
+        margin: 10px auto;
+        width: 95vw;
 
-    .cen-content{
-        height: 53px; 
-        width: 272px;
-        top: 100px;
-        left: 0px;
-        h1{
-            font-size: 20px;
-        }
-    }
-
-    .login{
-        visibility: hidden;
-    }
-
-    .hero-images{
-        top: 399px;
-        width: 100px;
-
-        #image1{
-            width: 260px;
-            height: 100px;
+        margin-bottom: 150px;
+        .cen-content{
+            width: 100%;
+            text-align: center;
+            padding: 0;
+            h1{
+                font-size: 40px;
+            }
         }
 
-        #image2{
-            width: 260px;
-            height: 100px;
+        .collage{
+            margin: 100px auto 0;
+            width: 90vw;
+            padding: 0;
+            height: 200px;
         }
-
-        
-    }
-    #image3{
-            left: 180px;
-            top: 399px;
-            width: 213px;
-            height: 201px; 
+        .hero-text{
+            margin: -235px auto 0;
+            width: 100%;
+            position: relative;
+            font-size: 25px;
+            top: 0;
+            right: 0;
+            text-align: center;
+            color: $siteWhite;
+            filter: drop-shadow(0 5px 10px $drkBlu);
         }
-
-    .hero-text{
-        font-size: 20px;
-        top: 350px;
-        right: 0px;
-        height: 40px;
-        width: 327px;
-        color: white;
     }
 }
-
