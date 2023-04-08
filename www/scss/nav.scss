@@ -42,7 +42,7 @@
 .nav-wrapper-black{
     height: 90px;
     width: 100%;
-    display:contents;
+    display: contents;
     
     
     nav{
@@ -84,11 +84,10 @@
 }
 
 .nav-mobile-wrapper{
-    visibility: hidden;
     height: 74px;
     width: 100%;
     background-color: $ltBrn;
-    display: flex;
+    display: none;
     justify-content: space-between;
     align-items: center;
     #ham-icon{
@@ -172,7 +171,7 @@
 
     
     .nav-mobile-wrapper{
-        visibility: visible;
+        display: flex;
     }
     
 }

@@ -3,10 +3,11 @@
     background-color: $ltBlu;
 
     .about{
-        display:flex;
+        display: flex;
         justify-content: space-between;
         
         &-img{
+            // height: 300px;
             width: 44%;
             background-image: linear-gradient($ltBluA,$ltBluA),url(../assets/images/street.jpg);
 
@@ -95,7 +96,7 @@
             font-size: 30px;
             top: 775px;
             left: 120px;
-            color: black;
+            color: $siteBlack;
         }
 
         #about-para{

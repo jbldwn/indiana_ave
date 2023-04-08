@@ -12,14 +12,14 @@ h1, h2, h3, h4, h5, h6, p {
 
 .container {
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   width: 1000px; }
 
 @media (max-width: 600px) {
   .container {
-    width: 100vw; } }
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; } }
 
 /*pages*/
 .ld {
@@ -410,7 +410,7 @@ h1, h2, h3, h4, h5, h6, p {
       font-size: 30px;
       top: 775px;
       left: 120px;
-      color: black; }
+      color: #000; }
     .about-con #about-para {
       width: 350px;
       margin-right: 0px;
@@ -480,11 +480,10 @@ h1, h2, h3, h4, h5, h6, p {
         font-family: LMB; }
 
 .nav-mobile-wrapper {
-  visibility: hidden;
   height: 74px;
   width: 100%;
   background-color: #d2bfa1;
-  display: flex;
+  display: none;
   justify-content: space-between;
   align-items: center; }
   .nav-mobile-wrapper #ham-icon {
@@ -542,7 +541,7 @@ h1, h2, h3, h4, h5, h6, p {
   .nav-wrapper-black {
     display: none; }
   .nav-mobile-wrapper {
-    visibility: visible; } }
+    display: flex; } }
 
 @font-face {
   font-family: LM;
@@ -556,37 +555,58 @@ h1, h2, h3, h4, h5, h6, p {
   font-family: LMI;
   src: url(fonts/lemon_milk/LEMONMILK-LightItalic.otf); }
 
-.footer {
-  width: 100%;
-  height: 400px;
-  background-color: #0b032d;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-top: 60px; }
-  .footer .logo {
-    width: 200px;
-    height: 100px;
-    background-image: url(../Logo/IndianaAveLogo-wht.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; }
-  .footer .footer-con {
-    height: 175px;
-    width: 138px;
-    background-color: bisque; }
-  .footer .footer-icons {
-    height: 200px;
-    width: 200px;
-    display: grid;
-    justify-content: center;
+@font-face {
+  font-family: NeuReg;
+  src: url(fonts/neuton/Neuton-Regular.ttf); }
+
+@font-face {
+  font-family: NeuBld;
+  src: url(fonts/neuton/Neuton-Bold.ttf); }
+
+footer {
+  background-color: #0b032d; }
+  footer .footer {
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    grid-template-columns: 100px 100px;
-    grid-row: auto auto; }
-    .footer .footer-icons #icon {
-      height: 50px;
-      width: 50px;
-      background-color: aqua; }
+    padding: 0 15px; }
+    footer .footer .logo {
+      width: 200px;
+      height: 100px;
+      background-image: url(../assets/Logo/IndianaAveLogo-wht.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    footer .footer .footer-nav {
+      height: 200px;
+      width: 138px;
+      color: #FFF;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; }
+      footer .footer .footer-nav h3 {
+        font-family: LM; }
+      footer .footer .footer-nav a {
+        color: #FFF;
+        margin-left: 30px;
+        text-decoration: none;
+        margin-bottom: 0;
+        font-family: NeuReg;
+        font-size: 20px; }
+      footer .footer .footer-nav a:hover {
+        font-family: NeuBld;
+        text-decoration: underline;
+        font-size: 18px; }
+    footer .footer .footer-icons {
+      width: 220px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      footer .footer .footer-icons #icon {
+        height: 50px;
+        width: 50px;
+        background-color: aqua; }
 
 @media (max-width: 600px) {
   .footer {

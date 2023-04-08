@@ -16,7 +16,7 @@ require_once('includes/header.php');
         <div class="about-con">
             <h1 class="about-con-header">About US</h1>
             <p class="about-con-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc congue nisi vitae suscipit. Sed odio morbi quis commodo odio aenean sed adipiscing diam.
-                Sit amet consectetur adipiscing elit. Donec ac odio tempor orci dapibus ultrices. Non odio euismod lacinia at quis risus sed vulputate.
+            Sit amet consectetur adipiscing elit. Donec ac odio tempor orci dapibus ultrices. Non odio euismod lacinia at quis risus sed vulputate.
                 <br>
                 <br>
                 Urna molestie at elementum eu facilisis sed odio.
@@ -35,24 +35,24 @@ require_once('includes/header.php');
         <div id="site-add"></div>
     </div>
 </div>
-
-<div class="footer">
-    <div class="logo"></div>
-    <div class="footer-con">
-        <h3>Site Map:</h3>
-        <a href="index.php">Home</a>
-        <a href="index.php/#about">About</a>
-        <a href="landmarks.php">Landmarks</a>
-        <a href="contact.php">Contact</a>
-        <a href="login.php">Maintenance</a>
+<footer>
+    <div class="footer container">
+        <div class="logo"></div>
+        <div class="footer-icons">
+            <div id="icon"></div>
+            <div id="icon"></div>
+            <div id="icon"></div>
+        </div>
+        <div class="footer-nav">
+            <h3>Site Map:</h3>
+            <a href="index.php">Home</a>
+            <a href="index.php/#about">About</a>
+            <a href="landmarks.php">Landmarks</a>
+            <a href="contact.php">Contact</a>
+            <a href="login.php">Maintenance</a>
+        </div>
     </div>
-    <div class="footer-icons">
-        <div id="icon"></div>
-        <div id="icon"></div>
-        <div id="icon"></div>
-        <div id="icon"></div>
-    </div>
-</div>
+</footer>
 <script src="www/js/menu.js"></script>
 </body>
 </html>
