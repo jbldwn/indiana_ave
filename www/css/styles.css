@@ -12,9 +12,10 @@ h1, h2, h3, h4, h5, h6, p {
 
 .container {
   margin: 0 auto;
-  width: 1000px; }
+  width: 70vw;
+  max-width: 1000px; }
 
-@media (max-width: 600px) {
+@media (max-width: 850px) {
   .container {
     width: 100vw;
     display: flex;
@@ -267,8 +268,10 @@ h1, h2, h3, h4, h5, h6, p {
   position: relative;
   margin-bottom: 90px; }
   .hero .cen-content {
+    margin-top: 50px;
     padding: 0 25px; }
     .hero .cen-content h1 {
+      filter: drop-shadow(0 5px 5px #644536);
       color: #FFF;
       font-family: LM;
       font-size: 50px; }
@@ -276,8 +279,8 @@ h1, h2, h3, h4, h5, h6, p {
     display: flex;
     justify-content: left;
     padding: 0 40px;
-    height: 248px;
-    width: 500px; }
+    height: 280px;
+    width: 55%; }
     .hero .collage .hero-images {
       text-align: center;
       display: flex;
@@ -303,40 +306,42 @@ h1, h2, h3, h4, h5, h6, p {
       background-repeat: no-repeat;
       background-size: cover; }
   .hero .hero-text {
+    filter: drop-shadow(0 5px 5px #644536);
     position: absolute;
     top: 285px;
     right: 30px;
     width: 500px;
     font-family: LM;
+    color: #FFF;
     font-size: 50px;
     text-align: right; }
     .hero .hero-text span {
-      font-family: LMI; }
+      font-family: LMI;
+      filter: drop-shadow(0 5px 10px #644536); }
 
-@media (max-width: 600px) {
+@media (max-width: 850px) {
   .hero {
-    height: 240px;
-    margin: 10px auto;
-    width: 95vw;
-    margin-bottom: 150px; }
+    height: 330px;
+    margin: 10px auto 100px;
+    width: 95vw; }
     .hero .cen-content {
+      padding: 0 30px;
       width: 100%;
-      text-align: center;
-      padding: 0; }
+      text-align: left; }
       .hero .cen-content h1 {
         font-size: 40px; }
     .hero .collage {
-      margin: 100px auto 0;
       width: 90vw;
-      padding: 0;
-      height: 200px; }
+      height: 260px;
+      width: 65%;
+      position: absolute;
+      top: 140px;
+      left: 0px; }
     .hero .hero-text {
-      margin: -235px auto 0;
-      width: 100%;
-      position: relative;
-      font-size: 25px;
-      top: 0;
-      right: 0;
+      width: 50%;
+      font-size: 35px;
+      top: 240px;
+      right: 0px;
       text-align: center;
       color: #FFF;
       filter: drop-shadow(0 5px 10px #0b032d); } }
@@ -380,7 +385,7 @@ h1, h2, h3, h4, h5, h6, p {
           font-family: LM;
           margin: 15px 0; }
 
-@media (max-width: 600px) {
+@media (max-width: 850px) {
   #about .about {
     flex-direction: column; }
     #about .about-img {
@@ -426,19 +431,21 @@ h1, h2, h3, h4, h5, h6, p {
   width: 100%;
   display: contents; }
   .nav-wrapper nav {
-    padding: 15px;
+    padding: 30px 0;
     border-bottom: solid 2px #FFF;
     display: flex;
     justify-content: space-between;
     align-items: baseline; }
     .nav-wrapper nav .logo {
-      width: 119px;
-      height: 60px;
+      margin-right: 30px;
+      width: 110px;
+      height: 56px;
       background-image: url(../assets/logo/IndianaAveLogo-wht.png);
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover; }
     .nav-wrapper nav .links {
+      margin-left: 30px;
       width: 350px;
       display: flex;
       justify-content: space-between; }
@@ -467,11 +474,11 @@ h1, h2, h3, h4, h5, h6, p {
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
-      margin-right: 20px; }
+      margin-right: 30px; }
     .nav-wrapper-black nav .links {
       width: 350px;
       display: flex;
-      justify-content: space-around; }
+      justify-content: space-between; }
       .nav-wrapper-black nav .links a {
         text-decoration: none;
         color: #000;
@@ -534,7 +541,7 @@ h1, h2, h3, h4, h5, h6, p {
   .mobile-menu a:hover {
     font-family: LMB; }
 
-@media (max-width: 600px) {
+@media (max-width: 850px) {
   .nav-wrapper {
     display: none;
     margin: -20px; }
@@ -603,6 +610,8 @@ footer {
       display: flex;
       justify-content: space-between;
       align-items: center; }
+      footer .footer .footer-icons i {
+        color: #FFF; }
       footer .footer .footer-icons #icon {
         height: 50px;
         width: 50px;

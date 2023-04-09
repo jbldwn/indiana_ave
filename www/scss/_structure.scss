@@ -5,16 +5,17 @@
   // border: red solid 1px;
 }
 html,body {
- height: 100%
+ height: 100%;
 }
 h1, h2, h3, h4, h5, h6, p {
- margin-bottom: 16px
+ margin-bottom: 16px;
 }
 
 .container{
   margin: 0 auto;
   
-  width: 1000px;
+  width: 70vw;
+  max-width: 1000px;
 }
 
 @media (max-width: $mobileWidth){

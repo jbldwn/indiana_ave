@@ -39,9 +39,20 @@ require_once('includes/header.php');
     <div class="footer container">
         <div class="logo"></div>
         <div class="footer-icons">
+            <!-- round -->
+            <i class="fa-brands fa-facebook fa-3x"></i>
+            <i class="fa-brands fa-twitter fa-3x"></i>
+            <i class="fa-brands fa-instagram fa-3x"></i>
+
+            <!-- square -->
+            <!-- <i class="fa-brands fa-square-facebook"></i>
+            <i class="fa-brands fa-square-twitter"></i>
+            <i class="fa-brands fa-square-instagram"></i> -->
+
+            <!-- stand-in -->
+            <!-- <div id="icon"></div>
             <div id="icon"></div>
-            <div id="icon"></div>
-            <div id="icon"></div>
+            <div id="icon"></div> -->
         </div>
         <div class="footer-nav">
             <h3>Site Map:</h3>
@@ -54,5 +65,6 @@ require_once('includes/header.php');
     </div>
 </footer>
 <script src="www/js/menu.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
 </body>
 </html>

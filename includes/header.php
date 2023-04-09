@@ -17,6 +17,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Indiana Avenue Home Prototype</title>
     <link rel="stylesheet" href="www/css/styles.css">
+    <script src="https://kit.fontawesome.com/d22db5bb67.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <div class="container">

@@ -10,9 +10,11 @@
     margin-bottom: 90px;
     
     .cen-content{
+        margin-top: 50px;
         padding: 0 25px;
     
         h1{
+            filter:drop-shadow(0 5px 5px $drkBrn);
             color: $siteWhite;
             font-family: LM;
             font-size: 50px;
@@ -22,8 +24,8 @@
         display: flex;
         justify-content: left;
         padding: 0 40px;
-        height: 248px;
-        width: 500px;
+        height: 280px;
+        width: 55%;
     
         .hero-images{
             text-align: center;
@@ -62,16 +64,19 @@
         
     }
     .hero-text{
+        filter:drop-shadow(0 5px 5px $drkBrn);
         position: absolute;
         top: 285px;
         right: 30px;
     
         width: 500px;
         font-family: LM;
+        color:$siteWhite;
         font-size: 50px;
         text-align: right;
         span{
             font-family: LMI;
+            filter:drop-shadow(0 5px 10px $drkBrn);
         }
     }
 }
@@ -79,33 +84,34 @@
 @media (max-width: $mobileWidth){
     
     .hero{
-        height: 240px; 
-        margin: 10px auto;
+        height: 330px; 
+        margin: 10px auto 100px;
         width: 95vw;
 
-        margin-bottom: 150px;
         .cen-content{
+            padding: 0 30px;
             width: 100%;
-            text-align: center;
-            padding: 0;
+            text-align: left;
             h1{
                 font-size: 40px;
             }
         }
 
         .collage{
-            margin: 100px auto 0;
             width: 90vw;
-            padding: 0;
-            height: 200px;
+            height: 260px;
+            width: 65%;
+
+            position:absolute;
+            top: 140px;
+            left: 0px;
+
         }
         .hero-text{
-            margin: -235px auto 0;
-            width: 100%;
-            position: relative;
-            font-size: 25px;
-            top: 0;
-            right: 0;
+            width: 50%;
+            font-size: 35px;
+            top: 240px;
+            right: 0px;
             text-align: center;
             color: $siteWhite;
             filter: drop-shadow(0 5px 10px $drkBlu);
