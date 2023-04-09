@@ -44,21 +44,14 @@ footer{
         }
     
         .footer-icons{
-            // height: 200px;
-            width: 220px;
+            width: 180px;
             
-            // display: grid;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            // grid-template-columns: 100px 100px;
-            // grid-row: auto auto;
             
             i{
                 color: $siteWhite;
-                // height: 50px;
-                // weight:50px;
-
             }
     
             #icon{

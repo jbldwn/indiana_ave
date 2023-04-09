@@ -22,7 +22,12 @@ require_once('includes/header.php');
                 Urna molestie at elementum eu facilisis sed odio.
                 Sit amet consectetur adipiscing elit. Donec ac odio tempor orcidapibus ultrices. Non odio euismod lacinia at quis risus sed vulputate. Urna molestie at elementum eu facilisis sed odio.
             </p>
-            <a href="#"><button class="about-button">Experience the Ave</button></a>
+            <a href="#">
+                <button class="about-button">
+                    <i class="fa-solid fa-map-location-dot  fa-xl"></i>
+                    <span>Experience the Ave</span>
+                </button>
+            </a>
         </div>
     </div>
 </section>
@@ -39,20 +44,9 @@ require_once('includes/header.php');
     <div class="footer container">
         <div class="logo"></div>
         <div class="footer-icons">
-            <!-- round -->
-            <i class="fa-brands fa-facebook fa-3x"></i>
-            <i class="fa-brands fa-twitter fa-3x"></i>
-            <i class="fa-brands fa-instagram fa-3x"></i>
-
-            <!-- square -->
-            <!-- <i class="fa-brands fa-square-facebook"></i>
-            <i class="fa-brands fa-square-twitter"></i>
-            <i class="fa-brands fa-square-instagram"></i> -->
-
-            <!-- stand-in -->
-            <!-- <div id="icon"></div>
-            <div id="icon"></div>
-            <div id="icon"></div> -->
+            <i class="fa-brands fa-facebook fa-2x"></i>
+            <i class="fa-brands fa-twitter fa-2x"></i>
+            <i class="fa-brands fa-instagram fa-2x"></i>
         </div>
         <div class="footer-nav">
             <h3>Site Map:</h3>

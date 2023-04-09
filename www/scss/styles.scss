@@ -1,24 +1,19 @@
+/*structural scss*/
 @import "_variables.scss";
 @import "_structure.scss";
 
-
-
 /*pages*/
-@import "landmarks";
-@import "login";
-@import "contact";
-
+@import "landmarks.scss";
+@import "login.scss";
+@import "contact.scss";
 //is this the individual location page?
-@import "sites";
-
+@import "sites.scss";
 //home page?
-@import "hero";
-@import "about";
-
-
+@import "hero.scss";
+@import "about.scss";
 
 /*partials*/
-@import "nav";
-@import "fonts";
-@import "footer";
+@import "nav.scss";
+@import "fonts.scss";
+@import "footer.scss";
 

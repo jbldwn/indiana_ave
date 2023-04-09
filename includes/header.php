@@ -48,6 +48,23 @@
                 </div>
 
             </nav>
+            <div class="ctrls">
+                <button class="edit">
+                    <i class="fa-solid fa-pen-to-square fa-xl"></i>
+                    <span class="label">Edit</span>
+                </button>
+                <!-- if on edit page, these two buttons will be visible -->
+                <!-- <button class="save">
+                    <i class="fa-solid fa-pen-to-square fa-xl"></i>
+                    <span class="label">Save</span>
+                </button> -->
+                <!-- <button class="delete">
+                    <i class="fa-solid fa-pen-to-square fa-xl"></i>
+                    <span class="label">Delete</span>
+                </button> -->
+                
+
+            </div>
         </div>
         <div class="cen-content">
             <h1>Indiana Avenue</h1>
