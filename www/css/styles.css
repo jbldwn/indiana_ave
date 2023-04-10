@@ -16,7 +16,7 @@ h1, h2, h3, h4, h5, h6, p {
   width: 70vw;
   max-width: 1000px; }
 
-button {
+.ctrls button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,10 +25,10 @@ button {
   color: #FFF;
   font-family: LM;
   background-color: #f48026; }
-  button span {
+  .ctrls button span {
     margin-left: 5px; }
 
-button:hover {
+.ctrls button:hover {
   background-color: #c25a0a; }
 
 @media (max-width: 850px) {
@@ -112,68 +112,63 @@ button:hover {
       height: 100%;
       width: 350px; } }
 
-.containter-login {
-  display: flex;
-  flex-direction: column; }
+* {
+  border: red solid 1px; }
 
-.login-black {
-  visibility: visible; }
-
-.login-base {
+.login {
+  margin-top: 30px;
   width: 100%;
-  height: 500px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center; }
-  .login-base .login-img {
-    width: 1000px;
-    height: 600px;
-    background-image: url(../images/Hero.jpg);
+  background-color: #534981; }
+  .login-img {
+    width: 50%;
+    height: 75vh;
+    background-image: linear-gradient(rgba(83, 73, 129, 0.5), rgba(83, 73, 129, 0.5)), url(../assets/images/Hero.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; }
-  .login-base form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 712px;
-    margin-top: 50px; }
-    .login-base form label {
-      margin-right: 650px; }
-    .login-base form input[type=text], .login-base form select {
-      width: 100%;
-      padding: 12px 20px;
-      margin: 8px 0;
-      display: inline-block;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      box-sizing: border-box; }
-    .login-base form input[type=password], .login-base form select {
-      width: 100%;
-      padding: 12px 20px;
-      margin: 8px 0;
-      display: inline-block;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      box-sizing: border-box; }
-    .login-base form input[type=submit] {
-      width: 150px;
-      background-color: #F48026;
-      color: white;
-      padding: 14px 20px;
-      margin: 8px 0;
-      border: none;
-      border-radius: 38px;
-      cursor: pointer; }
-    .login-base form input[type=submit]:hover {
-      background-color: #753b1d; }
-    .login-base form a {
-      text-decoration: none;
-      color: black;
-      font-family: LM;
-      font-size: 15px; }
+  .login-base {
+    margin-top: -75vh; }
+    .login-base form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 712px;
+      margin-top: 50px; }
+      .login-base form label {
+        margin-right: 650px; }
+      .login-base form input[type=text], .login-base form select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box; }
+      .login-base form input[type=password], .login-base form select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box; }
+      .login-base form input[type=submit] {
+        width: 150px;
+        background-color: #F48026;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 38px;
+        cursor: pointer; }
+      .login-base form input[type=submit]:hover {
+        background-color: #753b1d; }
+      .login-base form a {
+        text-decoration: none;
+        color: black;
+        font-family: LM;
+        font-size: 15px; }
 
 @media (max-width: 600px) {
   .login-base .login-img {
@@ -430,14 +425,6 @@ button:hover {
     display: flex;
     justify-content: space-between;
     align-items: baseline; }
-    .nav-wrapper nav .logo {
-      margin-right: 30px;
-      width: 110px;
-      height: 56px;
-      background-image: url(../assets/logo/IndianaAveLogo-wht.png);
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover; }
     .nav-wrapper nav .links {
       margin-left: 30px;
       width: 350px;
@@ -449,6 +436,14 @@ button:hover {
         font-size: 20px; }
       .nav-wrapper nav .links a:hover {
         font-family: LMB; }
+    .nav-wrapper nav .logo {
+      margin-right: 30px;
+      width: 110px;
+      height: 56px;
+      background-image: url(../assets/logo/IndianaAveLogo-wht.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
   .nav-wrapper .ctrls {
     margin-left: auto;
     max-width: 50%;
@@ -476,25 +471,16 @@ button:hover {
       background-color: #5e1608; }
 
 .nav-wrapper-black {
-  height: 90px;
   width: 100%;
   display: contents; }
   .nav-wrapper-black nav {
-    width: 100%;
-    height: 130px;
+    padding: 30px 0;
     border-bottom: solid 2px #000;
     display: flex;
     justify-content: space-between;
-    align-items: center; }
-    .nav-wrapper-black nav .logo {
-      width: 119px;
-      height: 60px;
-      background-image: url(../assets/logo/IndianaAveLogo-blk.png);
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      margin-right: 30px; }
+    align-items: baseline; }
     .nav-wrapper-black nav .links {
+      margin-left: 30px;
       width: 350px;
       display: flex;
       justify-content: space-between; }
@@ -503,7 +489,40 @@ button:hover {
         color: #000;
         font-size: 20px; }
       .nav-wrapper-black nav .links a:hover {
-        font-family: LMB; }
+        font-family: LM; }
+    .nav-wrapper-black nav .logo {
+      margin-right: 30px;
+      width: 110px;
+      height: 56px;
+      background-image: url(../assets/logo/IndianaAveLogo-blk.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+  .nav-wrapper-black .ctrls {
+    margin-left: auto;
+    max-width: 50%;
+    margin-top: 10px;
+    margin-right: 30px;
+    color: #FFF;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center; }
+    .nav-wrapper-black .ctrls button {
+      width: 110px;
+      height: 45px; }
+    .nav-wrapper-black .ctrls .edit {
+      background-color: #8f8114; }
+    .nav-wrapper-black .ctrls .edit:hover {
+      background-color: #6b600f; }
+    .nav-wrapper-black .ctrls .save {
+      background-color: #227619; }
+    .nav-wrapper-black .ctrls .save:hover {
+      background-color: #14430f; }
+    .nav-wrapper-black .ctrls .delete {
+      background-color: #831d0b; }
+    .nav-wrapper-black .ctrls .delete:hover {
+      background-color: #5e1608; }
 
 .nav-mobile-wrapper {
   height: 74px;
@@ -595,9 +614,9 @@ footer {
     height: 400px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 0 15px; }
+    align-items: center; }
     footer .footer .logo {
+      margin-left: 30px;
       width: 200px;
       height: 100px;
       background-image: url(../assets/Logo/IndianaAveLogo-wht.png);
@@ -605,6 +624,7 @@ footer {
       background-repeat: no-repeat;
       background-size: cover; }
     footer .footer .footer-nav {
+      margin-right: 30px;
       height: 200px;
       width: 138px;
       color: #FFF;

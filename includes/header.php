@@ -9,17 +9,7 @@
 
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Indiana Avenue Home Prototype</title>
-    <link rel="stylesheet" href="www/css/styles.css">
-    <script src="https://kit.fontawesome.com/d22db5bb67.js" crossorigin="anonymous"></script>
-</head>
-<body>
+
 <div class="container">
     <div class="nav-mobile-wrapper">
         <div id="ham-icon" onclick="toggleMenu(this)">
@@ -44,26 +34,21 @@
                     <a href="landmarks.html">Landmarks</a>
                     <a href="contact.html">Contact Us</a>
                 </div>
-                <div class="logo">
-                </div>
-
+                <div class="logo"></div>
             </nav>
             <div class="ctrls">
-                <button class="edit">
-                    <i class="fa-solid fa-pen-to-square fa-xl"></i>
-                    <span class="label">Edit</span>
+                <button class="delete">
+                    <i class="fa-solid fa-right-from-bracket fa-xl"></i>
+                    <span class="label">Logout</span>
                 </button>
-                <!-- if on edit page, these two buttons will be visible -->
-                <!-- <button class="save">
-                    <i class="fa-solid fa-pen-to-square fa-xl"></i>
-                    <span class="label">Save</span>
-                </button> -->
-                <!-- <button class="delete">
-                    <i class="fa-solid fa-pen-to-square fa-xl"></i>
-                    <span class="label">Delete</span>
-                </button> -->
-                
-
+                <button class="edit">
+                    <i class="fa-solid fa-user fa-xl"></i>
+                    <span class="label">Profile</span>
+                </button>
+                <button class="save">
+                    <i class="fa-solid fa-clipboard-user fa-xl"></i>
+                    <span class="label">Roster</span>
+                </button>
             </div>
         </div>
         <div class="cen-content">
