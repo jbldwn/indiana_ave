@@ -29,10 +29,10 @@
         <div class="nav-wrapper">
             <nav>
                 <div class="links">
-                    <a href="home.html">Home</a>
-                    <a href="#about">About</a>
-                    <a href="landmarks.html">Landmarks</a>
-                    <a href="contact.html">Contact Us</a>
+                    <a href="index.php">Home</a>
+                    <a href="index.php/#about">About</a>
+                    <a href="landmarks.php">Landmarks</a>
+                    <a href="contact.php">Contact Us</a>
                 </div>
                 <div class="logo"></div>
             </nav>
@@ -51,7 +51,7 @@
                 </button>
             </div>
         </div>
-        <div class="cen-content">
+        <div class="pageHeader">
             <h1>Indiana Avenue</h1>
         </div>
         <div class="collage">

@@ -16,6 +16,15 @@ h1, h2, h3, h4, h5, h6, p {
   width: 70vw;
   max-width: 1000px; }
 
+.pageHeader {
+  margin-top: 50px;
+  padding: 0 30px; }
+  .pageHeader h1 {
+    filter: drop-shadow(0 5px 5px #644536);
+    color: #FFF;
+    font-family: LM;
+    font-size: 50px; }
+
 .ctrls button {
   display: flex;
   justify-content: center;
@@ -113,54 +122,59 @@ h1, h2, h3, h4, h5, h6, p {
       width: 350px; } }
 
 .login {
-  margin-top: 30px;
+  margin: 30px 0 50px;
   width: 100%;
   background-color: #534981; }
   .login-img {
-    width: 50%;
-    height: 75vh;
+    width: 40%;
+    height: 55vh;
     background-image: linear-gradient(rgba(83, 73, 129, 0.5), rgba(83, 73, 129, 0.5)), url(../assets/images/Hero.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; }
   .login-base {
-    margin-top: -75vh; }
+    margin-top: -55vh;
+    height: 55vh;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    position: relative; }
+    .login-base .pageHeader {
+      position: absolute;
+      top: -35px;
+      left: 0; }
     .login-base form {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      width: 712px;
-      margin-top: 50px; }
+      width: 60%;
+      margin: 50px 30px 0 0; }
       .login-base form label {
-        margin-right: 650px; }
-      .login-base form input[type=text], .login-base form select {
+        width: 100%;
+        color: #FFF;
+        font-family: LM;
+        font-size: 16px; }
+      .login-base form input, .login-base form select {
         width: 100%;
         padding: 12px 20px;
         margin: 8px 0;
         display: inline-block;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box; }
-      .login-base form input[type=password], .login-base form select {
-        width: 100%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        display: inline-block;
-        border: 1px solid #ccc;
+        border: none;
         border-radius: 4px;
         box-sizing: border-box; }
       .login-base form input[type=submit] {
         width: 150px;
-        background-color: #F48026;
-        color: white;
-        padding: 14px 20px;
-        margin: 8px 0;
-        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         border-radius: 38px;
-        cursor: pointer; }
+        border: none;
+        color: #FFF;
+        font-family: LM;
+        background-color: #f48026; }
       .login-base form input[type=submit]:hover {
-        background-color: #753b1d; }
+        background-color: #c25a0a; }
       .login-base form a {
         text-decoration: none;
         color: black;
@@ -275,14 +289,6 @@ h1, h2, h3, h4, h5, h6, p {
   background-size: cover;
   position: relative;
   margin-bottom: 120px; }
-  .hero .cen-content {
-    margin-top: 50px;
-    padding: 0 25px; }
-    .hero .cen-content h1 {
-      filter: drop-shadow(0 5px 5px #644536);
-      color: #FFF;
-      font-family: LM;
-      font-size: 50px; }
   .hero .collage {
     display: flex;
     justify-content: left;
@@ -640,7 +646,8 @@ footer {
       footer .footer .footer-nav a:hover {
         font-family: NeuBld;
         text-decoration: underline;
-        font-size: 18px; }
+        font-size: 18px;
+        color: #f48026; }
     footer .footer .footer-icons {
       width: 180px;
       display: flex;
@@ -648,6 +655,8 @@ footer {
       align-items: center; }
       footer .footer .footer-icons i {
         color: #FFF; }
+      footer .footer .footer-icons i:hover {
+        color: #f48026; }
       footer .footer .footer-icons #icon {
         height: 50px;
         width: 50px;

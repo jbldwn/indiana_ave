@@ -2,13 +2,13 @@
   //border: red solid 1px;
 }
 .login{
-    margin-top: 30px;
+    margin: 30px 0 50px;
     width: 100%;
     background-color: $ltBlu;
 
   &-img{
-    width: 50%;
-    height: 75vh;
+    width: 40%;
+    height: 55vh;
     background-image: linear-gradient($ltBluA, $ltBluA), url(../assets/images/Hero.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -16,57 +16,59 @@
   }
 
   &-base{
-    margin-top: -75vh;
-      //width: 100%;
-      //height: 500px;
+    margin-top: -55vh;
+    height: 55vh;
 
-      //display: flex;
-      //justify-content: center;
-      //flex-direction: column;
-      //align-items: center;
+      display: flex;
+      justify-content: right;
+      align-items: center;
+      position: relative;
+
+      .pageHeader{
+        position: absolute;
+        top: -35px;
+        left: 0;
+      }
 
       form{
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          width: 712px;
-          margin-top: 50px;
+          width: 60%;
+          margin: 50px 30px 0 0;
 
           label{
-              margin-right: 650px;
+            width:100%;
+            //align-self: left;
+            color:$siteWhite;
+            font-family: LM;
+            font-size: 16px;
           }
-          input[type=text], select {
+          input, select {
             width: 100%;
             padding: 12px 20px;
             margin: 8px 0;
             display: inline-block;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-          }
-          input[type=password], select {
-            width: 100%;
-            padding: 12px 20px;
-            margin: 8px 0;
-            display: inline-block;
-            border: 1px solid #ccc;
+            border: none;
             border-radius: 4px;
             box-sizing: border-box;
           }
           input[type=submit] {
             width: 150px;
-            background-color: #F48026;
-            color: white;
-            padding: 14px 20px;
-            margin: 8px 0;
-            border: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
             border-radius: 38px;
-            cursor: pointer;
+            border: none;
+            color: $siteWhite;
+            font-family: LM;
+            background-color: $genericColor;
           }
 
           input[type=submit]:hover {
-            background-color: rgb(117, 59, 29);
+            background-color: $genericHoverColor;
           }
 
           a{

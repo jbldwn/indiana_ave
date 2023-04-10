@@ -43,6 +43,7 @@ footer{
                 font-family: NeuBld;
                 text-decoration: underline;
                 font-size: 18px;
+                color: $btOrg;
             }
         }
     
@@ -55,6 +56,9 @@ footer{
             
             i{
                 color: $siteWhite;
+            }
+            i:hover{
+                color: $btOrg;
             }
     
             #icon{

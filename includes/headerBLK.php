@@ -25,27 +25,27 @@
     <div class="nav-wrapper-black">
         <nav>
             <div class="links">
-                <a href="home.html">Home</a>
-                <a href="home.html/#about">About</a>
-                <a href="landmarks.html">Landmarks</a>
-                <a href="contact.html">Contact Us</a>
+                <a href="index.php">Home</a>
+                <a href="index.php/#about">About</a>
+                <a href="landmarks.php">Landmarks</a>
+                <a href="contact.php">Contact Us</a>
             </div>
             <div class="logo"></div>
         </nav>
-<!--        <div class="ctrls">-->
-<!--            <button class="delete">-->
-<!--                <i class="fa-solid fa-right-from-bracket fa-xl"></i>-->
-<!--                <span class="label">Logout</span>-->
-<!--            </button>-->
-<!--            <button class="edit">-->
-<!--                <i class="fa-solid fa-user fa-xl"></i>-->
-<!--                <span class="label">Profile</span>-->
-<!--            </button>-->
-<!--            <button class="save">-->
-<!--                <i class="fa-solid fa-clipboard-user fa-xl"></i>-->
-<!--                <span class="label">Roster</span>-->
-<!--            </button>-->
-<!--        </div>-->
+        <div class="ctrls">
+            <button class="delete">
+                <i class="fa-solid fa-right-from-bracket fa-xl"></i>
+                <span class="label">Logout</span>
+            </button>
+            <button class="edit">
+                <i class="fa-solid fa-user fa-xl"></i>
+                <span class="label">Profile</span>
+            </button>
+            <button class="save">
+                <i class="fa-solid fa-clipboard-user fa-xl"></i>
+                <span class="label">Roster</span>
+            </button>
+        </div>
 
     </div>
 </div>

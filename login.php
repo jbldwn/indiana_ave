@@ -17,7 +17,9 @@ require_once('includes/headerBLK.php');
     <div class="login-img"></div>
 
     <div class="container login-base">
-        <h1>Login</h1>
+        <div class="pageHeader">
+            <h1>Login</h1>
+        </div>
         <form method="post" action="verifyuser.php">
             <?php
 //            if ($login_status == 2) {
