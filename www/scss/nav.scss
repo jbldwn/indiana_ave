@@ -11,13 +11,14 @@
 
         .links{
             margin-left:30px;
-            width: 350px;
+            width: 500px;
             display: flex;
             justify-content: space-between;
             a{
                 text-decoration: none;
                 color: $siteWhite;
                 font-size: 20px;
+                font-family: LM;
             }
 
             a:hover{
@@ -86,17 +87,18 @@
 
         .links{
             margin-left:30px;
-            width: 350px;
+            width: 500px;
             display: flex;
             justify-content: space-between;
             a{
                 text-decoration: none;
                 color: $siteBlack;
                 font-size: 20px;
+                font-family: LM;
             }
 
             a:hover{
-                font-family: LM;
+                font-family: LMB;
             }
         }
         .logo{

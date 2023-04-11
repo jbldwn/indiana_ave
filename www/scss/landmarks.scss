@@ -32,51 +32,38 @@
         height: 30px;
         width: 100%;
         margin-bottom: 10px;
+        font-family: LM;
     }
 .ld-sites{
-    height: 600px;
+
     width: 500px;
-    
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 
-    #site1{
+    #site{
         width: 100%;
         height: 200px;
         
-        #site1-img{
+        #site-img{
             height: 150px;
-            background-color: red;
+            background-color: blue;
         }
         
         
     }
 .ld-site-head{
-          height: 25px;
-          
+          height: 15px;
           font-size: 20px;
+        font-family: LM;
         }
 .ld-site-add{
-    height: 25px;
+    height: 15px;
+    font-family: LM;
     
 }
-    #site2{
-        width: 100%;
-        height: 200px;
-        #site2-img{
-            height: 150px;
-            background-color: red;
-        }
-    }
 
-    #site3{
-        width: 100%;
-        height: 200px;
-        #site3-img{
-            height: 150px;
-            background-color: red;
-        }
-    }
+
 }
 
 @media (max-width: 600px){

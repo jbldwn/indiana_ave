@@ -17,5 +17,6 @@
     <title>Indiana Avenue Home Prototype</title>
     <link rel="stylesheet" href="www/css/styles.css">
     <script src="https://kit.fontawesome.com/d22db5bb67.js" crossorigin="anonymous"></script>
+    <script src="./js/menu.js"></script>
 </head>
 <body>

@@ -13,6 +13,7 @@ $host = "localhost";
 $login = "phpuser";
 $password = "phpuser";
 $database = "indiana_ave";
+$tblLocations = "locations";
 
 //Connect to the mysql server
 $conn = @new mysqli($host, $login, $password, $database);
