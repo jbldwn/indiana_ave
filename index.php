@@ -5,6 +5,7 @@
  *File: index.php
  *Description: This is the home page for Indiana Avenue
  */
+$page_title = "Home";
 //header
 require_once('includes/web.php');
 require_once('includes/header.php');

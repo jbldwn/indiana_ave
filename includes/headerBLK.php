@@ -6,6 +6,10 @@
  *Description: black header for Indiana Ave
  */
 
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+
 //variables for a user’s login, name, and role
 $login = '';
 $name = '';
@@ -35,10 +39,10 @@ if (isset($_SESSION['login'])
             <div class="bar2"></div>
             <div class="bar3"></div>
             <ul class="mobile-menu">
-                <li><a href="index.php">Home</a></li>
-                <li><a href="landmarks.php">Landmarks</a></li>
-                <li><a href="contact.php">Contact</a></li>
-                <li><a href="login.php">Login</a></li>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="landmarks.html">Landmarks</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
             </ul>
         </div>
         <div class="mobile-icon"></div>
@@ -53,32 +57,56 @@ if (isset($_SESSION['login'])
             </div>
             <div class="logo"></div>
         </nav>
-        <?php
-        if($login==null){
-            echo "<span>no admin detected</span>";
-        }else if($role==0){
-            echo "<span>basic user detected</span>";
-        }else if($role==1){
-            echo "<span>advanced user detected</span>";
-        }else if($role==2){
-            echo "<span>super user detected</span>";
-        }
+        <div class="user-panel">
 
-        ?>
-        <div class="ctrls">
-            <button class="delete">
-                <i class="fa-solid fa-right-from-bracket fa-xl"></i>
-                <span class="label">Logout</span>
+            <?php
+            if($login==null){
+                echo "<span>no admin detected</span>";
+            }else if($login!=null){
+                echo "<span class='greeting'>Hello $name</span>
+                    <div class='ctrls'>";
+            }
+            if($role==2){
+                echo "
+                    <button class='save'>
+                        <i class='fa-solid fa-clipboard-user fa-xl'></i>
+                        <span class='label'>Roster</span>
+                    </button>
+                    ";
+            }
+            if($role==0 || $role==1 || $role==2){
+//            echo "<span>basic user detected</span>";
+//        }else if($role==1){
+//            echo "<span>advanced user detected</span>";
+                echo "
+            <button class='edit'>
+                <i class='fa-solid fa-user fa-xl'></i>
+                <span class='label'>Profile</span>
             </button>
-            <button class="edit">
-                <i class="fa-solid fa-user fa-xl"></i>
-                <span class="label">Profile</span>
-            </button>
-            <button class="save">
-                <i class="fa-solid fa-clipboard-user fa-xl"></i>
-                <span class="label">Roster</span>
-            </button>
+            <a href='logout.php'>
+                <button class='delete'>
+                    <i class='fa-solid fa-right-from-bracket fa-xl'></i>
+                    <span class='label'>Logout</span>
+                </button>
+            </a>
+            </div>
+            ";
+            }
+
+
+            ?>
+            <!--            <button class="delete">-->
+            <!--                <i class="fa-solid fa-right-from-bracket fa-xl"></i>-->
+            <!--                <span class="label">Logout</span>-->
+            <!--            </button>-->
+            <!--            <button class="edit">-->
+            <!--                <i class="fa-solid fa-user fa-xl"></i>-->
+            <!--                <span class="label">Profile</span>-->
+            <!--            </button>-->
+            <!--            <button class="save">-->
+            <!--                <i class="fa-solid fa-clipboard-user fa-xl"></i>-->
+            <!--                <span class="label">Roster</span>-->
+            <!--            </button>-->
         </div>
-
     </div>
 </div>

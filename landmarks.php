@@ -7,8 +7,10 @@
  * Description:
  */
 
-require_once('includes/headerBLK.php');
+$page_title = "Landmarks";
+
 require_once('includes/web.php');
+require_once('includes/headerBLK.php');
 
 require 'includes/database.php';
 

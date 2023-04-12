@@ -5,8 +5,12 @@
  *File: login.php
  *Description: login for maintenance for Indiana Ave
  */
+
+$page_title = "Login";
+
 //header
 require_once('includes/web.php');
+//require_once('includes/web.php');
 //require_once('includes/header.php');
 require_once('includes/headerBLK.php');
 
