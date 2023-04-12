@@ -1,0 +1,88 @@
+.ld-detail{
+    
+    width: 500px;
+    background-color: beige;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+.ld-chapters{
+    
+    width: 500px;
+    background-color: palegoldenrod;
+    display: flex;
+    flex-direction: column;
+}
+
+.ld-hero{
+    height: 300px;
+    width: 500px;
+    background-color: red;
+}
+
+.ld-address{
+    width: 100%;
+    height: 50px;
+    background-color: aqua;
+}
+.ld-historical{
+    width: 100%;
+    height: 50px;
+    background-color: gray;
+}
+.ld-current{
+    width: 100%;
+    height: 50px;
+    background-color: green;
+}
+.ld-des{
+    width: 100%;
+    height: 250px;
+    background-color: palevioletred;
+}
+.ld-banner{
+    width: 100%;
+    height: 100px;
+    background-color: blue;
+
+    
+}
+.ld-chapter-number{
+        
+}
+
+.ld-chapter-name{
+
+}
+
+.ld-grid{
+    height: 400px;
+    width: 100%;
+    margin-top: 50px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 225px 200px;
+    grid-template-rows: 225px;
+    
+    background-color: yellow;
+}
+
+.ld-photo{
+    width: 200px;
+    height: 200px;
+    background-color: black;
+}
+
+.ld-audio{
+    margin-top: 50px;
+    width: 100%;
+    height: 50px;
+    background-color: aqua;
+}
+
+.ld-chapter-detail{
+    width: 100%;
+    height: 300px;
+    background-color: red;
+}
