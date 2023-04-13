@@ -63,37 +63,38 @@ if (isset($_SESSION['login'])
             <div class="user-panel">
 
                 <?php
-                if($login==null){
-                    echo "<span>no admin detected</span>";
-                }else if($login!=null){
-                    echo "<span class='greeting'>Hello $name</span>
-                    <div class='ctrls'>";
-                }
-                if($role==2){
-                    echo "
-                    <button class='save'>
-                        <i class='fa-solid fa-clipboard-user fa-xl'></i>
-                        <span class='label'>Roster</span>
+                    if($login!=null) {
+                        echo "<span class='greeting'>Hello $name</span>
+                        <div class='ctrls'>";
+                        if ($role == 2) {
+                            echo "
+                            <button class='save'>
+                                <i class='fa-solid fa-clipboard-user fa-xl'></i>
+                                <span class='label'>Roster</span>
+                            </button>
+                            ";
+                        }
+                        if ($role == 0 || $role == 1 || $role == 2) {
+                            //            echo "<span>basic user detected</span>";
+                            //        }else if($role==1){
+                            //            echo "<span>advanced user detected</span>";
+                            echo "
+                    <button class='edit'>
+                        <i class='fa-solid fa-user fa-xl'></i>
+                        <span class='label'>Profile</span>
                     </button>
+                    <a href='logout.php'>
+                        <button class='delete'>
+                            <i class='fa-solid fa-right-from-bracket fa-xl'></i>
+                            <span class='label'>Logout</span>
+                        </button>
+                    </a>
+                    </div>
                     ";
-                }
-                if($role==0 || $role==1 || $role==2){
-//            echo "<span>basic user detected</span>";
-//        }else if($role==1){
-//            echo "<span>advanced user detected</span>";
-                    echo "
-            <button class='edit'>
-                <i class='fa-solid fa-user fa-xl'></i>
-                <span class='label'>Profile</span>
-            </button>
-            <a href='logout.php'>
-                <button class='delete'>
-                    <i class='fa-solid fa-right-from-bracket fa-xl'></i>
-                    <span class='label'>Logout</span>
-                </button>
-            </a>
-            ";
-                }
+                        }
+                    }
+
+
 
 
                 ?>

@@ -3,8 +3,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: borderbox;
-  border: red solid 1px; }
+  box-sizing: border-box; }
 
 html, body {
   height: 100%; }
@@ -324,7 +323,7 @@ h1, h2, h3, h4, h5, h6, p {
   .hero .hero-text {
     filter: drop-shadow(0 5px 5px #644536);
     position: absolute;
-    top: 320px;
+    top: 290px;
     right: 30px;
     width: 500px;
     font-family: LM;
@@ -347,7 +346,6 @@ h1, h2, h3, h4, h5, h6, p {
       .hero .cen-content h1 {
         font-size: 40px; }
     .hero .collage {
-      width: 90vw;
       height: 260px;
       width: 65%;
       position: absolute;
@@ -456,6 +454,9 @@ h1, h2, h3, h4, h5, h6, p {
     display: flex;
     justify-content: space-between;
     align-items: center; }
+    .nav-wrapper .user-panel .greeting {
+      margin-left: 30px;
+      color: #FFF; }
     .nav-wrapper .user-panel .ctrls {
       margin-left: auto;
       margin-top: 10px;

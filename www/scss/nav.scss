@@ -23,6 +23,7 @@
 
             a:hover{
                 font-family: LMB;
+                //font-size: 18px;
             }
         }
 
@@ -43,6 +44,10 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        .greeting{
+            margin-left: 30px;
+            color: $siteWhite;
+        }
         .ctrls{
             margin-left: auto;
             margin-top: 10px;
