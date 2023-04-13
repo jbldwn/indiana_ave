@@ -19,6 +19,8 @@ $sql = "SELECT location_id, location_name, address, city, state, zipcode, catego
 
 $query = $conn->query($sql);
 
+
+
 if (!$query) {
     $error = "Selection failed: " . $conn->error;
     $conn->close();
@@ -34,11 +36,13 @@ if (!$query) {
     <div class="ld-sites">
         <h1 class="ld-body-head">Locations</h1>
         <?php while($row = $query->fetch_assoc()) { ?>
+                <a style="text-decoration: none; color: black"  href="landmark-detail.php?location_id=<?= $row['location_id'] ?>">
             <div id="site">
                 <div id="site-img"></div>
                 <h1 class="ld-site-head"><?= $row['location_name'] ?></h1>
                 <p class="ld-site-add"><?= $row['address'] ?></p>
             </div>
+                </a>
         <?php } ?>
     </div>
 
