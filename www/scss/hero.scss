@@ -1,5 +1,5 @@
 .hero{
-    height: 450px;
+    height: 470px;
     width: 100%;
     background-image: linear-gradient($btOrgA, $btOrgA), url(../assets/images/Hero.jpg);
     background-position: center;
@@ -13,7 +13,7 @@
     .collage{
         display: flex;
         justify-content: left;
-        padding: 0 40px;
+        padding: 0 30px;
         height: 280px;
         width: 55%;
     
@@ -56,10 +56,10 @@
     .hero-text{
         filter:drop-shadow(0 5px 5px $drkBrn);
         position: absolute;
-        top: 290px;
+        top: 310px;
         right: 30px;
     
-        width: 500px;
+        width: 350px;
         font-family: LM;
         color:$siteWhite;
         font-size: 50px;

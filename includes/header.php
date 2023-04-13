@@ -79,18 +79,18 @@ if (isset($_SESSION['login'])
                             //        }else if($role==1){
                             //            echo "<span>advanced user detected</span>";
                             echo "
-                    <button class='edit'>
-                        <i class='fa-solid fa-user fa-xl'></i>
-                        <span class='label'>Profile</span>
-                    </button>
-                    <a href='logout.php'>
-                        <button class='delete'>
-                            <i class='fa-solid fa-right-from-bracket fa-xl'></i>
-                            <span class='label'>Logout</span>
-                        </button>
-                    </a>
-                    </div>
-                    ";
+                                <button class='edit'>
+                                    <i class='fa-solid fa-user fa-xl'></i>
+                                    <span class='label'>Profile</span>
+                                </button>
+                                <a href='logout.php'>
+                                    <button class='delete'>
+                                        <i class='fa-solid fa-right-from-bracket fa-xl'></i>
+                                        <span class='label'>Logout</span>
+                                    </button>
+                                </a>
+                                </div>
+                            ";
                         }
                     }
 
