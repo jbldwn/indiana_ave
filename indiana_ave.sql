@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 05, 2023 at 11:20 PM
+-- Generation Time: Apr 13, 2023 at 04:27 PM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 7.0.8
 
@@ -32,14 +32,14 @@ CREATE TABLE `administrators` (
   `admin_last_name` varchar(50) NOT NULL,
   `admin_email` varchar(100) DEFAULT NULL,
   `admin_password` varchar(12) NOT NULL,
-  `admin_lvl` int(1) NOT NULL
+  `admin_role` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `administrators`
 --
 
-INSERT INTO `administrators` (`admin_id`, `admin_first_name`, `admin_last_name`, `admin_email`, `admin_password`, `admin_lvl`) VALUES
+INSERT INTO `administrators` (`admin_id`, `admin_first_name`, `admin_last_name`, `admin_email`, `admin_password`, `admin_role`) VALUES
 (1, 'Super', 'User', 'su@gmail.com', '*2470C0C', 2),
 (2, 'Idris', 'Elba', 'IE@gmail.com', '*2470C0C', 1),
 (3, 'Jennifer', 'Baldwin', 'jbldwn@iu.edu', 'password', 0),
