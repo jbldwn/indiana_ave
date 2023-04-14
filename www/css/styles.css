@@ -431,7 +431,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 #about {
   width: 100%;
-  background-color: #534981; }
+  background-color: #493f66; }
   #about .about {
     display: flex;
     justify-content: space-between; }
@@ -447,7 +447,7 @@ h1, h2, h3, h4, h5, h6, p {
       margin: 20px 0 100px; }
       #about .about-con-header {
         margin-left: -30px;
-        color: #534981;
+        color: #5d5185;
         font-family: LM;
         font-size: 75px;
         filter: drop-shadow(0 5px 10px #0b032d); }

@@ -1,6 +1,6 @@
 #about{
     width: 100%;
-    background-color: $ltBlu;
+    background-color: $ltdrkBlu;
 
     .about{
         display: flex;
@@ -22,7 +22,7 @@
 
             &-header{
                 margin-left: -30px;
-                color: $ltBlu;
+                color: $ltltBlu;
                 font-family: LM;
                 font-size: 75px;
                 filter: drop-shadow(0 5px 10px $drkBlu);
