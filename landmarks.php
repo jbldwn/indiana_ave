@@ -14,7 +14,7 @@ require_once('includes/headerBLK.php');
 
 require 'includes/database.php';
 
-$sql = "SELECT location_id, location_name, address, city, state, zipcode, category_id, creator_admin_id, last_editor_admin_id, last_updated
+$sql = "SELECT location_id, location_name, location_address, location_city, location_state, location_zip, category_id, creator_admin_id, last_editor_admin_id, last_updated
  FROM  $tblLocations";
 
 $query = $conn->query($sql);
@@ -40,7 +40,7 @@ if (!$query) {
             <div id="site">
                 <div id="site-img"></div>
                 <h1 class="ld-site-head"><?= $row['location_name'] ?></h1>
-                <p class="ld-site-add"><?= $row['address'] ?></p>
+                <p class="ld-site-add"><?= $row['location_address'] ?></p>
             </div>
                 </a>
         <?php } ?>

@@ -13,7 +13,8 @@ require 'includes/database.php';
 
 $id = filter_input(INPUT_GET, "location_id", FILTER_SANITIZE_NUMBER_INT);
 
-$sql = "SELECT location_id, location_name, address, city, state, zipcode, category_id, creator_admin_id, last_editor_admin_id, last_updated
+$sql = "SELECT location_id, location_name, location_address, location_city, location_state, location_zip, 
+       category_id, creator_admin_id, last_editor_admin_id, last_updated, location_description, location_current, location_historical
  FROM  $tblLocations WHERE location_id = $id";
 
 $query = $conn->query($sql);
@@ -27,10 +28,10 @@ $row = $query->fetch_assoc();
     <div class="ld-detail">
         <h1 class="ld-body-head">Details</h1>
         <div class="ld-hero"></div>
-        <div class="ld-address"><?= $row['address'] ?></div>
-        <div class="ld-historical"></div>
-        <div class="ld-current"></div>
-        <div class="ld-des"></div>
+        <div class="ld-address"><?= $row['location_address'] ?></div>
+        <div class="ld-historical"><?= $row['location_historical'] ?></div>
+        <div class="ld-current"><?= $row['location_current'] ?></div>
+        <div class="ld-des"><?= $row['location_description'] ?></div>
     </div>
     <div class="ld-chapters">
         <h1 class="ld-body-head">Chapters</h1>
@@ -43,6 +44,7 @@ $row = $query->fetch_assoc();
             <div class="ld-photo"></div>
             <div class="ld-photo"></div>
             <div class="ld-photo"></div>
+
         </div>
         <div class="ld-audio"></div>
         <div class="ld-chapter-detail"></div>
