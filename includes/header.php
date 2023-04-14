@@ -35,28 +35,29 @@ if (isset($_SESSION['login'])
 
 
 <div class="container">
-    <div class="nav-mobile-wrapper">
-        <div id="ham-icon" onclick="toggleMenu(this)">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-            <ul class="mobile-menu">
-                <li><a href="index.php">Home</a></li>
-                <li><a href="landmarks.php">Landmarks</a></li>
-                <li><a href="contact.php">Contact</a></li>
-                <li><a href="login.php">Login</a></li>
-            </ul>
-        </div>
-        <div class="mobile-icon"></div>
-    </div>
+
     <div class="hero">
+        <div class="nav-mobile-wrapper">
+            <div id="ham-icon" onclick="toggleMenu(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+                <ul class="mobile-menu">
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="landmarks.php">Landmarks</a></li>
+                    <li><a href="contact.php">Contact</a></li>
+                    <li><a href="login.php">Login</a></li>
+                </ul>
+            </div>
+            <div class="mobile-icon"></div>
+        </div>
         <div class="nav-wrapper">
             <nav>
                 <div class="links">
                     <a href="index.php">Home</a>
                     <a href="index.php#about">About</a>
                     <a href="landmarks.php">Landmarks</a>
-                    <a href="contact.php">Contact Us</a>
+                    <a href="contact.php">Contact</a>
                 </div>
                 <div class="logo"></div>
             </nav>

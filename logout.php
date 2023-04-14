@@ -26,7 +26,7 @@ include('includes/headerBLK.php');
 
 ?>
     <div class="container">
-        <h2 class="p-title">You have been logged out.</h2>
+        <h2 style="margin-left: 30px">You have been logged out.</h2>
     </div>
 
 <?php

@@ -24,7 +24,7 @@ require_once('includes/header.php');
                 Urna molestie at elementum eu facilisis sed odio.
                 Sit amet consectetur adipiscing elit. Donec ac odio tempor orcidapibus ultrices. Non odio euismod lacinia at quis risus sed vulputate. Urna molestie at elementum eu facilisis sed odio.
             </p>
-            <a href="#">
+            <a href="landmarks.php" class="ctrls">
                 <button class="about-button">
                     <i class="fa-solid fa-map-location-dot  fa-xl"></i>
                     <span>Experience the Ave</span>

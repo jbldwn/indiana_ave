@@ -3,7 +3,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  border: red solid 1px; }
 
 html, body {
   height: 100%; }
@@ -499,13 +500,13 @@ h1, h2, h3, h4, h5, h6, p {
     align-items: baseline; }
     .nav-wrapper nav .links {
       margin-left: 30px;
-      width: 500px;
+      width: 70%;
       display: flex;
       justify-content: space-between; }
       .nav-wrapper nav .links a {
         text-decoration: none;
         color: #FFF;
-        font-size: 20px;
+        font-size: 1.25em;
         font-family: LM; }
       .nav-wrapper nav .links a:hover {
         font-family: LMB; }
@@ -557,21 +558,18 @@ h1, h2, h3, h4, h5, h6, p {
     justify-content: space-between;
     align-items: baseline; }
     .nav-wrapper-black nav .links {
-      height: 30px;
       margin-left: 30px;
       width: 500px;
       display: flex;
       justify-content: space-between; }
       .nav-wrapper-black nav .links a {
-        height: 30px;
         text-decoration: none;
         color: #000;
         font-size: 18px;
         font-family: LM; }
       .nav-wrapper-black nav .links a:hover {
         font-family: LMB;
-        font-size: 20px;
-        margin-bottom: 0; }
+        font-size: 18px; }
     .nav-wrapper-black nav .logo {
       margin-right: 30px;
       width: 110px;
@@ -611,29 +609,27 @@ h1, h2, h3, h4, h5, h6, p {
         background-color: #5e1608; }
 
 .nav-mobile-wrapper {
-  height: 74px;
+  padding: 10px 30px;
   width: 100%;
-  background-color: #d2bfa1;
   display: none;
   justify-content: space-between;
   align-items: center; }
   .nav-mobile-wrapper #ham-icon {
-    float: right;
-    display: block;
-    cursor: pointer; }
+    height: 50px;
+    width: 65px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
     .nav-mobile-wrapper #ham-icon div {
-      width: 55px;
-      height: 10px;
+      width: 100%;
+      height: 25%;
       border-radius: 38px;
-      background-color: #644536;
-      margin: 10px 0;
-      transition: 0.4s;
-      margin-left: 10px; }
+      background-color: #FFF;
+      transition: 0.4s; }
   .nav-mobile-wrapper .mobile-icon {
-    height: 51px;
-    width: 100px;
-    margin-right: 10px;
-    background-image: url(../assets/Logo/IndianaAveLogo-blk.png);
+    width: 110px;
+    height: 56px;
+    background-image: url(../assets/Logo/IndianaAveLogo-wht.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; }

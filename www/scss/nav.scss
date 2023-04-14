@@ -10,14 +10,18 @@
         align-items: baseline;
 
         .links{
+            //line-height: 80px;
+
             margin-left:30px;
-            width: 500px;
+            width: 70%;
             display: flex;
             justify-content: space-between;
             a{
+
                 text-decoration: none;
                 color: $siteWhite;
-                font-size: 20px;
+                //font-size: 20px;
+                font-size: 1.25em;
                 font-family: LM;
             }
 
@@ -99,15 +103,13 @@
         align-items: baseline;
 
         .links{
-            height: 30px;
+            //line-height: 80px;
 
             margin-left:30px;
             width: 500px;
             display: flex;
             justify-content: space-between;
             a{
-                height: 30px;
-
                 text-decoration: none;
                 color: $siteBlack;
                 font-size: 18px;
@@ -116,8 +118,7 @@
 
             a:hover{
                 font-family: LMB;
-                font-size: 20px;
-                margin-bottom: 0;
+                font-size: 18px;
             }
         }
         .logo{
@@ -181,33 +182,36 @@
 }
 
 .nav-mobile-wrapper{
-    height: 74px;
+    padding: 10px 30px;
+    //height: 74px;
     width: 100%;
-    background-color: $ltBrn;
+    //background-color: $ltBrn;
     display: none;
     justify-content: space-between;
     align-items: center;
     #ham-icon{
-        float: right;
-        display: block;
+        height: 50px;
+        width: 65px;
 
-        cursor: pointer;
-        
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
         div{
-            width: 55px;
-            height: 10px;
+            width: 100%;
+            height: 25%;
             border-radius: 38px;
-            background-color: $drkBrn;
-            margin: 10px 0;
+            background-color: $siteWhite;
+            //margin: 10px 0;
             transition: 0.4s;
-            margin-left: 10px;
+            //margin-left: 10px;
         }
     }
     .mobile-icon{
-        height: 51px;
-        width: 100px;
-        margin-right: 10px;
-        background-image: url(../assets/Logo/IndianaAveLogo-blk.png);
+        width: 110px;
+        height: 56px;
+        //margin-right: 10px;
+        background-image: url(../assets/Logo/IndianaAveLogo-wht.png);
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;

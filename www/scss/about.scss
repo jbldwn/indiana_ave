@@ -7,7 +7,6 @@
         justify-content: space-between;
         
         &-img{
-            // height: 300px;
             width: 44%;
             background-image: linear-gradient($ltBluA,$ltBluA),url(../assets/images/street.jpg);
 
@@ -29,11 +28,11 @@
             }
         
             &-para{
-                    color: $siteWhite;
-                    font-family: LM;
-                    font-size: 12px;
-                    padding: 0 30px 0 15px;
-                }
+                color: $siteWhite;
+                font-family: LM;
+                font-size: 12px;
+                padding: 0 30px 0 15px;
+            }
             a{
                 position: absolute;
                 right: 0;
