@@ -14,6 +14,7 @@ $login = "phpuser";
 $password = "phpuser";
 $database = "indiana_ave";
 $tblLocations = "locations";
+$tblChapters = "chapters";
 
 //Connect to the mysql server
 $conn = @new mysqli($host, $login, $password, $database);
