@@ -549,79 +549,78 @@ h1, h2, h3, h4, h5, h6, p {
       .nav-wrapper .user-panel .ctrls .delete:hover {
         background-color: #5e1608; }
 
-.nav-wrapper-black {
-  width: 100%;
-  display: contents; }
-  .nav-wrapper-black nav {
-    padding: 35px 0;
-    border-bottom: solid 2px #000;
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline; }
-    .nav-wrapper-black nav .links {
-      margin-left: 30px;
-      width: 500px;
-      display: flex;
-      justify-content: space-between; }
-      .nav-wrapper-black nav .links a {
-        text-decoration: none;
-        color: #000;
-        font-size: 18px;
-        font-family: LM; }
-      .nav-wrapper-black nav .links a:hover {
-        font-family: LMB;
-        font-size: 18px; }
-    .nav-wrapper-black nav .logo {
-      margin-right: 30px;
-      width: 110px;
-      height: 56px;
-      background-image: url(../assets/logo/IndianaAveLogo-blk.png);
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover; }
-  .nav-wrapper-black .user-panel {
-    height: 50px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 5px 0; }
-    .nav-wrapper-black .user-panel .greeting {
-      margin-left: 30px;
-      color: #000; }
-    .nav-wrapper-black .user-panel .ctrls {
-      margin-right: 30px;
-      color: #FFF; }
-      .nav-wrapper-black .user-panel .ctrls button {
-        width: 110px;
-        height: 45px;
-        margin-left: 10px; }
-
-.nav-mobile-wrapper {
+.nav-black .mobile {
   padding: 10px 30px;
   width: 100%;
+  background-color: #FFF;
   display: none;
   justify-content: space-between;
   align-items: center; }
-  .nav-mobile-wrapper #ham-icon {
+  .nav-black .mobile #ham-icon {
     height: 50px;
     width: 65px;
     display: flex;
     flex-direction: column;
     justify-content: space-between; }
-    .nav-mobile-wrapper #ham-icon .bar {
+    .nav-black .mobile #ham-icon .bar {
       width: 100%;
       height: 25%;
       border-radius: 38px;
-      background-color: #FFF;
+      background-color: #000;
       transition: 0.4s; }
-  .nav-mobile-wrapper .mobile-icon {
+  .nav-black .mobile .mobile-icon {
     width: 110px;
     height: 56px;
-    background-image: url(../assets/Logo/IndianaAveLogo-wht.png);
+    background-image: url(../assets/Logo/IndianaAveLogo-blk.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; }
+
+.nav-black .web nav {
+  padding: 35px 0;
+  border-bottom: solid 2px #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline; }
+  .nav-black .web nav .links {
+    margin-left: 30px;
+    width: 65%;
+    display: flex;
+    justify-content: space-between; }
+    .nav-black .web nav .links a {
+      text-decoration: none;
+      color: #000;
+      font-size: 18px;
+      font-family: LM; }
+    .nav-black .web nav .links a:hover {
+      font-family: LMB;
+      font-size: 18px; }
+  .nav-black .web nav .logo {
+    margin-right: 30px;
+    width: 110px;
+    height: 56px;
+    background-image: url(../assets/logo/IndianaAveLogo-blk.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; }
+
+.nav-black .web .user-panel {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 0; }
+  .nav-black .web .user-panel .greeting {
+    margin-left: 30px;
+    color: #000; }
+  .nav-black .web .user-panel .ctrls {
+    margin-right: 30px;
+    color: #FFF; }
+    .nav-black .web .user-panel .ctrls button {
+      width: 110px;
+      height: 45px;
+      margin-left: 10px; }
 
 .open .mobile-menu {
   display: flex;
@@ -651,12 +650,13 @@ h1, h2, h3, h4, h5, h6, p {
     font-family: LMB; }
 
 @media (max-width: 850px) {
-  .nav-wrapper {
-    display: none;
-    margin: -20px; }
   .nav-wrapper-black {
     display: none; }
   .nav-mobile-wrapper {
+    display: flex; }
+  .nav-black .web {
+    display: none; }
+  .nav-black .mobile {
     display: flex; } }
 
 @font-face {

@@ -92,129 +92,130 @@
     }
 }
 
-.nav-wrapper-black{
-    width: 100%;
-    display:contents;
-    nav{
-        padding: 35px 0;
-        border-bottom: solid 2px $siteBlack;
-        display: flex;
+.nav-black{
+
+    .mobile{
+        padding: 10px 30px;
+        width: 100%;
+        //height: 12vh;
+        background-color: $siteWhite;
+
+        display: none;
         justify-content: space-between;
-        align-items: baseline;
+        align-items: center;
+        #ham-icon{
+            height: 50px;
+            width: 65px;
 
-        .links{
-            //line-height: 80px;
-
-            margin-left:30px;
-            width: 500px;
             display: flex;
+            flex-direction: column;
             justify-content: space-between;
-            a{
-                text-decoration: none;
-                color: $siteBlack;
-                font-size: 18px;
-                font-family: LM;
-            }
 
-            a:hover{
-                font-family: LMB;
-                font-size: 18px;
+            .bar{
+                width: 100%;
+                height: 25%;
+                border-radius: 38px;
+                background-color: $siteBlack;
+                transition: 0.4s;
             }
         }
-        .logo{
-            margin-right:30px;
+        .mobile-icon{
             width: 110px;
             height: 56px;
-            background-image: url(../assets/logo/IndianaAveLogo-blk.png);
+            background-image: url(../assets/Logo/IndianaAveLogo-blk.png);
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
         }
     }
-    .user-panel{
-        height: 50px;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: 5px 0;
+    .web{
+        nav{
+            padding: 35px 0;
+            border-bottom: solid 2px $siteBlack;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
 
-        .greeting{
-            margin-left: 30px;
-            color: $siteBlack;
-        }
-        .ctrls{
-            //margin-left: auto;
-            //margin: 10px 0;
-            margin-right: 30px;
-            color: $siteWhite;
+            .links{
+                //line-height: 80px;
 
-            button{
+                margin-left:30px;
+                width: 65%;
+                display: flex;
+                justify-content: space-between;
+                a{
+                    text-decoration: none;
+                    color: $siteBlack;
+                    font-size: 18px;
+                    font-family: LM;
+                }
+
+                a:hover{
+                    font-family: LMB;
+                    font-size: 18px;
+                }
+            }
+            .logo{
+                margin-right:30px;
                 width: 110px;
-                height: 45px;
+                height: 56px;
+                background-image: url(../assets/logo/IndianaAveLogo-blk.png);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        }
+        .user-panel{
+            height: 50px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 5px 0;
+
+            .greeting{
+                margin-left: 30px;
+                color: $siteBlack;
+            }
+            .ctrls{
+                //margin-left: auto;
                 //margin: 10px 0;
+                margin-right: 30px;
+                color: $siteWhite;
 
-                margin-left: 10px;
+                button{
+                    width: 110px;
+                    height: 45px;
+                    //margin: 10px 0;
 
+                    margin-left: 10px;
+
+                }
+
+                //.edit{
+                //    background-color: $editColor;
+                //}
+                //.edit:hover{
+                //    background-color: $editHoverColor;
+                //}
+                //.save{
+                //    background-color: $saveColor;
+                //}
+                //.save:hover{
+                //    background-color: $saveHoverColor;
+                //}
+                //.delete{
+                //    background-color: $deleteColor;
+                //}
+                //.delete:hover{
+                //    background-color: $deleteHoverColor;
+                //}
             }
 
-            //.edit{
-            //    background-color: $editColor;
-            //}
-            //.edit:hover{
-            //    background-color: $editHoverColor;
-            //}
-            //.save{
-            //    background-color: $saveColor;
-            //}
-            //.save:hover{
-            //    background-color: $saveHoverColor;
-            //}
-            //.delete{
-            //    background-color: $deleteColor;
-            //}
-            //.delete:hover{
-            //    background-color: $deleteHoverColor;
-            //}
-        }
-
-    }
-}
-
-.nav-mobile-wrapper{
-    padding: 10px 30px;
-    width: 100%;
-    display: none;
-    justify-content: space-between;
-    align-items: center;
-    #ham-icon{
-        height: 50px;
-        width: 65px;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-
-        .bar{
-            width: 100%;
-            height: 25%;
-            border-radius: 38px;
-            background-color: $siteWhite;
-            transition: 0.4s;
         }
     }
-    .mobile-icon{
-        width: 110px;
-        height: 56px;
-        background-image: url(../assets/Logo/IndianaAveLogo-wht.png);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
+
 }
-
-
-
 
 .open .mobile-menu {
     display: flex;
@@ -251,13 +252,48 @@
 }
 
 
+//.open .mobile {
+//    display: flex;
+//    flex-direction: column;
+//    align-items: center;
+//    justify-content: flex-start;
+//    height: 2500px;
+//}
+
+//.mobile{
+//    display: none;
+//    position: absolute;
+//    top: 75px;
+//    left: 0;
+//    width: 100%;
+//    background-color: $btOrgAA;
+//    z-index:99;
+//    padding-top: 20vh;
+//    li{
+//        list-style-type: none;
+//        margin: 20px;
+//    }
+//
+//    a{
+//        color: $siteWhite;
+//        font-size: 20px;
+//        font-family: LM;
+//        text-decoration: none;
+//    }
+//
+//    a:hover{
+//        font-family: LMB;
+//    }
+//}
+
+
 
 @media (max-width: $mobileWidth){
     
-    .nav-wrapper{
-        display: none;
-        margin: -20px;
-    }
+    //.nav-wrapper{
+    //    display: none;
+    //    margin: -20px;
+    //}
 
     .nav-wrapper-black{
         display: none;
@@ -266,4 +302,16 @@
     .nav-mobile-wrapper{
         display: flex;
     }
+    .nav-black{
+        //height: 70px;
+
+        .web{
+            display: none;
+        }
+
+        .mobile{
+            display: flex;
+        }
+    }
+
 }
