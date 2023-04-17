@@ -4,11 +4,11 @@
 .login{
     margin-bottom: 50px;
     width: 100%;
-    background-color: $ltBlu;
+    background-color: $ltdrkBlu;
 
   &-img{
-    width: 40%;
-    height: 55vh;
+    width: 45%;
+    height: 60vh;
     background-image: linear-gradient($ltBluA, $ltBluA), url(../assets/images/Hero.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -16,68 +16,77 @@
   }
 
   &-base{
-    margin-top: -55vh;
-    height: 55vh;
+    //margin-top: -60vh;
+    height: 60vh;
+    margin: -60vh auto 0;
+
+    .login-form{
+      position: relative;
+      margin: 15px 0 30px 50%;
 
       display: flex;
-      justify-content: right;
-      align-items: center;
-      position: relative;
+      flex-direction: column;
+      justify-content: space-between;
 
-      .pageHeader{
-        position: absolute;
-        top: 15px;
-        left: 0;
+
+      .header{
+        width: fit-content;
+        margin-left: -30px;
+        color: $ltltBlu;
+        font-family: LM;
+        font-size: 75px;
+        filter: drop-shadow(0 5px 10px $drkBlu);
       }
 
       form{
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          width: 60%;
-          margin: 50px 30px 0 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: end;
+        width: 100%;
 
-          label{
-            width:100%;
-            //align-self: left;
-            color:$siteWhite;
-            font-family: LM;
-            font-size: 16px;
-          }
-          input, select {
-            width: 100%;
-            padding: 12px 20px;
-            margin: 8px 0;
-            display: inline-block;
-            border: none;
-            border-radius: 4px;
-            box-sizing: border-box;
-          }
-          input[type=submit] {
-            width: 150px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        label{
+          width:100%;
+          //align-self: left;
+          color:$siteWhite;
+          font-family: LM;
+          font-size: 16px;
+        }
+        input, select {
+          width: 100%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: none;
+          border-radius: 4px;
+          box-sizing: border-box;
+        }
+        input[type=submit] {
+          width: 150px;
+          //display: flex;
+          //justify-content: end;
+          //align-items: center;
 
-            border-radius: 38px;
-            border: none;
-            color: $siteWhite;
-            font-family: LM;
-            background-color: $genericColor;
-          }
+          border-radius: 38px;
+          border: none;
+          color: $siteWhite;
+          font-family: LM;
+          background-color: $genericColor;
+        }
 
-          input[type=submit]:hover {
-            background-color: $genericHoverColor;
-          }
+        input[type=submit]:hover {
+          background-color: $genericHoverColor;
+        }
 
-          a{
-            text-decoration: none;
-            color: black;
-            font-family: LM;
-            font-size: 15px;
-          }
+        a{
+          text-decoration: none;
+          color: black;
+          font-family: LM;
+          font-size: 15px;
+        }
       }
+
+    }
   }
 }
 
