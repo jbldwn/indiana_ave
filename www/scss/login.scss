@@ -30,6 +30,7 @@
         width: fit-content;
         margin-left: -30px;
         color: $ltltBlu;
+        //color: $siteWhite;
         font-family: LM;
         font-size: 75px;
         filter: drop-shadow(0 5px 10px $drkBlu);
@@ -105,8 +106,7 @@
         justify-content: center;
 
         .header{
-          margin: 5px 0 15px;
-          //margin-bottom: 15px;
+          margin: -5px 0 15px;
         }
       }
     }
