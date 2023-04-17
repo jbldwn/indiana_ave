@@ -6,8 +6,7 @@ footer{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        //padding: 0 15px;
-    
+
         .logo{
             margin-left: 30px;
             width: 200px;
@@ -19,8 +18,7 @@ footer{
         }
     
         .footer-icons{
-            width: 200px;
-            
+            width: 160px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -28,6 +26,7 @@ footer{
             i{
                 color: $siteWhite;
             }
+
             i:hover{
                 color: $btOrg;
             }
@@ -91,12 +90,19 @@ footer{
                 margin: 0;
             }
 
+            .footer-icons {
+                width: 200px;
+            }
+
             .footer-nav{
                 margin-right: 0;
 
                 a{
                     margin-left: 0;
                     align-self: end;
+                }
+                #maintenance{
+                    display: none;
                 }
             }
         }

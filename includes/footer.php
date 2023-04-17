@@ -8,6 +8,7 @@
 
 ?>
 
+
 <footer>
     <div class="footer container">
         <div class="logo"></div>
@@ -22,7 +23,7 @@
             <a href="index.php#about">About</a>
             <a href="landmarks.php">Landmarks</a>
             <a href="contact.php">Contact</a>
-            <a href="login.php">Maintenance</a>
+            <a id="maintenance" href="login.php">Maintenance</a>
         </div>
     </div>
 </footer>
