@@ -63,6 +63,7 @@
 
 @media (max-width: $mobileWidth){
     #about{
+        height: 80vh;
         margin-bottom: 30px;
         padding-bottom: 10px;
         .img{
@@ -72,8 +73,7 @@
         .about{
             margin-top: -150px;
             height: calc(100% - 130px);
-        //    flex-direction: column;
-        //
+
             &-con{
                 margin: 0;
                 margin-top: 130px;
@@ -88,15 +88,16 @@
         //            text-align: center;
         //            filter: drop-shadow(0 -2px 10px $drkBlu);
         //        }
-        //        &-para{
-        //            margin: 0 auto;
-        //            width: 70%;
+                &-para{
+                    margin: 0 auto;
+                    width: 70%;
         //            text-align: justify;
         //            margin-bottom: 10px;
-        //        }
-        //        a{
+                }
+                a{
+                    //margin-bottom: 15px;
         //            position: relative;
-        //        }
+                }
             }
         }
     }
