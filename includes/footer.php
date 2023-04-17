@@ -17,9 +17,9 @@
             <i class="fa-brands fa-instagram fa-2x"></i>
         </div>
         <div class="footer-nav">
-            <h3>Site Map:</h3>
+            <h3>Site-Map:</h3>
             <a href="index.php">Home</a>
-            <a href="index.php/#about">About</a>
+            <a href="index.php#about">About</a>
             <a href="landmarks.php">Landmarks</a>
             <a href="contact.php">Contact</a>
             <a href="login.php">Maintenance</a>

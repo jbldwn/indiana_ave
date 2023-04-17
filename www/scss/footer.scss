@@ -11,44 +11,15 @@ footer{
         .logo{
             margin-left: 30px;
             width: 200px;
-            height: 100px;
+            height: 102px;
             background-image: url(../assets/Logo/IndianaAveLogo-wht.png);
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
         }
     
-        .footer-nav{
-            margin-right: 30px;
-
-            height: 200px;
-            width: 138px;
-            color: $siteWhite;
-    
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            h3{
-                font-family: LM;
-            }
-            a{
-                color: $siteWhite;
-                margin-left: 30px;
-                text-decoration: none;
-                margin-bottom: 0;
-                font-family: NeuReg;
-                font-size: 20px;
-            }
-            a:hover{
-                font-family: NeuBld;
-                text-decoration: underline;
-                font-size: 18px;
-                color: $btOrg;
-            }
-        }
-    
         .footer-icons{
-            width: 180px;
+            width: 200px;
             
             display: flex;
             justify-content: space-between;
@@ -67,39 +38,67 @@ footer{
                 background-color: aqua;
             }
         }
+
+        .footer-nav{
+            margin-right: 30px;
+
+            //height: 150px;
+            width: 138px;
+
+            color: $siteWhite;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            h3{
+                font-family: LM;
+                margin-bottom: 10px;
+            }
+            a{
+                color: $siteWhite;
+                margin-left: 30px;
+                text-decoration: none;
+                margin-bottom: 0;
+                font-family: NeuReg;
+                font-size: 20px;
+            }
+            a:hover{
+                font-family: NeuBld;
+                text-decoration: underline;
+                font-size: 18px;
+                color: $btOrg;
+            }
+        }
     }
 }
 
 
-@media (max-width: 600px){
-    
-    .footer{
-        height: 330px;
-        display: grid;
-        grid-template-columns: 100px 100px;
-        grid-row: auto auto;
-        
-        .logo{
-            width: 100px;
-            height: 50px;
-            background-image: url(../Logo/IndianaAveLogo-wht.png);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-        
-    .footer-con{
-            height: 150px;
-        }
+@media (max-width: $mobileWidth){
+    footer{
+        height: 90vh;
 
-    .footer-icons{
-        height: 150px;
-        width: 100px;
-        grid-template-columns: 70px 70px;
-    }
-    }
+        .footer{
+            flex-direction: column;
 
-    
-    
-    
+            height: 100%;
+            margin: 0 auto;
+            width: 70vw;
+            padding: 80px;
+
+            align-content: center;
+
+            .logo{
+                margin: 0;
+            }
+
+            .footer-nav{
+                margin-right: 0;
+
+                a{
+                    margin-left: 0;
+                    align-self: end;
+                }
+            }
+        }
+    }
 }

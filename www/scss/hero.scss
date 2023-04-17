@@ -74,17 +74,15 @@
 @media (max-width: $mobileWidth){
     
     .hero{
-        height: 330px; 
+        height: 380px;
         margin: 10px auto 100px;
         width: 95vw;
 
-        .cen-content{
-            padding: 0 30px;
-            width: 100%;
-            text-align: left;
-            h1{
-                font-size: 40px;
-            }
+        .pageHeader{
+            width: fit-content;
+            margin: 10px auto;
+            padding: 0;
+            align-content: center;
         }
 
         .collage{
@@ -93,7 +91,7 @@
             width: 65%;
 
             position:absolute;
-            top: 140px;
+            top: 180px;
             left: 0px;
 
         }

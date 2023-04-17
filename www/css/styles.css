@@ -18,7 +18,7 @@ h1, h2, h3, h4, h5, h6, p {
   max-width: 1000px; }
 
 .pageHeader {
-  padding: 0 30px; }
+  padding-left: 30px; }
   .pageHeader h1 {
     filter: drop-shadow(0 5px 5px #644536);
     color: #FFF;
@@ -406,20 +406,19 @@ h1, h2, h3, h4, h5, h6, p {
 
 @media (max-width: 850px) {
   .hero {
-    height: 330px;
+    height: 380px;
     margin: 10px auto 100px;
     width: 95vw; }
-    .hero .cen-content {
-      padding: 0 30px;
-      width: 100%;
-      text-align: left; }
-      .hero .cen-content h1 {
-        font-size: 40px; }
+    .hero .pageHeader {
+      width: fit-content;
+      margin: 10px auto;
+      padding: 0;
+      align-content: center; }
     .hero .collage {
       height: 260px;
       width: 65%;
       position: absolute;
-      top: 140px;
+      top: 180px;
       left: 0px; }
     .hero .hero-text {
       width: 50%;
@@ -486,7 +485,9 @@ h1, h2, h3, h4, h5, h6, p {
         margin: 0 auto;
         width: 70%;
         text-align: justify;
-        margin-bottom: 10px; } }
+        margin-bottom: 10px; }
+      #about .about-con a {
+        position: relative; } }
 
 /*partials*/
 .nav-wrapper {
@@ -595,18 +596,6 @@ h1, h2, h3, h4, h5, h6, p {
         width: 110px;
         height: 45px;
         margin-left: 10px; }
-      .nav-wrapper-black .user-panel .ctrls .edit {
-        background-color: #8f8114; }
-      .nav-wrapper-black .user-panel .ctrls .edit:hover {
-        background-color: #6b600f; }
-      .nav-wrapper-black .user-panel .ctrls .save {
-        background-color: #227619; }
-      .nav-wrapper-black .user-panel .ctrls .save:hover {
-        background-color: #14430f; }
-      .nav-wrapper-black .user-panel .ctrls .delete {
-        background-color: #831d0b; }
-      .nav-wrapper-black .user-panel .ctrls .delete:hover {
-        background-color: #5e1608; }
 
 .nav-mobile-wrapper {
   padding: 10px 30px;
@@ -620,7 +609,7 @@ h1, h2, h3, h4, h5, h6, p {
     display: flex;
     flex-direction: column;
     justify-content: space-between; }
-    .nav-mobile-wrapper #ham-icon div {
+    .nav-mobile-wrapper #ham-icon .bar {
       width: 100%;
       height: 25%;
       border-radius: 38px;
@@ -646,10 +635,10 @@ h1, h2, h3, h4, h5, h6, p {
   position: absolute;
   top: 75px;
   left: 0;
-  height: 0px;
   width: 100%;
-  background-color: #a9cb67;
-  z-index: 99; }
+  background-color: rgba(179, 111, 59, 0.95);
+  z-index: 99;
+  padding-top: 20vh; }
   .mobile-menu li {
     list-style-type: none;
     margin: 20px; }
@@ -700,21 +689,34 @@ footer {
     footer .footer .logo {
       margin-left: 30px;
       width: 200px;
-      height: 100px;
+      height: 102px;
       background-image: url(../assets/Logo/IndianaAveLogo-wht.png);
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover; }
+    footer .footer .footer-icons {
+      width: 200px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      footer .footer .footer-icons i {
+        color: #FFF; }
+      footer .footer .footer-icons i:hover {
+        color: #f48026; }
+      footer .footer .footer-icons #icon {
+        height: 50px;
+        width: 50px;
+        background-color: aqua; }
     footer .footer .footer-nav {
       margin-right: 30px;
-      height: 200px;
       width: 138px;
       color: #FFF;
       display: flex;
       flex-direction: column;
       justify-content: space-between; }
       footer .footer .footer-nav h3 {
-        font-family: LM; }
+        font-family: LM;
+        margin-bottom: 10px; }
       footer .footer .footer-nav a {
         color: #FFF;
         margin-left: 30px;
@@ -727,36 +729,21 @@ footer {
         text-decoration: underline;
         font-size: 18px;
         color: #f48026; }
-    footer .footer .footer-icons {
-      width: 180px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center; }
-      footer .footer .footer-icons i {
-        color: #FFF; }
-      footer .footer .footer-icons i:hover {
-        color: #f48026; }
-      footer .footer .footer-icons #icon {
-        height: 50px;
-        width: 50px;
-        background-color: aqua; }
 
-@media (max-width: 600px) {
-  .footer {
-    height: 330px;
-    display: grid;
-    grid-template-columns: 100px 100px;
-    grid-row: auto auto; }
-    .footer .logo {
-      width: 100px;
-      height: 50px;
-      background-image: url(../Logo/IndianaAveLogo-wht.png);
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover; }
-    .footer .footer-con {
-      height: 150px; }
-    .footer .footer-icons {
-      height: 150px;
-      width: 100px;
-      grid-template-columns: 70px 70px; } }
+@media (max-width: 850px) {
+  footer {
+    height: 90vh; }
+    footer .footer {
+      flex-direction: column;
+      height: 100%;
+      margin: 0 auto;
+      width: 70vw;
+      padding: 80px;
+      align-content: center; }
+      footer .footer .logo {
+        margin: 0; }
+      footer .footer .footer-nav {
+        margin-right: 0; }
+        footer .footer .footer-nav a {
+          margin-left: 0;
+          align-self: end; } }

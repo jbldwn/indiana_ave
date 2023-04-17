@@ -39,9 +39,9 @@ if (isset($_SESSION['login'])
     <div class="hero">
         <div class="nav-mobile-wrapper">
             <div id="ham-icon" onclick="toggleMenu(this)">
-                <div class="bar1"></div>
-                <div class="bar2"></div>
-                <div class="bar3"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
                 <ul class="mobile-menu">
                     <li><a href="index.php">Home</a></li>
                     <li><a href="landmarks.php">Landmarks</a></li>

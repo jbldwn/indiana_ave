@@ -158,24 +158,24 @@
 
             }
 
-            .edit{
-                background-color: $editColor;
-            }
-            .edit:hover{
-                background-color: $editHoverColor;
-            }
-            .save{
-                background-color: $saveColor;
-            }
-            .save:hover{
-                background-color: $saveHoverColor;
-            }
-            .delete{
-                background-color: $deleteColor;
-            }
-            .delete:hover{
-                background-color: $deleteHoverColor;
-            }
+            //.edit{
+            //    background-color: $editColor;
+            //}
+            //.edit:hover{
+            //    background-color: $editHoverColor;
+            //}
+            //.save{
+            //    background-color: $saveColor;
+            //}
+            //.save:hover{
+            //    background-color: $saveHoverColor;
+            //}
+            //.delete{
+            //    background-color: $deleteColor;
+            //}
+            //.delete:hover{
+            //    background-color: $deleteHoverColor;
+            //}
         }
 
     }
@@ -183,9 +183,7 @@
 
 .nav-mobile-wrapper{
     padding: 10px 30px;
-    //height: 74px;
     width: 100%;
-    //background-color: $ltBrn;
     display: none;
     justify-content: space-between;
     align-items: center;
@@ -197,26 +195,22 @@
         flex-direction: column;
         justify-content: space-between;
 
-        div{
+        .bar{
             width: 100%;
             height: 25%;
             border-radius: 38px;
             background-color: $siteWhite;
-            //margin: 10px 0;
             transition: 0.4s;
-            //margin-left: 10px;
         }
     }
     .mobile-icon{
         width: 110px;
         height: 56px;
-        //margin-right: 10px;
         background-image: url(../assets/Logo/IndianaAveLogo-wht.png);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
-    
 }
 
 
@@ -235,25 +229,25 @@
     position: absolute;
     top: 75px;
     left: 0;
-    height: 0px;
     width: 100%;
-    background-color: $mdGrn;
+    background-color: $btOrgAA;
     z-index:99;
+    padding-top: 20vh;
     li{
         list-style-type: none;
         margin: 20px;
     }
+
     a{
         color: $siteWhite;
         font-size: 20px;
         font-family: LM;
         text-decoration: none;
-        
     }
+
     a:hover{
         font-family: LMB;
     }
-    
 }
 
 
@@ -269,10 +263,7 @@
         display: none;
     }
     
-
-    
     .nav-mobile-wrapper{
         display: flex;
     }
-    
 }
