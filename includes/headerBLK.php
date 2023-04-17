@@ -39,6 +39,7 @@ if (isset($_SESSION['login'])
             <div class="bar"></div>
             <ul class="mobile-menu">
                 <li><a href="index.php">Home</a></li>
+                <li><a href="index.php#about">About</a></li>
                 <li><a href="landmarks.php">Landmarks</a></li>
                 <li><a href="contact.php">Contact</a></li>
                 <li><a href="login.php">Login</a></li>
