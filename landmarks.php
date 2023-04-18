@@ -29,22 +29,32 @@ if (!$query) {
 }
 
 ?>
-<h1 id="ld-head">Landmarks</h1>
-<div class="ld">
-
-
-    <div class="ld-sites">
-        <h1 class="ld-body-head">Locations</h1>
-        <?php while($row = $query->fetch_assoc()) { ?>
-                <a style="text-decoration: none; color: black"  href="landmark-detail.php?location_id=<?= $row['location_id'] ?>">
-            <div id="site">
-                <div id="site-img"></div>
-                <h1 class="ld-site-head"><?= $row['location_name'] ?></h1>
-                <p class="ld-site-add"><?= $row['location_address'] ?></p>
-            </div>
-                </a>
-        <?php } ?>
+<section class="landmarks container">
+    <div class="header">
+        <h1 id="ld-head">Landmarks</h1>
+        <div class="ctrls">
+            <button class="save">
+                <i class="fa-solid fa-location-plus fa-xl"></i>
+                <span>Add Location</span>
+            </button>
+        </div>
     </div>
+    <div class="lists">
 
-</div>
+
+        <div class="ld-sites">
+            <h1 class="ld-body-head">Locations</h1>
+            <?php while($row = $query->fetch_assoc()) { ?>
+                    <a style="text-decoration: none; color: black"  href="landmark-detail.php?location_id=<?= $row['location_id'] ?>">
+                        <div id="site">
+                            <div id="site-img"></div>
+                            <h1 class="ld-site-head"><?= $row['location_name'] ?></h1>
+                            <p class="ld-site-add"><?= $row['location_address'] ?></p>
+                        </div>
+                    </a>
+            <?php } ?>
+        </div>
+
+    </div>
+</section>
 <?php require_once('includes/footer.php');?>
