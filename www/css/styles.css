@@ -3,7 +3,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  border: red solid 1px; }
 
 html, body {
   height: 100%; }
@@ -58,52 +59,48 @@ h1, h2, h3, h4, h5, h6, p {
     justify-content: center; } }
 
 /*pages*/
-.ld {
+.landmarks .lists {
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin-top: 100px; }
+  align-items: center; }
 
-#ld-head {
-  position: absolute;
-  top: 200px;
-  left: 100px;
+.landmarks #ld-head {
   font-family: LM; }
 
-.ld-map {
+.landmarks .ld-map {
   height: 600px;
   width: 500px;
   display: flex;
   flex-direction: column;
   margin: 10px; }
-  .ld-map #ld-map {
+  .landmarks .ld-map #ld-map {
     height: 100%;
     width: 100%;
     background-color: aqua; }
 
-.ld-body-head {
+.landmarks .ld-body-head {
   height: 30px;
   width: 100%;
   margin-bottom: 10px;
   font-family: LM; }
 
-.ld-sites {
+.landmarks .ld-sites {
   width: 500px;
   display: flex;
   flex-direction: column;
   justify-content: space-between; }
-  .ld-sites #site {
+  .landmarks .ld-sites #site {
     width: 100%;
     height: 200px; }
-    .ld-sites #site #site-img {
+    .landmarks .ld-sites #site #site-img {
       height: 150px;
       background-color: blue; }
-  .ld-sites .ld-site-head {
+  .landmarks .ld-sites .ld-site-head {
     height: 15px;
     font-size: 20px;
     font-family: LM; }
-  .ld-sites .ld-site-add {
+  .landmarks .ld-sites .ld-site-add {
     height: 15px;
     font-family: LM; }
 
@@ -111,14 +108,12 @@ h1, h2, h3, h4, h5, h6, p {
   .containter-landmarks {
     display: flex;
     flex-direction: column; }
-  #ld-head {
-    top: 100px; }
-  .ld {
+  .lists {
     flex-direction: column; }
-    .ld .ld-map {
+    .lists .ld-map {
       height: 300px;
       width: 350px; }
-    .ld .ld-sites {
+    .lists .ld-sites {
       height: 100%;
       width: 350px; } }
 
