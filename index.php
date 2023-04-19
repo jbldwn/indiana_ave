@@ -22,8 +22,8 @@ $row = $query->fetch_assoc();
 ?>
 
 <section id="about">
+    <div class="img"></div>
     <div class="container about">
-        <div class="about-img"></div>
         <div class="about-con">
             <h1 class="about-con-header">About US</h1>
             <p class="about-con-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc congue nisi vitae suscipit. Sed odio morbi quis commodo odio aenean sed adipiscing diam.
