@@ -49,11 +49,13 @@ $query = $conn->query($sql);
     <div class="gallery js-flickity"
          data-flickity-options='{ "wrapAround": true }'>
         <?php while($row = $query->fetch_assoc()) {?>
+        <a style="text-decoration: none; color: black"  href="landmark-detail.php?location_id=<?= $row['location_id'] ?>">
             <div class="gallery-cell">
                 <div id="site-img" style="background-image: url(<?= $row['photo_file'] ?>); background-size:cover; background-position: top;  background-repeat: no-repeat;"></div>
                 <div id="site-name" ><?= $row['location_name'] ?></div>
                 <div id="site-add"><?= $row['location_address'] ?></div>
             </div>
+        </a>
         <?php } ?>
 
     </div>
