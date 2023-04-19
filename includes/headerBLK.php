@@ -71,25 +71,45 @@ if (isset($_SESSION['login'])
                     ";
                 }
                 if ($role == 0 || $role == 1 || $role == 2) {
-                    //            echo "<span>basic user detected</span>";
-                    //        }else if($role==1){
-                    //            echo "<span>advanced user detected</span>";
-                    echo "
-            <a href='profile.php'>
-                <button class='edit'>
-                    <i class='fa-solid fa-user fa-xl'></i>
-                    <span class='label'>Profile</span>
-                </button>
-            </a>    
-            <a href='logout.php'>
-                <button class='delete'>
-                    <i class='fa-solid fa-right-from-bracket fa-xl'></i>
-                    <span class='label'>Logout</span>
-                </button>
-            </a>
-            </div>
-            ";
+                    if($page_title === 'Profile'){} else {echo "
+                                <a href='profile.php'>
+                                    <button class='edit'>
+                                        <i class='fa-solid fa-user fa-xl'></i>
+                                        <span class='label'>Profile</span>
+                                    </button>
+                                </a> 
+                            ";}
+                    echo "<a href='logout.php'>
+                                    <button class='delete'>
+                                        <i class='fa-solid fa-right-from-bracket fa-xl'></i>
+                                        <span class='label'>Logout</span>
+                                    </button>
+                                </a>
+                                </div>
+                            ";
                 }
+//                if ($role == 0 || $role == 1 || $role == 2) {
+//                    if(strpos($page_title, 'Profile') == false){
+//                        echo "
+//                            <a href='profile.php'>
+//                                <button class='edit'>
+//                                    <i class='fa-solid fa-user fa-xl'></i>
+//                                    <span class='label'>Profile</span>
+//                                </button>
+//                            </a> 
+//                        ";}
+//                    if(strpos($page_title, 'Edit') == false){
+//                        echo "<a href='logout.php'>
+//                                        <button class='delete'>
+//                                            <i class='fa-solid fa-right-from-bracket fa-xl'></i>
+//                                            <span class='label'>Logout</span>
+//                                        </button>
+//                                </a>
+//                            ";}
+//                }
+//
+//                echo "</div>";
+
             }
 
 

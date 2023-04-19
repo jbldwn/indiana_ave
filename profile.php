@@ -62,117 +62,65 @@ if (isset($_SESSION['admin_id'])
 ?>
 
 <section class="profile container">
-    <h1 class="header">Profile Details</h1>
+    <div class="header">
+        <h1 class="title">Profile Details:</h1>
+        <div class="ctrls">
+            <a href="profile_edit.php">
+                <button class="edit">
+                    <i class="fa-solid fa-user-pen fa-xl"></i>
+                    <span>edit</span>
+                </button>
+            </a>
+        </div>
+    </div>
     <div class="details">
         <div class="row">
-            <div class="name">
+            <div class="column">
                 <span class="label">First name:</span>
                 <span class="input"><?=$f_name?></span>
             </div>
-            <div class="name">
+            <div class="column">
                 <span class="label">Last name:</span>
                 <span class="input"><?=$l_name?></span>
             </div>
         </div>
         <div class="row">
-            <div class="name">
+            <div class="column">
                 <span class="label">Email:</span>
                 <span class="input"><?=$email?></span>
             </div>
-            <div class="name">
+            <div class="column">
                 <span class="label">Password:</span>
                 <span class="input">**********</span>
             </div>
         </div>
-<!--        <div class="name">-->
-<!--            <div class="row">-->
-<!--                <span class="Icon"></span>-->
-<!--                <span class="input">Create locations</span>-->
-<!--            </div>-->
-<!--            <div class="row">-->
-<!--                <span class="Icon"></span>-->
-<!--                <span class="input">Edit locations</span>-->
-<!--            </div>-->
-<!--            <div class="row">-->
-<!--                <span class="Icon"></span>-->
-<!--                <span class="input">Delete locations</span>-->
-<!--            </div>-->
-<!--            <div class="row">-->
-<!--                <span class="Icon"></span>-->
-<!--                <span class="input">Add new users</span>-->
-<!--            </div>-->
-<!--            <div class="row">-->
-<!--                <span class="Icon"></span>-->
-<!--                <span class="input">Modify user roles</span>-->
-<!--            </div>-->
-<!--        </div>-->
-
-        <div class="row">
-            <div class="name">
+        <div class="permissions">
+            <div class="label column">Permissions:</div>
+            <div class="column">
                 <div class="row">
-                    <span class="Icon"></span>
-                    <span class="input">Create locations</span>
+                    <i class="fa-solid fa-square-check fa-xl"></i>
+                    <span class="label">Create locations</span>
                 </div>
                 <div class="row">
-                    <span class="Icon"></span>
-                    <span class="input">Edit locations</span>
+                    <i class="fa-solid fa-square-check fa-xl"></i>
+                    <span class="label">Edit locations</span>
                 </div>
                 <div class="row">
-                    <span class="Icon"></span>
-                    <span class="input">Delete locations</span>
+                    <i class="fa-solid fa-square-xmark fa-xl"></i>
+                    <span class="label">Delete locations</span>
                 </div>
                 <div class="row">
-                    <span class="Icon"></span>
-                    <span class="input">Add new users</span>
+                    <i class="fa-solid fa-square-xmark fa-xl"></i>
+                    <span class="label">Add users</span>
                 </div>
                 <div class="row">
-                    <span class="Icon"></span>
-                    <span class="input">Modify user roles</span>
+                    <i class="fa-solid fa-square-xmark fa-xl"></i>
+                    <span class="label">Modify users</span>
                 </div>
             </div>
-            <div class="name"></div>
         </div>
-
     </div>
-    <?= $admin_id?>
-
 </section>
-<!--<section class="landmarks container">-->
-<!--    <h1 id="ld-head">Landmarks</h1>-->
-<!--    <div class="all-landmarks">-->
-<!--        <div class="header">-->
-<!--            <h1 class="ld-body-head">All Locations</h1>-->
-<!--            <div class="ctrls">-->
-<!--                <button class="save">-->
-<!--                    <div class="button-icon">-->
-<!--                        <i class="fa-solid fa-plus fa-l"></i>-->
-<!--                    </div>-->
-<!--                    <span>Add Location</span>-->
-<!--                </button>-->
-<!--            </div>-->
-<!--        </div>-->
-        <!--        list to hold all retrieved locations-->
-<!--        <div class="list">-->
-            <!--            creates a new link for each landmark from db-->
-<!--            --><?php //while($row = $query->fetch_assoc()) { ?>
-<!--                <a style="text-decoration: none; color: black"  href="landmark-detail.php?location_id=--><?//= $row['location_id'] ?><!--">-->
-<!--                    <div id="location_--><?//= $row['location_id']?><!--" class="location" style="background-image:linear-gradient(rgba(83, 73, 129, 0.5),rgba(83, 73, 129, 0.5)), url('www/assets/images/street.jpg')">-->
-<!---->
-                        <!--site-img is just holding space to showcase img applied to parent-->
-<!--                        <div class="site-img" ></div>-->
-<!--                        <div class="site-info">-->
-<!--                            <h1 class="loc_name">--><?//= $row['location_name'] ?><!--</h1>-->
-<!--                            <p class="address">--><?//= $row['location_address'] ?><!--</p>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </a>-->
-<!--            --><?php //} ?>
-<!--        </div>-->
-<!---->
-<!--    </div>-->
-<!---->
-<!--</section>-->
-
 <?php
 
     //close the connection

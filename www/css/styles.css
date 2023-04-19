@@ -3,7 +3,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  border: red solid 1px; }
 
 html, body {
   height: 100%; }
@@ -226,20 +227,80 @@ h1, h2, h3, h4, h5, h6, p {
   height: 300px;
   background-color: red; }
 
-.profile * {
-  margin: 0 30px; }
-
 .profile .header {
-  font-family: LM;
-  height: 50px;
-  padding: 1% 0;
-  font-size: 30px; }
+  padding: 0 30px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-content: baseline;
+  margin: 15px 0 20px; }
+  .profile .header .title {
+    margin-bottom: 0;
+    font-family: LM;
+    font-size: 24px; }
+  .profile .header .ctrls button {
+    padding: 0 15px;
+    height: 45px;
+    margin-left: 10px; }
+    .profile .header .ctrls button .button-icon {
+      width: 20px;
+      height: 20px;
+      border-radius: 10px;
+      background-color: #fff; }
+      .profile .header .ctrls button .button-icon i {
+        color: #227619;
+        margin: 25% auto; }
+    .profile .header .ctrls button span {
+      height: 20px; }
 
-.profile .details .row {
-  display: flex; }
-  .profile .details .row .name {
+.profile .details {
+  margin: 20px 0 50px; }
+  .profile .details .row {
     display: flex;
-    flex-direction: column; }
+    justify-content: space-between;
+    margin: 0 60px 10px; }
+    .profile .details .row .column {
+      width: 48%;
+      display: flex;
+      flex-direction: column; }
+      .profile .details .row .column .ctrls {
+        padding-top: 15%; }
+        .profile .details .row .column .ctrls button {
+          padding: 0 15px;
+          height: 45px;
+          margin-left: 80%; }
+          .profile .details .row .column .ctrls button .button-icon {
+            width: 20px;
+            height: 20px;
+            border-radius: 10px;
+            background-color: #fff; }
+            .profile .details .row .column .ctrls button .button-icon i {
+              color: #227619;
+              margin: 25% auto; }
+          .profile .details .row .column .ctrls button span {
+            height: 20px; }
+  .profile .details .permissions {
+    margin: 0 90px;
+    display: flex;
+    justify-content: space-between; }
+    .profile .details .permissions .column .row {
+      width: 100%;
+      margin-left: unset; }
+      .profile .details .permissions .column .row i {
+        padding-top: 5%; }
+  .profile .details .input {
+    font-family: NeuReg;
+    font-size: 24px; }
+  .profile .details .label {
+    font-family: LM;
+    font-size: 12px; }
+  .profile .details input {
+    border: solid 1px #f48026;
+    height: 30px;
+    border-radius: 15px;
+    padding: 15px; }
+  .profile .details label {
+    padding: 0 15px; }
 
 .login {
   margin-bottom: 50px;
