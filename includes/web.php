@@ -14,7 +14,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><? echo $page_title?></title>
+    <title><?= $page_title?></title>
     <link rel="stylesheet" href="www/css/styles.css">
     <script src="https://kit.fontawesome.com/d22db5bb67.js" crossorigin="anonymous"></script>
     <script src="./js/menu.js"></script>

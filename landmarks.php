@@ -19,8 +19,6 @@ $sql = "SELECT location_id, location_name, location_address, location_city, loca
 
 $query = $conn->query($sql);
 
-
-
 if (!$query) {
     $error = "Selection failed: " . $conn->error;
     $conn->close();
@@ -30,29 +28,15 @@ if (!$query) {
 
 ?>
 <section class="landmarks container">
-<!--    <div class="header">-->
-        <h1 id="ld-head">Landmarks</h1>
-<!--        <div class="ctrls">-->
-<!--            <button class="save">-->
-<!--                <i class="fa-solid fa-location-plus fa-xl"></i>-->
-<!--                <div class="button-icon">-->
-<!--                    <i class="fa-solid fa-plus fa-xl"></i>-->
-<!--                </div>-->
-<!--                <i class="fa-solid fa-circle-plus fa-xl"></i>-->
-<!--                <span>Add Location</span>-->
-<!--            </button>-->
-<!--        </div>-->
-<!--    </div>-->
+    <h1 id="ld-head">Landmarks</h1>
     <div class="all-landmarks">
         <div class="header">
             <h1 class="ld-body-head">All Locations</h1>
             <div class="ctrls">
                 <button class="save">
-                    <!--                <i class="fa-solid fa-location-plus fa-xl"></i>-->
                     <div class="button-icon">
                         <i class="fa-solid fa-plus fa-l"></i>
                     </div>
-                    <!--                <i class="fa-solid fa-circle-plus fa-xl"></i>-->
                     <span>Add Location</span>
                 </button>
             </div>
