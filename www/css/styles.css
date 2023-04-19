@@ -698,14 +698,16 @@ h1, h2, h3, h4, h5, h6, p {
 
 #site-name {
   width: 471px;
-  height: 79px;
-  background-color: blue;
+  height: 35px;
+  font-family: LM;
+  font-size: 25px;
 }
 
 #site-add {
   width: 471px;
   height: 79px;
-  background-color: aquamarine;
+  font-family: LM;
+  font-size: 25px;
 }
 
 @media (max-width: 600px) {
@@ -1360,6 +1362,7 @@ footer .footer .footer-nav a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
   width: 471px;
   height: 517px;
   margin-right: 10px;
