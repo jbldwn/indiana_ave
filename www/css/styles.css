@@ -27,8 +27,12 @@ h1, h2, h3, h4, h5, h6, p {
 
 .ctrls {
   display: flex;
+  justify-content: center;
   align-items: center; }
   .ctrls button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 38px;
     border: none;
     color: #FFF;
@@ -52,6 +56,8 @@ h1, h2, h3, h4, h5, h6, p {
     background-color: #5e1608; }
 
 @media (max-width: 850px) {
+  .ctrls {
+    display: none; }
   .container {
     width: 100vw;
     display: flex;
@@ -59,14 +65,12 @@ h1, h2, h3, h4, h5, h6, p {
     justify-content: center; } }
 
 /*pages*/
-.landmarks .lists {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-
 .landmarks #ld-head {
-  font-family: LM; }
+  font-family: LM;
+  margin: 0 30px;
+  height: 50px;
+  padding: 1% 0;
+  font-size: 30px; }
 
 .landmarks .ld-map {
   height: 600px;
@@ -79,42 +83,79 @@ h1, h2, h3, h4, h5, h6, p {
     width: 100%;
     background-color: aqua; }
 
-.landmarks .ld-body-head {
-  height: 30px;
+.landmarks .all-landmarks {
   width: 100%;
-  margin-bottom: 10px;
-  font-family: LM; }
-
-.landmarks .ld-sites {
-  width: 500px;
+  padding: 0 60px;
   display: flex;
   flex-direction: column;
   justify-content: space-between; }
-  .landmarks .ld-sites #site {
+  .landmarks .all-landmarks .header {
     width: 100%;
-    height: 200px; }
-    .landmarks .ld-sites #site #site-img {
-      height: 150px;
-      background-color: blue; }
-  .landmarks .ld-sites .ld-site-head {
-    height: 15px;
-    font-size: 20px;
-    font-family: LM; }
-  .landmarks .ld-sites .ld-site-add {
-    height: 15px;
-    font-family: LM; }
+    display: flex;
+    justify-content: space-between;
+    align-content: baseline;
+    margin: 15px 0 20px; }
+    .landmarks .all-landmarks .header .ld-body-head {
+      height: fit-content;
+      margin-bottom: 0;
+      font-family: LM;
+      font-size: 24px; }
+    .landmarks .all-landmarks .header .ctrls button {
+      width: 170px;
+      height: 45px;
+      margin-left: 10px; }
+      .landmarks .all-landmarks .header .ctrls button .button-icon {
+        width: 20px;
+        height: 20px;
+        border-radius: 10px;
+        background-color: #fff; }
+        .landmarks .all-landmarks .header .ctrls button .button-icon i {
+          color: #227619;
+          margin: 25% auto; }
+      .landmarks .all-landmarks .header .ctrls button span {
+        height: 20px; }
+  .landmarks .all-landmarks .list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 30px 0; }
+    .landmarks .all-landmarks .list a {
+      width: 100%;
+      margin: 0 0 30px 0; }
+      .landmarks .all-landmarks .list a .location {
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat; }
+        .landmarks .all-landmarks .list a .location .site-img {
+          height: 150px; }
+        .landmarks .all-landmarks .list a .location .site-info {
+          background-color: rgba(255, 255, 255, 0.75);
+          padding: 5px 20px; }
+          .landmarks .all-landmarks .list a .location .site-info .loc_name {
+            margin: 10px 0 5px 0;
+            font-size: 20px;
+            font-family: LM; }
+          .landmarks .all-landmarks .list a .location .site-info .address {
+            font-family: LM; }
+    .landmarks .all-landmarks .list a:hover .location .site-img {
+      background-image: linear-gradient(rgba(73, 63, 102, 0.5), rgba(73, 63, 102, 0.5)); }
+    .landmarks .all-landmarks .list a:hover .location .site-info {
+      background-image: linear-gradient(rgba(73, 63, 102, 0.5), rgba(73, 63, 102, 0.5)); }
 
 @media (max-width: 600px) {
   .containter-landmarks {
     display: flex;
     flex-direction: column; }
+  .all-landmarks {
+    height: 100%;
+    width: 350px; }
   .lists {
     flex-direction: column; }
     .lists .ld-map {
       height: 300px;
-      width: 350px; }
-    .lists .ld-sites {
-      height: 100%;
       width: 350px; } }
 
 .ld-detail {
@@ -514,7 +555,7 @@ h1, h2, h3, h4, h5, h6, p {
       background-repeat: no-repeat;
       background-size: cover; }
   .nav-white .web nav {
-    padding: 35px 0;
+    padding: 30px 0;
     border-bottom: solid 2px #FFF;
     display: flex;
     justify-content: space-between;
@@ -586,7 +627,7 @@ h1, h2, h3, h4, h5, h6, p {
     background-size: cover; }
 
 .nav-black .web nav {
-  padding: 35px 0;
+  padding: 30px 0;
   border-bottom: solid 2px #000;
   display: flex;
   justify-content: space-between;

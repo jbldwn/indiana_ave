@@ -1,70 +1,137 @@
 
+.landmarks{
 
-.ld{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 100px;
-   
-}
-#ld-head{
-        position: absolute;
-        top: 200px;
-        left: 100px;
+    #ld-head{
         font-family: LM;
+        margin: 0 30px;
+        height: 50px;
+        padding: 1% 0;
+        font-size: 30px;
     }
-.ld-map{
-    height: 600px;
-    width: 500px;
-    
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
 
-    #ld-map{
-        height: 100%;
-        width: 100%;
-        background-color: aqua;
-    }
-}
-.ld-body-head{
-        height: 30px;
-        width: 100%;
-        margin-bottom: 10px;
-        font-family: LM;
-    }
-.ld-sites{
 
-    width: 500px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    .ld-map{
+        height: 600px;
+        width: 500px;
 
-    #site{
-        width: 100%;
-        height: 200px;
-        
-        #site-img{
-            height: 150px;
-            background-color: blue;
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+
+        #ld-map{
+            height: 100%;
+            width: 100%;
+            background-color: aqua;
         }
-        
-        
     }
-.ld-site-head{
-          height: 15px;
-          font-size: 20px;
-        font-family: LM;
+
+    .all-landmarks{
+        width: 100%;
+        padding: 0 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .header{
+            //height: 50px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-content: baseline;
+            margin: 15px 0 20px;
+
+            .ld-body-head{
+                //height: 30px;
+                height: fit-content;
+                //align-self: baseline;
+                //width: 100%;
+                margin-bottom: 0;
+                font-family: LM;
+                font-size: 24px;
+            }
+
+            .ctrls button{
+                    width: 170px;
+                    height: 45px;
+                    margin-left: 10px;
+
+                    .button-icon{
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 10px;
+                        background-color: #fff;
+
+                        i{
+                            color: $saveColor;
+                            margin: 25% auto;
+                        }
+
+                    }
+                    span{
+                        //height: 75%;
+                        //padding-top: 50%;
+                        height: 20px;
+                        //margin-top: 5%;
+
+                    }
+                }
+
         }
-.ld-site-add{
-    height: 15px;
-    font-family: LM;
-    
+
+        .list{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0 0 30px 0;
+
+            a{
+                width: 100%;
+                margin: 0 0 30px 0;
+
+                .location{
+                    width: 100%;
+
+                    //for the image added with php
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+
+                    .site-img{
+                        height: 150px;
+                    }
+                    .site-info{
+                        background-color: $siteWhiteA;
+                        padding: 5px 20px;
+
+                        .loc_name{
+                            margin: 10px 0 5px 0;
+                            font-size: 20px;
+                            font-family: LM;
+                        }
+                        .address{
+                            font-family: LM;
+                        }
+                    }
+                }
+            }
+            a:hover{
+                .location{
+                    .site-img{
+                        background-image: linear-gradient($ltdrkBluA,$ltdrkBluA);
+                    }
+                    .site-info{
+                        background-image: linear-gradient($ltdrkBluA,$ltdrkBluA);
+                        //color: $ltBlu;
+                    }
+
+                }
+            }
+        }
+    }
 }
 
-
-}
 
 @media (max-width: 600px){
     
@@ -74,10 +141,15 @@
     }
 
     #ld-head{
-        top: 100px;
+        //top: 100px;
+    }
+    .all-landmarks{
+        height: 100%;
+        width: 350px;
     }
 
-    .ld{
+
+    .lists{
         flex-direction: column;
 
         .ld-map{
@@ -85,9 +157,5 @@
             width: 350px;
         }
 
-        .ld-sites{
-            height: 100%;
-            width: 350px;
-        }
     }
 }
