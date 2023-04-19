@@ -9,12 +9,24 @@ $page_title = "Home";
 //header
 require_once('includes/web.php');
 require_once('includes/header.php');
+require_once ('includes/database.php');
 
+$sql = "SELECT *
+ FROM $tblLocations, $tblPhotos
+ WHERE locations.location_id = photos.location_id";
+
+$query = $conn->query($sql);
+
+
+for ($i = 0; $i < 3; $i++){
+    $row = $query->fetch_assoc();
+    sleep(5);
+}
 ?>
 
 <section id="about">
-    <div class="img"></div>
     <div class="container about">
+        <div class="about-img"></div>
         <div class="about-con">
             <h1 class="about-con-header">About US</h1>
             <p class="about-con-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc congue nisi vitae suscipit. Sed odio morbi quis commodo odio aenean sed adipiscing diam.
@@ -37,9 +49,9 @@ require_once('includes/header.php');
 <div class="home-sites">
     <h1 id="sites-head">Featured Sites</h1>
     <div class="site">
-        <div id="site-img"></div>
-        <div id="site-name"></div>
-        <div id="site-add"></div>
+        <div id="site-img" style="background-image: url(<?= $row['photo_file'] ?>); background-size:cover; background-position: top;  background-repeat: no-repeat;"></div>
+        <div id="site-name" style="color: red"><?= $row['location_name'] ?></div>
+        <div id="site-add"><?= $row['location_address'] ?></div>
     </div>
 </div>
 
