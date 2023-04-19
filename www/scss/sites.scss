@@ -1,44 +1,51 @@
 .home-sites{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+
+
 
     #sites-head{
         color: rgb(11, 3, 45);
         font-family: LM;
         font-size: 50px;
+        position: relative;
+        left: 500px;
     }
+}
+
+.list-sites{
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 .site{
     display: flex;
-    flex-direction: column;
+
     align-items: center;
     width: 471px;
     height: 517px;
     background-color: red;
 
-    #site-img{
-        height: 359px;
-        width: 471px;
-        background-color: antiquewhite;
-    }
 
-    #site-name{
-        width: 471px;
-        height: 79px;
-        background-color: black;
-    }
-
-    #site-add{
-        width: 471px;
-        height: 79px;
-        background-color: aquamarine;
-    }
+}
+#site-img{
+    height: 359px;
+    width: 471px;
+    background-color: antiquewhite;
 }
 
+#site-name{
+    width: 471px;
+    height: 79px;
+    background-color: blue;
+}
+
+#site-add{
+    width: 471px;
+    height: 79px;
+    background-color: aquamarine;
+}
 @media (max-width: 600px){
     
     .home-sites{

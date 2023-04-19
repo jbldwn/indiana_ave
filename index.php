@@ -17,7 +17,6 @@ $sql = "SELECT *
 
 $query = $conn->query($sql);
 
-$row = $query->fetch_assoc();
 
 ?>
 
@@ -45,10 +44,18 @@ $row = $query->fetch_assoc();
 
 <div class="home-sites">
     <h1 id="sites-head">Featured Sites</h1>
-    <div class="site">
-        <div id="site-img" style="background-image: url(<?= $row['photo_file'] ?>); background-size:cover; background-position: top;  background-repeat: no-repeat;"></div>
-        <div id="site-name" style="color: red"><?= $row['location_name'] ?></div>
-        <div id="site-add"><?= $row['location_address'] ?></div>
+
+    <!-- Flickity HTML init -->
+    <div class="gallery js-flickity"
+         data-flickity-options='{ "wrapAround": true }'>
+        <?php while($row = $query->fetch_assoc()) {?>
+            <div class="gallery-cell">
+                <div id="site-img" style="background-image: url(<?= $row['photo_file'] ?>); background-size:cover; background-position: top;  background-repeat: no-repeat;"></div>
+                <div id="site-name" ><?= $row['location_name'] ?></div>
+                <div id="site-add"><?= $row['location_address'] ?></div>
+            </div>
+        <?php } ?>
+
     </div>
 </div>
 

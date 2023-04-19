@@ -18,5 +18,7 @@
     <link rel="stylesheet" href="www/css/styles.css">
     <script src="https://kit.fontawesome.com/d22db5bb67.js" crossorigin="anonymous"></script>
     <script src="./js/menu.js"></script>
+    <link rel="stylesheet" href="./www/css/flickity.css" media="screen">
+    <script src="./js/flickity.pkgd.min.js"></script>
 </head>
 <body>
