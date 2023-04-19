@@ -30,31 +30,52 @@ if (!$query) {
 
 ?>
 <section class="landmarks container">
-    <div class="header">
+<!--    <div class="header">-->
         <h1 id="ld-head">Landmarks</h1>
-        <div class="ctrls">
-            <button class="save">
-                <i class="fa-solid fa-location-plus fa-xl"></i>
-                <span>Add Location</span>
-            </button>
+<!--        <div class="ctrls">-->
+<!--            <button class="save">-->
+<!--                <i class="fa-solid fa-location-plus fa-xl"></i>-->
+<!--                <div class="button-icon">-->
+<!--                    <i class="fa-solid fa-plus fa-xl"></i>-->
+<!--                </div>-->
+<!--                <i class="fa-solid fa-circle-plus fa-xl"></i>-->
+<!--                <span>Add Location</span>-->
+<!--            </button>-->
+<!--        </div>-->
+<!--    </div>-->
+    <div class="all-landmarks">
+        <div class="header">
+            <h1 class="ld-body-head">All Locations</h1>
+            <div class="ctrls">
+                <button class="save">
+                    <!--                <i class="fa-solid fa-location-plus fa-xl"></i>-->
+                    <div class="button-icon">
+                        <i class="fa-solid fa-plus fa-l"></i>
+                    </div>
+                    <!--                <i class="fa-solid fa-circle-plus fa-xl"></i>-->
+                    <span>Add Location</span>
+                </button>
+            </div>
         </div>
-    </div>
-    <div class="lists">
-
-
-        <div class="ld-sites">
-            <h1 class="ld-body-head">Locations</h1>
+<!--        list to hold all retrieved locations-->
+        <div class="list">
+<!--            creates a new link for each landmark from db-->
             <?php while($row = $query->fetch_assoc()) { ?>
-                    <a style="text-decoration: none; color: black"  href="landmark-detail.php?location_id=<?= $row['location_id'] ?>">
-                        <div id="site">
-                            <div id="site-img"></div>
-                            <h1 class="ld-site-head"><?= $row['location_name'] ?></h1>
-                            <p class="ld-site-add"><?= $row['location_address'] ?></p>
-                        </div>
-                    </a>
-            <?php } ?>
+            <a style="text-decoration: none; color: black"  href="landmark-detail.php?location_id=<?= $row['location_id'] ?>">
+                <div id="location_<?= $row['location_id']?>" class="location" style="background-image:linear-gradient(rgba(83, 73, 129, 0.5),rgba(83, 73, 129, 0.5)), url('www/assets/images/street.jpg')">
+
+                    <!--site-img is just holding space to showcase img applied to parent-->
+                    <div class="site-img" ></div>
+                    <div class="site-info">
+                        <h1 class="loc_name"><?= $row['location_name'] ?></h1>
+                        <p class="address"><?= $row['location_address'] ?></p>
+                    </div>
+                </div>
+            </a>
+        <?php } ?>
         </div>
 
     </div>
+
 </section>
 <?php require_once('includes/footer.php');?>
