@@ -17,11 +17,8 @@ $sql = "SELECT *
 
 $query = $conn->query($sql);
 
+$row = $query->fetch_assoc();
 
-for ($i = 0; $i < 3; $i++){
-    $row = $query->fetch_assoc();
-    sleep(5);
-}
 ?>
 
 <section id="about">
