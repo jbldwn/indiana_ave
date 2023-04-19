@@ -65,19 +65,73 @@ if (isset($_SESSION['admin_id'])
     <h1 class="header">Profile Details</h1>
     <div class="details">
         <div class="row">
-            <div class="first">
-                <span>First name:</span>
-                <span><?=$f_name?></span>
+            <div class="name">
+                <span class="label">First name:</span>
+                <span class="input"><?=$f_name?></span>
             </div>
-            <div class="last">
-                <span>Last name:</span>
-                <span><?=$l_name?></span>
+            <div class="name">
+                <span class="label">Last name:</span>
+                <span class="input"><?=$l_name?></span>
             </div>
-
         </div>
-        <div class="row"></div>
-        <div class="row"></div>
-        <div class="row"></div>
+        <div class="row">
+            <div class="name">
+                <span class="label">Email:</span>
+                <span class="input"><?=$email?></span>
+            </div>
+            <div class="name">
+                <span class="label">Password:</span>
+                <span class="input">**********</span>
+            </div>
+        </div>
+<!--        <div class="name">-->
+<!--            <div class="row">-->
+<!--                <span class="Icon"></span>-->
+<!--                <span class="input">Create locations</span>-->
+<!--            </div>-->
+<!--            <div class="row">-->
+<!--                <span class="Icon"></span>-->
+<!--                <span class="input">Edit locations</span>-->
+<!--            </div>-->
+<!--            <div class="row">-->
+<!--                <span class="Icon"></span>-->
+<!--                <span class="input">Delete locations</span>-->
+<!--            </div>-->
+<!--            <div class="row">-->
+<!--                <span class="Icon"></span>-->
+<!--                <span class="input">Add new users</span>-->
+<!--            </div>-->
+<!--            <div class="row">-->
+<!--                <span class="Icon"></span>-->
+<!--                <span class="input">Modify user roles</span>-->
+<!--            </div>-->
+<!--        </div>-->
+
+        <div class="row">
+            <div class="name">
+                <div class="row">
+                    <span class="Icon"></span>
+                    <span class="input">Create locations</span>
+                </div>
+                <div class="row">
+                    <span class="Icon"></span>
+                    <span class="input">Edit locations</span>
+                </div>
+                <div class="row">
+                    <span class="Icon"></span>
+                    <span class="input">Delete locations</span>
+                </div>
+                <div class="row">
+                    <span class="Icon"></span>
+                    <span class="input">Add new users</span>
+                </div>
+                <div class="row">
+                    <span class="Icon"></span>
+                    <span class="input">Modify user roles</span>
+                </div>
+            </div>
+            <div class="name"></div>
+        </div>
 
     </div>
     <?= $admin_id?>
