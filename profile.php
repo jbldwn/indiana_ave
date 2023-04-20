@@ -64,14 +64,6 @@ if (isset($_SESSION['admin_id'])
 <section class="profile container">
     <div class="header">
         <h1 class="title">Profile Details:</h1>
-        <div class="ctrls">
-            <a href="profile_edit.php">
-                <button class="edit">
-                    <i class="fa-solid fa-user-pen fa-xl"></i>
-                    <span>edit</span>
-                </button>
-            </a>
-        </div>
     </div>
     <div class="details">
         <div class="row">
@@ -94,29 +86,38 @@ if (isset($_SESSION['admin_id'])
                 <span class="input">**********</span>
             </div>
         </div>
-        <div class="permissions">
-            <div class="label column">Permissions:</div>
-            <div class="column">
-                <div class="row">
+        <div class="row">
+
+            <div class="permissions">
+                <div class="label">Permissions:</div>
+                <div class="permission yes">
                     <i class="fa-solid fa-square-check fa-xl"></i>
                     <span class="label">Create locations</span>
                 </div>
-                <div class="row">
+                <div class="permission yes">
                     <i class="fa-solid fa-square-check fa-xl"></i>
                     <span class="label">Edit locations</span>
                 </div>
-                <div class="row">
+                <div class="permission no">
                     <i class="fa-solid fa-square-xmark fa-xl"></i>
                     <span class="label">Delete locations</span>
                 </div>
-                <div class="row">
+                <div class="permission no">
                     <i class="fa-solid fa-square-xmark fa-xl"></i>
                     <span class="label">Add users</span>
                 </div>
-                <div class="row">
+                <div class="permission no">
                     <i class="fa-solid fa-square-xmark fa-xl"></i>
                     <span class="label">Modify users</span>
                 </div>
+            </div>
+            <div class="ctrls">
+                <a href="profile_edit.php">
+                    <button class="edit">
+                        <i class="fa-solid fa-user-pen fa-xl"></i>
+                        <span>edit</span>
+                    </button>
+                </a>
             </div>
         </div>
     </div>

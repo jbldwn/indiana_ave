@@ -4,6 +4,7 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  border: red solid 1px;
 }
 
 html, body {
@@ -378,24 +379,6 @@ h1, h2, h3, h4, h5, h6, p {
   font-family: LM;
   font-size: 24px;
 }
-.profile .header .ctrls button {
-  padding: 0 15px;
-  height: 45px;
-  margin-left: 10px;
-}
-.profile .header .ctrls button .button-icon {
-  width: 20px;
-  height: 20px;
-  border-radius: 10px;
-  background-color: #fff;
-}
-.profile .header .ctrls button .button-icon i {
-  color: rgb(34, 118, 25);
-  margin: 25% auto;
-}
-.profile .header .ctrls button span {
-  height: 20px;
-}
 .profile .details {
   margin: 20px 0 50px;
 }
@@ -439,21 +422,50 @@ h1, h2, h3, h4, h5, h6, p {
 .profile .details .row .column .ctrls button span {
   height: 20px;
 }
-.profile .details .permissions {
-  margin: 0 90px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+.profile .details .row .permissions {
+  width: 48%;
 }
-.profile .details .permissions .column .row {
-  width: 100%;
-  margin-left: unset;
+.profile .details .row .permissions .label {
+  margin-bottom: 15px;
 }
-.profile .details .permissions .column .row i {
-  padding-top: 5%;
+.profile .details .row .permissions .permission {
+  margin: 0 0 10px 30px;
+}
+.profile .details .row .permissions .permission i {
+  margin-top: 1%;
+  height: 50%;
+}
+.profile .details .row .permissions .permission .yes {
+  color: rgb(34, 118, 25);
+}
+.profile .details .row .permissions .permission .no {
+  color: rgb(131, 29, 11);
+}
+.profile .details .row .ctrls {
+  position: relative;
+}
+.profile .details .row .ctrls a {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.profile .details .row .ctrls a button {
+  padding: 0 15px;
+  height: 45px;
+  margin-left: 10px;
+}
+.profile .details .row .ctrls a button .button-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+.profile .details .row .ctrls a button .button-icon i {
+  color: rgb(34, 118, 25);
+  margin: 25% auto;
+}
+.profile .details .row .ctrls a button span {
+  height: 20px;
 }
 .profile .details .input {
   font-family: NeuReg;

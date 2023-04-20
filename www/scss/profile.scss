@@ -13,27 +13,6 @@
       font-size: 24px;
     }
 
-    .ctrls button{
-      padding: 0 15px;
-      height: 45px;
-      margin-left: 10px;
-
-      .button-icon{
-        width: 20px;
-        height: 20px;
-        border-radius: 10px;
-        background-color: #fff;
-
-        i{
-          color: $saveColor;
-          margin: 25% auto;
-        }
-
-      }
-      span{
-        height: 20px;
-      }
-    }
   }
   .details{
     margin: 20px 0 50px;
@@ -73,23 +52,58 @@
         }
         }
       }
-    }
-
-    .permissions{
-      margin: 0 90px;
-      display: flex;
-      justify-content: space-between;
-      .column{
-        .row{
-          width: 100%;
-          margin-left:unset;
+      .permissions{
+        width: 48%;
+        .label{
+          margin-bottom: 15px;
+        }
+        .permission{
+          margin: 0 0  10px 30px;
           i{
-            padding-top: 5%;
+            margin-top: 1%;
+            height:50%;
           }
+          .yes{
+            color: $saveColor;
+          }
+          .no{
+            color:$deleteColor;
+          }
+        }
+      }
+      .ctrls{
+        //width:48%;
+        position: relative;
+        a{
+          position: absolute;
+          right: 0;
+          bottom:0;
+          button {
+            padding: 0 15px;
+            height: 45px;
+            margin-left: 10px;
 
+            .button-icon {
+              width: 20px;
+              height: 20px;
+              border-radius: 10px;
+              background-color: #fff;
+
+              i {
+                color: $saveColor;
+                margin: 25% auto;
+              }
+
+            }
+
+            span {
+              height: 20px;
+            }
+          }
         }
       }
     }
+
     .input{
       font-family: NeuReg;
       font-size: 24px;
