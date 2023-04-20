@@ -662,7 +662,7 @@ h1, h2, h3, h4, h5, h6, p {
   font-family: LM;
   font-size: 50px;
   position: relative;
-  left: 500px;
+  left: 0px;
 }
 
 .list-sites {
@@ -711,9 +711,6 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 @media (max-width: 600px) {
-  .home-sites {
-    margin-top: 50px;
-  }
   .home-sites #sites-head {
     font-size: 40px;
   }
