@@ -53,7 +53,7 @@ $row = $query->fetch_assoc();
         <div class="ld-audio"></div>
         <div class="ld-chapter-detail"><?= $row['chapter_content'] ?></div>
     </div>
-
+    <a style="text-decoration: none; color: black"  href="qr-code.php?location_id=<?= $row['location_id'] ?>">Here</a>
 
 </div>
 
