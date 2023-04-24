@@ -16,6 +16,7 @@ $database = "indiana_ave";
 $tblLocations = "locations";
 $tblChapters = "chapters";
 $tblPhotos = "photos";
+$tblAudios = "audios";
 
 //Connect to the mysql server
 $conn = @new mysqli($host, $login, $password, $database);

@@ -22,14 +22,20 @@ $sql_photos = "SELECT *
  FROM  $tblPhotos
  WHERE photos.location_id=$id AND photos.chapter_id=$id";
 
+$sql_audio = "SELECT *
+ FROM  $tblChapters, $tblAudios
+ WHERE chapters.chapter_location = audios.chapter_id";
+
 
 $query = $conn->query($sql);
 
 $query_photos = $conn->query($sql_photos);
 
+$query_audios = $conn->query($sql_audio);
+
 $row = $query->fetch_assoc();
 
-
+$row_audio = $query_audios->fetch_assoc();
 
 ?>
 
@@ -47,6 +53,7 @@ $row = $query->fetch_assoc();
     <?php } ?>
 </div>
 
+<p><?= $row_audio['audio_file'] ?></p>
 
 <a href="landmark-detail.php?location_id=<?= $row['location_id'] ?>" >
     <button class="qr-button">
