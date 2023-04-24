@@ -33,27 +33,27 @@ $row = $query->fetch_assoc();
 
 ?>
 
-
+<body class="qr-body">
 <h1 id="qr-head"><?= $row['location_name'] ?></h1>
 
 <div class="gallery js-flickity"
      data-flickity-options='{ "wrapAround": true }'>
     <?php while($row_photos = $query_photos->fetch_assoc()) {?>
-    <div class="gallery-cell">
-        <div id="site-img" style="background-image: url(<?= $row_photos['photo_file'] ?>); background-size:cover; background-position: top;  background-repeat: no-repeat;"></div>
-        <p><?= $row_photos['photo_year'] ?></p>
-        <h1 id="qr-head"><?= $row_photos['photo_id'] ?></h1>
+    <div class="gallery-cell2">
+        <div id="qr-img" style="background-image: url(<?= $row_photos['photo_file'] ?>); background-size:cover; background-position: top;  background-repeat: no-repeat;"></div>
+        <p class="qr-des"><?= $row_photos['photo_description'] ?></p>
+        <p class="qr-year"><?= $row_photos['photo_year'] ?></p>
     </div>
     <?php } ?>
 </div>
-<p ><?= $row['chapter_content'] ?></p>
+
 
 <a href="landmark-detail.php?location_id=<?= $row['location_id'] ?>" >
     <button class="qr-button">
         Learn More
     </button>
 </a>
-
+</body>
 
 
 <?php  ?>
