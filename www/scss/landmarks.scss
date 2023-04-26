@@ -33,49 +33,40 @@
         justify-content: space-between;
 
         .header{
-            //height: 50px;
             width: 100%;
             display: flex;
             justify-content: space-between;
-            align-content: baseline;
+            align-content: center;
             margin: 15px 0 20px;
 
             .ld-body-head{
-                //height: 30px;
-                height: fit-content;
-                //align-self: baseline;
-                //width: 100%;
+                align-self: baseline;
                 margin-bottom: 0;
                 font-family: LM;
                 font-size: 24px;
             }
 
             .ctrls button{
-                    width: 170px;
-                    height: 45px;
-                    margin-left: 10px;
+                width: 170px;
+                height: 45px;
+                margin-left: 10px;
 
-                    .button-icon{
-                        width: 20px;
-                        height: 20px;
-                        border-radius: 10px;
-                        background-color: #fff;
+                .button-icon{
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 10px;
+                    background-color: #fff;
 
-                        i{
-                            color: $saveColor;
-                            margin: 25% auto;
-                        }
-
+                    i{
+                        color: $saveColor;
+                        margin: 25% auto;
                     }
-                    span{
-                        //height: 75%;
-                        //padding-top: 50%;
-                        height: 20px;
-                        //margin-top: 5%;
 
-                    }
                 }
-
+                span{
+                    height: 20px;
+                }
+            }
         }
 
         .list{
@@ -123,9 +114,7 @@
                     }
                     .site-info{
                         background-image: linear-gradient($ltdrkBluA,$ltdrkBluA);
-                        //color: $ltBlu;
                     }
-
                 }
             }
         }
@@ -134,20 +123,16 @@
 
 
 @media (max-width: 600px){
-    
+
     .containter-landmarks{
         display: flex;
         flex-direction: column;
     }
 
-    #ld-head{
-        //top: 100px;
-    }
     .all-landmarks{
         height: 100%;
         width: 350px;
     }
-
 
     .lists{
         flex-direction: column;
@@ -156,6 +141,5 @@
             height: 300px;
             width: 350px;
         }
-
     }
 }
