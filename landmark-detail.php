@@ -7,8 +7,8 @@
  * Description:
  */
 
-require_once('includes/headerBLK.php');
 require_once('includes/web.php');
+require_once('includes/headerBLK.php');
 require 'includes/database.php';
 
 $id = filter_input(INPUT_GET, "location_id", FILTER_SANITIZE_NUMBER_INT);
@@ -21,9 +21,7 @@ $sql = "SELECT *
 $sql_photos = "SELECT *
  FROM  $tblPhotos
  WHERE photos.location_id=$id AND photos.chapter_id=$id";
-//$sql = "SELECT location_id, location_name, location_address, location_city, location_state, location_zip,
-//       category_id, creator_admin_id, last_editor_admin_id, last_updated, location_description, location_current, location_historical
-// FROM  $tblLocations WHERE location_id = $id";
+
 $query_photos = $conn->query($sql_photos);
 
 $query = $conn->query($sql);
@@ -32,7 +30,27 @@ $row = $query->fetch_assoc();
 
 $row_photos = $query_photos->fetch_assoc();
 
+
+$page_title = $row['location_name'];
+
 ?>
+
+<section class="landmark-details container">
+    <div class="header">
+        <h1 class="title"><?= $row['location_name'] ?></h1>
+    </div>
+    <div class="location-data">
+        <div class="details half">
+            <h3 class="title">Details</h3>
+            <div id="site-img" style="background-image: url(<?= $row['photo_file'] ?>); background-size:cover; background-position: top;  background-repeat: no-repeat;"></div>
+            <h3 class="title"><?= $row['location_address'] ?></h3>
+            <h3 class="title"><?= $row['location_current'] ?></h3>
+            <h3 class="title"><?= $row['location_description'] ?></h3>
+        </div>
+        <div class="chapters half"></div>
+    </div>
+
+</section>
 
 <h1 id="ld-head"><?= $row['location_name'] ?></h1>
 <div class="ld">
