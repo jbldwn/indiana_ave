@@ -14,6 +14,7 @@ $login = "phpuser";
 $password = "phpuser";
 $database = "indiana_ave";
 $tblLocations = "locations";
+$tblAdministrators = "administrators";
 $tblChapters = "chapters";
 $tblPhotos = "photos";
 $tblAudios = "audios";

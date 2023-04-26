@@ -34,7 +34,6 @@ if (isset($_SESSION['admin_id'])
 <section class="profile container">
     <div class="header">
         <h1 class="title">Edit Profile Details:</h1>
-
     </div>
     <form method="post" class="details" action="profile_update.php">
         <div class="row">

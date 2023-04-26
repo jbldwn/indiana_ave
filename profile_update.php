@@ -5,12 +5,9 @@
  *File: profile_update.php
  *Description: update admin profile changes
  */
-
-$page_title = "Updated Profile";
-
-require_once 'includes/web.php';
-require_once 'includes/headerBLK.php';
+//initialize db
 require_once 'includes/database.php';
+
 
 //retrieve, sanitize, and escape user's input from a form
 $admin_id = $conn->real_escape_string(trim(filter_input(INPUT_POST, 'admin_id', FILTER_SANITIZE_NUMBER_INT)));
@@ -28,8 +25,23 @@ admin_email = '$email',
 admin_password = '$password',
 admin_role = '$role' WHERE admin_id='$admin_id'";
 
+//update session name
+$name = '';
+//setcookie('name', $name);
+if(isset($_SESSION['name'])){
+    $_SESSION['name']=$f_name;
+} else{
+    echo "nav name not reset";
+}
+
 //execute the query
 $query = @$conn->query($sql);
+
+//page
+$page_title = "Updated Profile";
+
+require_once 'includes/web.php';
+require_once 'includes/headerBLK.php';
 
 //handle error
 if(!$query) {

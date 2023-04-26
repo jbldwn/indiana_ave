@@ -24,7 +24,7 @@ if (filter_has_var(INPUT_POST, 'email') || filter_has_var(INPUT_POST, 'password'
     $password = $conn->real_escape_string(trim(filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING)));
 }
 
-//validate user name and password against a record in the users table in the database. If they are valid, create session variables.
+//validate username and password against a record in the users table in the database. If they are valid, create session variables.
 
 $sql = "SELECT * FROM administrators WHERE admin_email='$email' AND admin_password='$password'";
 
@@ -36,7 +36,7 @@ if  ($query ->num_rows){
     $_SESSION['login'] = $email;
     $_SESSION['role'] = $row['admin_role'];
     $_SESSION['admin_id'] = $row['admin_id'];
-    $_SESSION['name'] = $row['admin_first_name'] . " " . $row['admin_last_name'];
+    $_SESSION['name'] = $row['admin_first_name'];
     $_SESSION['login_status'] = 1;
 }
 

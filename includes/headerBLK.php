@@ -22,8 +22,6 @@ if (isset($_SESSION['login'])
     AND isset($_SESSION['role'])
     AND isset($_SESSION['admin_id'])
 ) {
-
-
     $login = $_SESSION['login'];
     $name = $_SESSION['name'];
     $role = $_SESSION['role'];
@@ -71,7 +69,7 @@ if (isset($_SESSION['login'])
                     ";
                 }
                 if ($role == 0 || $role == 1 || $role == 2) {
-                    if($page_title === 'Profile'){} else {echo "
+                    if($page_title !== 'Edit Profile'){echo "
                                 <a href='profile.php'>
                                     <button class='edit'>
                                         <i class='fa-solid fa-user fa-xl'></i>
@@ -80,13 +78,13 @@ if (isset($_SESSION['login'])
                                 </a> 
                             ";}
                     echo "<a href='logout.php'>
-                                    <button class='delete'>
-                                        <i class='fa-solid fa-right-from-bracket fa-xl'></i>
-                                        <span class='label'>Logout</span>
-                                    </button>
-                                </a>
-                                </div>
-                            ";
+                                <button class='delete'>
+                                    <i class='fa-solid fa-right-from-bracket fa-xl'></i>
+                                    <span class='label'>Logout</span>
+                                </button>
+                           </a>
+                        </div>
+                    ";
                 }
 //                if ($role == 0 || $role == 1 || $role == 2) {
 //                    if(strpos($page_title, 'Profile') == false){

@@ -203,22 +203,22 @@ INSERT INTO `locations` (`location_id`, `location_name`, `location_address`, `lo
 --
 DELIMITER $$
 CREATE TRIGGER `tr_locations_deleted` AFTER DELETE ON `locations` FOR EACH ROW BEGIN
-  INSERT INTO locations_deleted 
+  INSERT INTO locations_deleted
   VALUES (
-    OLD.location_id, 
-    OLD.location_name, 
-    OLD.address, 
-    OLD.city, 
-    OLD.state, 
-    OLD.zipcode, 
-    OLD.category_id, 
-    OLD.creator_admin_id, 
-    OLD.last_editor_admin_id, 
+    OLD.location_id,
+    OLD.location_name,
+    OLD.address,
+    OLD.city,
+    OLD.state,
+    OLD.zipcode,
+    OLD.category_id,
+    OLD.creator_admin_id,
+    OLD.last_editor_admin_id,
     NOW()
   );
-  
-  INSERT INTO chapters_deleted 
-  SELECT * FROM chapters 
+
+  INSERT INTO chapters_deleted
+  SELECT * FROM chapters
   WHERE chapter_location = OLD.location_id;
 END
 $$
