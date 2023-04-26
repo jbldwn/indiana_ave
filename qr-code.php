@@ -53,7 +53,11 @@ $row_audio = $query_audios->fetch_assoc();
     <?php } ?>
 </div>
 
-<p><?= $row_audio['audio_file'] ?></p>
+<p></p>
+
+<audio controls >
+    <source src="<?= $row_audio['audio_file'] ?>">
+</audio>
 
 <a href="landmark-detail.php?location_id=<?= $row['location_id'] ?>" >
     <button class="qr-button">

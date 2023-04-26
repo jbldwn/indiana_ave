@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
+-- version 5.2.0
+-- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 13, 2023 at 04:34 PM
--- Server version: 10.1.13-MariaDB
--- PHP Version: 7.0.8
+-- Generation Time: Apr 26, 2023 at 09:46 PM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -58,6 +59,13 @@ CREATE TABLE `audios` (
   `chapter_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `audios`
+--
+
+INSERT INTO `audios` (`audio_id`, `audio_file`, `chapter_id`) VALUES
+(1, 'www/assets/audios/Test.mp3', 1);
+
 -- --------------------------------------------------------
 
 --
@@ -97,7 +105,7 @@ CREATE TABLE `chapters` (
   `creator_admin_id` int(11) DEFAULT NULL,
   `last_editor_admin_id` int(11) DEFAULT NULL,
   `chapter_location` int(11) DEFAULT NULL,
-  `last_updated` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  `last_updated` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -116,7 +124,7 @@ INSERT INTO `chapters` (`chapter_id`, `chapter_title`, `chapter_content`, `creat
 (47, 'How it started', 'Barred from treating Black patients in city hospitals, Black surgeon and World War I veteran, Dr. Joseph Ward opened his Sanitarium and Nurses’ Training School at 722 Indiana Avenue around 1907. He convinced administrators at the segregated City Hospital to allow Black nurses to take courses alongside white students, opening professional opportunities to Black women, who were often relegated to manual labor. In addition to being entrepreneur Madam C.J. Walker’s personal physician, he and his wife, Zella, helped Walker get her start in business in Indianapolis, opening their property at 722 to her beauty culture demonstrations. In 1924, Ward became the first Black commander of the segregated Veterans Hospital No. 91 at Tuskegee, Alabama. His adept leadership challenged the Jim Crow Era perception that Black Americans were unfit to manage federal facilities.', 1, 2, 9, '2023-03-29 04:08:20'),
 (48, 'How it started', 'Established in 1846, Second Baptist Church was reportedly the first Black Baptist congregation established in Indianapolis. During its first few years, members met in a home near West and Ohio Street. The congregation established new churches in different parts of the city over the years, but met near 420-422 West Michigan Street for much of its history. ', 2, 2, 10, '2023-03-29 04:08:20'),
 (49, 'How it started', 'Founded in 1836, Bethel AME is considered the oldest Black church in the city of Indianapolis. It became a vital part of the Black community in the city not only for worship and education, but in aiding fugitive slaves and a site for Black state conventions and for recruiting U.S. Colored Troops during the Civil War.', 1, 1, 11, '2023-03-29 04:08:20'),
-(50, 'How it started', 'According to the Indianapolis Urban League, "The Urban League is the nation’s oldest and largest community-based movement devoted to empowering African Americans to enter the economic and social mainstream . . . The Indianapolis Urban League was founded in the fall of 1965 as a non-profit, non-partisan, interracial community-based social service/civil rights organization."', 1, 1, 12, '2023-03-29 04:08:20'),
+(50, 'How it started', 'According to the Indianapolis Urban League, \"The Urban League is the nation’s oldest and largest community-based movement devoted to empowering African Americans to enter the economic and social mainstream . . . The Indianapolis Urban League was founded in the fall of 1965 as a non-profit, non-partisan, interracial community-based social service/civil rights organization.\"', 1, 1, 12, '2023-03-29 04:08:20'),
 (51, 'How it started', 'The 1920 election was the first in which women could vote. Black women, of the predominately Black Fifth Ward, lined up to vote for the first time dressed in their finest clothing. Just as many women voted as men, mainly for a straight Republican ticket.', 1, 1, 13, '2023-03-29 04:08:20'),
 (52, 'How it started', 'Entrepreneur and philanthropist Madam Walker established her hair care manufacturing company and factory in 1910 at 640 North West Street. She expanded the factory by purchasing a parcel of land at 617 Indiana Avenue. After Walker’s 1919 death, company attorney Freeman B. Ransom finished acquisition of the property and worked with Walker’s daughter, A’Lelia, to construct a multiuse building. The four-story Walker Building, described as a “city within a city,” opened in 1927. In addition to the factory and corporate offices, the property housed medical offices, restaurants, a theatre, casino, and beauty shop. The Recorder described the building as “another monument to the undying genius of the race, which in spite of obstacles, in the face of adversity, presses forward acquiring property, piling up wealth and more and more are taking their rightful place alongside men of all races.” Amid Jim Crow segregation, the building served as a thriving venue for Black arts, commerce, and community events. In 2018, it was redesignated as the Madam Walker Legacy Center, which continues to support Black entrepreneurs, artists, and activists.   ', 2, 1, 14, '2023-03-29 04:08:20'),
 (53, 'How it started', 'Ransom Place grew into a thriving neighborhood for Indianapolis’s Black community in the late 1800s and early 1900s and paralleled the growth of nearby Indiana Avenue. In the 1960s, city leaders worked to systematically acquire many of the homes and lots in the area for IUPUI, leading to the displacement of much of the community. Community leaders have worked to revitalize the area and preserve its history.', 1, 1, 15, '2023-03-29 04:08:20'),
@@ -169,60 +177,32 @@ CREATE TABLE `locations` (
   `category_id` int(11) DEFAULT NULL,
   `creator_admin_id` int(11) DEFAULT NULL,
   `last_editor_admin_id` int(11) DEFAULT NULL,
-  `last_updated` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `location_description` varchar(100) DEFAULT NULL,
-  `location_current` varchar(100) DEFAULT NULL,
-  `location_historical` varchar(100) DEFAULT NULL
+  `last_updated` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `location_description` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `locations`
 --
 
-INSERT INTO `locations` (`location_id`, `location_name`, `location_address`, `location_city`, `location_state`, `location_zip`, `category_id`, `creator_admin_id`, `last_editor_admin_id`, `last_updated`, `location_description`, `location_current`, `location_historical`) VALUES
-(1, 'The 440 Club', '440 Indiana Avenue', 'Indianapolis', 'IN', '46203', 1, 1, 2, '2023-03-29 04:08:19', NULL, NULL, NULL),
-(2, 'Indiana Avenue Marker', '307 Indiana Ave', 'Indianapolis', 'IN', '46203', 1, 1, 1, '2023-03-29 04:08:19', NULL, NULL, NULL),
-(3, 'Senate Avenue YMCA', '420 North Senate Avenue', 'Indianapolis', 'IN', '46203', 2, 1, 1, '2023-03-29 04:08:19', NULL, NULL, NULL),
-(4, 'Phyllis Wheatley YWCA ', '653 North West Street ', 'Indianapolis', 'IN', '46201', 3, 1, 2, '2023-03-29 04:08:19', NULL, NULL, NULL),
-(5, 'Crispus Attucks 1955 Basketball Championship Parade Stop', 'West and Indiana Ave', 'Indianapolis', 'IN', '46203', 3, 1, 1, '2023-03-29 04:08:19', NULL, NULL, NULL),
-(6, 'Madam C.J. Walker''s Salon', '729 Indiana Avenue ', 'Indianapolis', 'IN', '46201', 4, 2, 2, '2023-03-29 04:08:19', NULL, NULL, NULL),
-(7, 'Willis Mortuary Site ', '632 Dr. Martin Luther King Jr. St. ', 'Indianapolis', 'IN', '46201', 4, 2, 1, '2023-03-29 04:08:19', NULL, NULL, NULL),
-(8, 'Hook''s Drug Store', '550 Indiana Avenue ', 'Indianapolis', 'IN', '46201', 4, 2, 2, '2023-03-29 04:08:19', NULL, NULL, NULL),
-(9, 'Ward’s Sanitarium and Nurses’ Training School', '729 Indiana Avenue ', 'Indianapolis', 'IN', '46201', 5, 2, 1, '2023-03-29 04:08:19', NULL, NULL, NULL),
-(10, 'Second Baptist Church', '422 West Michigan Street', 'Indianapolis', 'IN', '46201', 6, 1, 2, '2023-03-29 04:08:19', NULL, NULL, NULL),
-(11, 'Bethel AME', '414 West Vermont Street', 'Indianapolis', 'IN', '46201', 6, 2, 2, '2023-03-29 04:08:19', NULL, NULL, NULL),
-(12, 'Indianapolis Urban League ', '777 Indiana Ave', 'Indianapolis', 'IN', '46201', 7, 2, 2, '2023-03-29 04:08:19', NULL, NULL, NULL),
-(13, 'Polling Place', '904 Indiana Avenue ', 'Indianapolis', 'IN', '46201', 7, 2, 2, '2023-03-29 04:08:19', NULL, NULL, NULL),
-(14, 'Walker Theatre', '617 Indiana Avenue ', 'Indianapolis', 'IN', '46201', 7, 2, 1, '2023-03-29 04:08:19', NULL, NULL, NULL),
-(15, 'Ransom Place', '706 W. St. Clair St.', 'Indianapolis', 'IN', '46201', 8, 1, 1, '2023-03-29 04:08:19', NULL, NULL, NULL),
-(16, 'IUPUI / Displacement', '515 North Blackford Street', 'Indianapolis', 'IN', '46202', 8, 2, 1, '2023-03-29 04:08:19', NULL, NULL, NULL),
-(17, 'Indianapolis Recorder Building', '518 Indiana Avenue ', 'Indianapolis', 'IN', '46202', 9, 1, 2, '2023-03-29 04:08:19', NULL, NULL, NULL);
-
---
--- Triggers `locations`
---
-DELIMITER $$
-CREATE TRIGGER `tr_locations_deleted` AFTER DELETE ON `locations` FOR EACH ROW BEGIN
-  INSERT INTO locations_deleted 
-  VALUES (
-    OLD.location_id, 
-    OLD.location_name, 
-    OLD.address, 
-    OLD.city, 
-    OLD.state, 
-    OLD.zipcode, 
-    OLD.category_id, 
-    OLD.creator_admin_id, 
-    OLD.last_editor_admin_id, 
-    NOW()
-  );
-  
-  INSERT INTO chapters_deleted 
-  SELECT * FROM chapters 
-  WHERE chapter_location = OLD.location_id;
-END
-$$
-DELIMITER ;
+INSERT INTO `locations` (`location_id`, `location_name`, `location_address`, `location_city`, `location_state`, `location_zip`, `category_id`, `creator_admin_id`, `last_editor_admin_id`, `last_updated`, `location_description`) VALUES
+(1, 'The 440 Club', '440 Indiana Avenue', 'Indianapolis', 'IN', '46203', 1, 1, 2, '2023-04-26 19:43:03', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore '),
+(2, 'Indiana Avenue Marker', '307 Indiana Ave', 'Indianapolis', 'IN', '46203', 1, 1, 1, '2023-04-26 19:43:11', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore '),
+(3, 'Senate Avenue YMCA', '420 North Senate Avenue', 'Indianapolis', 'IN', '46203', 2, 1, 1, '2023-04-26 19:42:49', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore '),
+(4, 'Phyllis Wheatley YWCA ', '653 North West Street ', 'Indianapolis', 'IN', '46201', 3, 1, 2, '2023-04-26 19:43:23', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore '),
+(5, 'Crispus Attucks 1955 Basketball Championship Parade Stop', 'West and Indiana Ave', 'Indianapolis', 'IN', '46203', 3, 1, 1, '2023-03-29 04:08:19', NULL),
+(6, 'Madam C.J. Walker\'s Salon', '729 Indiana Avenue ', 'Indianapolis', 'IN', '46201', 4, 2, 2, '2023-03-29 04:08:19', NULL),
+(7, 'Willis Mortuary Site ', '632 Dr. Martin Luther King Jr. St. ', 'Indianapolis', 'IN', '46201', 4, 2, 1, '2023-03-29 04:08:19', NULL),
+(8, 'Hook\'s Drug Store', '550 Indiana Avenue ', 'Indianapolis', 'IN', '46201', 4, 2, 2, '2023-03-29 04:08:19', NULL),
+(9, 'Ward’s Sanitarium and Nurses’ Training School', '729 Indiana Avenue ', 'Indianapolis', 'IN', '46201', 5, 2, 1, '2023-03-29 04:08:19', NULL),
+(10, 'Second Baptist Church', '422 West Michigan Street', 'Indianapolis', 'IN', '46201', 6, 1, 2, '2023-03-29 04:08:19', NULL),
+(11, 'Bethel AME', '414 West Vermont Street', 'Indianapolis', 'IN', '46201', 6, 2, 2, '2023-03-29 04:08:19', NULL),
+(12, 'Indianapolis Urban League ', '777 Indiana Ave', 'Indianapolis', 'IN', '46201', 7, 2, 2, '2023-03-29 04:08:19', NULL),
+(13, 'Polling Place', '904 Indiana Avenue ', 'Indianapolis', 'IN', '46201', 7, 2, 2, '2023-03-29 04:08:19', NULL),
+(14, 'Walker Theatre', '617 Indiana Avenue ', 'Indianapolis', 'IN', '46201', 7, 2, 1, '2023-03-29 04:08:19', NULL),
+(15, 'Ransom Place', '706 W. St. Clair St.', 'Indianapolis', 'IN', '46201', 8, 1, 1, '2023-03-29 04:08:19', NULL),
+(16, 'IUPUI / Displacement', '515 North Blackford Street', 'Indianapolis', 'IN', '46202', 8, 2, 1, '2023-03-29 04:08:19', NULL),
+(17, 'Indianapolis Recorder Building', '518 Indiana Avenue ', 'Indianapolis', 'IN', '46202', 9, 1, 2, '2023-03-29 04:08:19', NULL);
 
 -- --------------------------------------------------------
 
@@ -259,6 +239,17 @@ CREATE TABLE `photos` (
   `chapter_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `photos`
+--
+
+INSERT INTO `photos` (`photo_id`, `photo_file`, `photo_description`, `photo_year`, `location_id`, `chapter_id`) VALUES
+(1, 'www/assets/images/440.png', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim blandit volutpat maecenas volutpat blandit aliquam. Id volutpat lacus laoreet non curabitur gravida. Aliquam nulla facilisi cras fermentum odio eu. Vulputate dignissim suspendisse in est ante in nibh. Quam adipiscing vitae proin sagittis nisl rhoncus mattis.', 1998, 1, 1),
+(2, 'www/assets/images/IAM.jpg', 'Indiana Avenue Marker', 2012, 2, 2),
+(3, 'www/assets/images/Senate-Ave-Building.png', 'Senate Avenue YMCA', 1977, 3, 3),
+(4, 'www/assets/images/PHY.jpg', 'The Phyllis Wheatley YWCA was a safe haven for Black Women and girls in the mid-20th Century and a testament to the power of Black women’s organizing and institution-building in the city, according to historian Dr. Nancy Robertson.', 1975, 4, 4),
+(5, 'www/assets/images/wes.jpg', 'Jazz Musician', 1787, 1, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -277,52 +268,10 @@ CREATE TABLE `signs` (
 --
 
 --
--- Indexes for table `administrators`
---
-ALTER TABLE `administrators`
-  ADD PRIMARY KEY (`admin_id`),
-  ADD UNIQUE KEY `admin_email` (`admin_email`);
-
---
--- Indexes for table `audios`
---
-ALTER TABLE `audios`
-  ADD PRIMARY KEY (`audio_id`),
-  ADD KEY `fk_audios_chapters_deleted` (`chapter_id`);
-
---
--- Indexes for table `categories`
---
-ALTER TABLE `categories`
-  ADD PRIMARY KEY (`category_id`);
-
---
--- Indexes for table `chapters`
---
-ALTER TABLE `chapters`
-  ADD PRIMARY KEY (`chapter_id`),
-  ADD KEY `chapters_location` (`chapter_location`),
-  ADD KEY `chapters_creator_admin` (`creator_admin_id`),
-  ADD KEY `chapters_last_editor_admin` (`last_editor_admin_id`);
-
---
--- Indexes for table `chapters_deleted`
---
-ALTER TABLE `chapters_deleted`
-  ADD PRIMARY KEY (`chapter_id`),
-  ADD KEY `location_id` (`chapter_location`),
-  ADD KEY `creator_admin_id` (`creator_admin_id`),
-  ADD KEY `last_editor_admin_id` (`last_editor_admin_id`),
-  ADD KEY `deleted_by_admin_id` (`deleted_by_admin_id`);
-
---
 -- Indexes for table `locations`
 --
 ALTER TABLE `locations`
-  ADD PRIMARY KEY (`location_id`),
-  ADD KEY `locations_category` (`category_id`),
-  ADD KEY `locations_creator_admin` (`creator_admin_id`),
-  ADD KEY `locations_last_editor_admin` (`last_editor_admin_id`);
+  ADD PRIMARY KEY (`location_id`);
 
 --
 -- Indexes for table `locations_deleted`
@@ -353,103 +302,23 @@ ALTER TABLE `signs`
 --
 
 --
--- AUTO_INCREMENT for table `administrators`
---
-ALTER TABLE `administrators`
-  MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
---
--- AUTO_INCREMENT for table `audios`
---
-ALTER TABLE `audios`
-  MODIFY `audio_id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `categories`
---
-ALTER TABLE `categories`
-  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
---
--- AUTO_INCREMENT for table `chapters`
---
-ALTER TABLE `chapters`
-  MODIFY `chapter_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
---
--- AUTO_INCREMENT for table `locations`
---
-ALTER TABLE `locations`
-  MODIFY `location_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
---
 -- AUTO_INCREMENT for table `locations_deleted`
 --
 ALTER TABLE `locations_deleted`
   MODIFY `location_id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `photos`
 --
 ALTER TABLE `photos`
-  MODIFY `photo_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `photo_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
 --
 -- AUTO_INCREMENT for table `signs`
 --
 ALTER TABLE `signs`
   MODIFY `sign_id` int(11) NOT NULL AUTO_INCREMENT;
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `audios`
---
-ALTER TABLE `audios`
-  ADD CONSTRAINT `audios_chapter` FOREIGN KEY (`chapter_id`) REFERENCES `chapters` (`chapter_id`),
-  ADD CONSTRAINT `fk_audios_chapters_deleted` FOREIGN KEY (`chapter_id`) REFERENCES `chapters_deleted` (`chapter_id`);
-
---
--- Constraints for table `chapters`
---
-ALTER TABLE `chapters`
-  ADD CONSTRAINT `chapters_creator_admin` FOREIGN KEY (`creator_admin_id`) REFERENCES `administrators` (`admin_id`),
-  ADD CONSTRAINT `chapters_last_editor_admin` FOREIGN KEY (`last_editor_admin_id`) REFERENCES `administrators` (`admin_id`),
-  ADD CONSTRAINT `chapters_location` FOREIGN KEY (`chapter_location`) REFERENCES `locations` (`location_id`);
-
---
--- Constraints for table `chapters_deleted`
---
-ALTER TABLE `chapters_deleted`
-  ADD CONSTRAINT `chapters_deleted_ibfk_1` FOREIGN KEY (`chapter_location`) REFERENCES `locations` (`location_id`),
-  ADD CONSTRAINT `chapters_deleted_ibfk_2` FOREIGN KEY (`creator_admin_id`) REFERENCES `administrators` (`admin_id`),
-  ADD CONSTRAINT `chapters_deleted_ibfk_3` FOREIGN KEY (`last_editor_admin_id`) REFERENCES `administrators` (`admin_id`),
-  ADD CONSTRAINT `chapters_deleted_ibfk_4` FOREIGN KEY (`deleted_by_admin_id`) REFERENCES `administrators` (`admin_id`);
-
---
--- Constraints for table `locations`
---
-ALTER TABLE `locations`
-  ADD CONSTRAINT `locations_category` FOREIGN KEY (`category_id`) REFERENCES `categories` (`category_id`),
-  ADD CONSTRAINT `locations_creator_admin` FOREIGN KEY (`creator_admin_id`) REFERENCES `administrators` (`admin_id`),
-  ADD CONSTRAINT `locations_last_editor_admin` FOREIGN KEY (`last_editor_admin_id`) REFERENCES `administrators` (`admin_id`);
-
---
--- Constraints for table `locations_deleted`
---
-ALTER TABLE `locations_deleted`
-  ADD CONSTRAINT `locations_deleted_ibfk_1` FOREIGN KEY (`category_id`) REFERENCES `categories` (`category_id`),
-  ADD CONSTRAINT `locations_deleted_ibfk_2` FOREIGN KEY (`creator_admin_id`) REFERENCES `administrators` (`admin_id`),
-  ADD CONSTRAINT `locations_deleted_ibfk_3` FOREIGN KEY (`last_editor_admin_id`) REFERENCES `administrators` (`admin_id`);
-
---
--- Constraints for table `photos`
---
-ALTER TABLE `photos`
-  ADD CONSTRAINT `fk_photos_chapters_deleted` FOREIGN KEY (`chapter_id`) REFERENCES `chapters_deleted` (`chapter_id`),
-  ADD CONSTRAINT `photos_chapter` FOREIGN KEY (`chapter_id`) REFERENCES `chapters` (`chapter_id`),
-  ADD CONSTRAINT `photos_location` FOREIGN KEY (`location_id`) REFERENCES `locations` (`location_id`);
-
---
--- Constraints for table `signs`
---
-ALTER TABLE `signs`
-  ADD CONSTRAINT `fk_chapter_id` FOREIGN KEY (`chapter_id`) REFERENCES `chapters` (`chapter_id`),
-  ADD CONSTRAINT `fk_signs_chapters_deleted` FOREIGN KEY (`chapter_id`) REFERENCES `chapters_deleted` (`chapter_id`);
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
