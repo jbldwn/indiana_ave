@@ -63,15 +63,18 @@ if (isset($_SESSION['admin_id'])
                 <ul>
                     <li>List administrators where admin_role == 0</li>
                 </ul>
+                <input style="display: none;" type="number" name="role" value="<?=$role?>">
+                <input style="display: none;" type="number" name="admin_id" value="<?=$admin_id?>">
             </div>
             <div class="column">
                 <div class="ctrls">
-                    <a href="profile_edit.php">
-                        <button class="save">
-                            <i class="fa-solid fa-floppy-disk fa-xl"></i>
-                            <span>save</span>
-                        </button>
-                    </a>
+                    <input class="save" type="submit" value="Save">
+                    <!--                    <a href="profile_edit.php">-->
+                    <!--                        <button type="submit" class="save">-->
+                    <!--                            <i class="fa-solid fa-floppy-disk fa-xl"></i>-->
+                    <!--                            <span>save</span>-->
+                    <!--                        </button>-->
+                    <!--                    </a>-->
                 </div>
             </div>
         </div>
@@ -79,7 +82,7 @@ if (isset($_SESSION['admin_id'])
 </section>
 <?php
 
-    //footer
-    require_once('includes/footer.php');
+//footer
+require_once('includes/footer.php');
 
 ?>

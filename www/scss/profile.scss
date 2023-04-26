@@ -26,31 +26,6 @@
         display: flex;
         flex-direction: column;
 
-        .ctrls{
-          padding-top: 15%;
-          //padding-left: 100%;
-          button{
-          padding: 0 15px;
-          height: 45px;
-          margin-left: 80%;
-
-          .button-icon{
-            width: 20px;
-            height: 20px;
-            border-radius: 10px;
-            background-color: #fff;
-
-            i{
-              color: $saveColor;
-              margin: 25% auto;
-            }
-
-          }
-          span{
-            height: 20px;
-          }
-        }
-        }
       }
       .permissions{
         width: 48%;
@@ -72,7 +47,6 @@
         }
       }
       .ctrls{
-        //width:48%;
         position: relative;
         a{
           position: absolute;
@@ -100,6 +74,15 @@
               height: 20px;
             }
           }
+        }
+        input {
+          padding: 0 15px;
+          height: 45px;
+          margin-left: 100%;
+          margin-right: 60px;
+          border-radius: 23px;
+          color: $siteWhite;
+          font-family: LM;
         }
       }
     }
