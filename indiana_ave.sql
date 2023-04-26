@@ -218,6 +218,7 @@ CREATE TRIGGER `tr_locations_deleted` AFTER DELETE ON `locations` FOR EACH ROW B
     OLD.location_city,
     OLD.location_state,
     OLD.location_zip,
+    OLD.location_description,
     OLD.category_id,
     OLD.creator_admin_id,
     OLD.last_editor_admin_id,
