@@ -7,8 +7,7 @@
  * Description:
  */
 
-require_once('includes/web.php');
-require_once('includes/headerBLK.php');
+
 require 'includes/database.php';
 
 $id = filter_input(INPUT_GET, "location_id", FILTER_SANITIZE_NUMBER_INT);
@@ -32,49 +31,118 @@ $row_photos = $query_photos->fetch_assoc();
 
 
 $page_title = $row['location_name'];
-
+require_once('includes/web.php');
+require_once('includes/headerBLK.php');
 ?>
 
 <section class="landmark-details container">
-    <div class="header">
-        <h1 class="title"><?= $row['location_name'] ?></h1>
-    </div>
-    <div class="location-data">
-        <div class="details half">
-            <h3 class="title">Details</h3>
-            <div id="site-img" style="background-image: url(<?= $row['photo_file'] ?>); background-size:cover; background-position: top;  background-repeat: no-repeat;"></div>
-            <h3 class="title"><?= $row['location_address'] ?></h3>
-            <h3 class="title"><?= $row['location_current'] ?></h3>
-            <h3 class="title"><?= $row['location_description'] ?></h3>
+
+    <div class="details half">
+        <div class="header">
+            <!--Location name-->
+            <h1 class="title"><?= $row['location_name']?></h1>
+            <!--Ctrl panel to edit Location when logged in.-->
+            <div class="ctrls">
+                <a href="#">
+                    <button class="edit">
+                        <i class="fa-solid fa-pen-to-square fa-sm"></i>
+<!--                        <span>Edit</span>-->
+                    </button>
+                </a>
+            </div>
         </div>
-        <div class="chapters half"></div>
+
+        <!--Photo tied only to location-->
+        <div class="photo" style="background-image: url('www/assets/uploads/photos/440.png')"></div>
+        <!--<div class="photo" style="background-image: url('www/assets/uploads/photos/<?/*//photo_file goes here*/?>')"></div>
+-->
+        <!--current address-->
+        <h3 class="smTitle"><?= $row['location_address'] ?></h3>
+
+        <!--historical address-->
+        <h3 class="smInfo"><span>Historical:</span>440  Indiana Ave</h3>
+<!--        <h3 class="smInfo"><span>Historical:</span>--><?//= $row['location_historical'] ?><!--</h3>-->
+
+        <!--current lot description-->
+        <h3 class="smInfo"><span>Use Today:</span>Dental office</h3>
+<!--        <h3 class="smInfo"><span>Use Today:</span>--><?//= $row['location_current'] ?><!--</h3>-->
+
+        <!--Brief description of significance-->
+        <p>Lorem Ipsum s cat in the hat went to get a snack at the 440 club when he happened up on mr. moose.</p>
+<!--        <p>--><?//= $row['location_description'] ?><!--</p>-->
     </div>
+    <div class="chapters half">
+        <div class="tblContents">
+            <!--Location name-->
+            <h4 class="title">Chapters:</h4>
+
+            <div class="ch_jump">
+                <a href="#">1</a>
+                <span>|</span>
+                <a href="#">2</a>
+                <span>|</span>
+                <a href="#">3</a>
+
+                <!--Ctrl panel to edit chapter when logged in.-->
+                <div class="ctrls">
+                    <a href="#">
+                        <button class="edit">
+                            <i class="fa-solid fa-pen-to-square fa-sm"></i>
+<!--                            <span>Edit</span>-->
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!--Begin loop for each chapter-->
+        <div class="chapter">
+            <div class="chapter-banner">
+                <!--Iterate "#" to be the chapter number beginning with 1-->
+                <h6 class="chap numb">Chapter #</h6>
+                <h4 class="chap title"><?= $row['chapter_title'] ?></h4>
+            </div>
+
+            <div class="gallery">
+                <!--Begin looping through all photos for associated chapter-->
+                <?php while($row_photos = $query_photos->fetch_assoc()) {?>
+                    <div class="photo" style="background-image: url(<?= $row_photos['photo_file'] ?>);"></div>
+                <?php } ?>
+                <!--Extra images to test styling-->
+                <div class="photo" style="background-image: url('www/assets/images/440.png');"></div>
+                <div class="photo" style="background-image: url('www/assets/images/People.png');"></div>
+            </div>
+
+            <p class="prose"><?= $row['chapter_content'] ?></p>
+        </div>
+    </div>
+
 
 </section>
 
-<h1 id="ld-head"><?= $row['location_name'] ?></h1>
+<!--<h1 id="ld-head"><?/*= $row['location_name'] */?></h1>
 <div class="ld">
     <div class="ld-detail">
         <h1 class="ld-body-head">Details</h1>
-        <div class="ld-hero" style="background-image: url(<?= $row_photos['photo_file'] ?>); background-size:cover; background-position: top;  background-repeat: no-repeat;"></div>
-        <div class="ld-address"><?= $row['location_address'] ?></div>
-        <div class="ld-des"><?= $row['location_description'] ?></div>
+        <div class="ld-hero" style="background-image: url(<?/*= $row_photos['photo_file'] */?>); background-size:cover; background-position: top;  background-repeat: no-repeat;"></div>
+        <div class="ld-address"><?/*= $row['location_address'] */?></div>
+        <div class="ld-des"><?/*= $row['location_description'] */?></div>
     </div>
     <div class="ld-chapters">
         <h1 class="ld-body-head">Chapters</h1>
-        <h1 class="ld-chapter-name"><?= $row['chapter_title'] ?></h1>
+        <h1 class="ld-chapter-name"><?/*= $row['chapter_title'] */?></h1>
         <div class="ld-grid">
-            <?php while($row_photos = $query_photos->fetch_assoc()) {?>
-            <div class="ld-photo" style="background-image: url(<?= $row_photos['photo_file'] ?>); background-size:cover; background-position: top;  background-repeat: no-repeat;"></div>
-            <?php } ?>
+            <?php /*while($row_photos = $query_photos->fetch_assoc()) {*/?>
+            <div class="ld-photo" style="background-image: url(<?/*= $row_photos['photo_file'] */?>); background-size:cover; background-position: top;  background-repeat: no-repeat;"></div>
+            <?php /*} */?>
 
         </div>
-<!--        <div class="ld-audio"></div>-->
-        <div class="ld-chapter-detail"><?= $row['chapter_content'] ?></div>
+        <div class="ld-audio"></div>
+        <div class="ld-chapter-detail"><?/*= $row['chapter_content'] */?></div>
     </div>
-    <a style="text-decoration: none; color: black"  href="qr-code.php?location_id=<?= $row['location_id'] ?>">Here</a>
+    <a style="text-decoration: none; color: black"  href="qr-code.php?location_id=<?/*= $row['location_id'] */?>">Here</a>
 
-</div>
+</div>-->
 
 
 

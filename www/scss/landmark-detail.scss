@@ -1,31 +1,198 @@
 .landmark-details {
-    .header {
-        padding: 0 30px;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-content: baseline;
-        margin: 15px 0 20px;
+    margin-bottom: 25px;
+    padding: 0 30px;
 
-        .title {
-            margin-bottom: 0;
-            font-family: LM;
-            font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+    .half{
+        width: 48%;
+        .header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-content: baseline;
+            margin: 15px 0 20px;
+
+            .title {
+                margin-bottom: 0;
+                font-family: LM;
+                font-size: 28px;
+            }
+            .ctrls a button{
+                height: 25px;
+                width: 25px;
+                margin-bottom: -2px;
+            }
         }
+
     }
-    .location-data{
-        display: flex;
-        justify-content: space-between;
+    .details{
+        position: relative;
+        .photo{
+            height: 35vh;
+            width: 100%;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        .smTitle{
+            font-family: LM;
+            font-size: 18px;
+        }
+        .smInfo{
+            margin-left: 30px;
+            font-family: LM;
+            font-size: 16px;
+            span{
+                font-size: 10px;
+            }
+        }
+        p{
+            font-family: NeuReg;
+            font-size: 16px;
+            padding: 0 15px;
+        }
+
+    }
+    .chapters{
+        overflow: scroll;
+        .tblContents{
+            margin: 15px 0 20px;
+            width: 100%;
+            height: 37px;
+            display: flex;
+            justify-content: flex-end;
+            align-content: flex-end;
+
+            .title{
+                display: none;
+                margin-bottom: 0;
+                font-family: LM;
+                font-size: 24px;
+            }
+
+            .ch_jump{
+                width: 50%;
+
+                display: flex;
+                justify-content: space-between;
+                align-items: end;
+
+
+                a, span{
+                    margin-bottom: 0;
+                    font-family: LM;
+                    color: $siteBlack;
+                    height: fit-content;
+                }
+                a{
+                    text-decoration: none;
+                    padding: 0 5%;
+                    button{
+                        height: 25px;
+                        width: 25px;
+                        margin-bottom: -2px;
+                    }
+                }
+                a:hover{
+                    font-family: LMB;
+                }
+                .ctrls{
+                    a i{
+                        //color: $saveColor;
+                    }
+                    a i:hover{
+                        //color: $saveHoverColor;
+                    }
+
+                }
+
+            }
+        }
+
+        .chapter{
+            &-banner{
+                background-image: linear-gradient($drkGrnBanner,$drkGrnBanner), url("../assets/images/SunsetTerrace.jpg");
+                background-position: 50% 93%;
+                background-repeat: no-repeat;
+                background-size: cover;
+                backdrop-filter: blur(10px);
+
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                padding: 15px 30px;
+
+                .chap{
+                    color: $fontGrn;
+                    filter: drop-shadow(0 5px 5px $siteGray);
+                    margin-bottom: 0;
+                }
+                .numb{
+                    font-family: NeuItal;
+                    font-size: 20px;
+                    margin-bottom: 5px;
+                }
+                .title{
+                    font-family: LM;
+                    font-size: 16px;
+                }
+            }
+
+            .gallery{
+                //height: 400px;
+                width: 100%;
+                margin-top: 25px;
+                padding: 0 15px;
+
+                display:flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+
+                .photo{
+                    height: 200px;
+
+                    width:48%;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+
+                    margin-bottom: 15px;
+                }
+
+
+            }
+
+            .prose{
+                font-family: NeuReg;
+                font-size: 16px;
+                padding: 0 15px;
+            }
+        }
+
+    }
+}
+
+@media (max-width: $mobileWidth){
+    .landmark-details{
+        margin: 0 auto;
+        flex-direction: column;
+        align-content: center;
+
         .half{
-            width: 48%;
-            height: 50px;
-            background-color: #5e1608;
+            width: 100%;
+            //margin: 0 30px;
         }
-        .details{
+        .chapters {
+            margin: 15px 0 30px;
+            .tblContents {
+                justify-content: space-between;
 
-        }
-        .chapters{
-
+                .title {
+                    display: block;
+                }
+            }
         }
     }
 }
@@ -38,7 +205,6 @@
     flex-direction: column;
     margin-right: 20px;
 }
-
 .ld-chapters{
     
     width: 500px;
@@ -46,13 +212,11 @@
     display: flex;
     flex-direction: column;
 }
-
 .ld-hero{
     height: 300px;
     width: 500px;
     background-color: red;
 }
-
 .ld-address{
     width: 100%;
     height: 50px;
@@ -98,7 +262,7 @@ background-color: red;
     justify-content: center;
     grid-template-columns: 225px 200px;
     grid-template-rows: 225px;
-    
+
     background-color: yellow;
 }
 
