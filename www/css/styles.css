@@ -3,8 +3,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  border: red solid 1px; }
+  box-sizing: border-box; }
 
 html, body {
   height: 100%; }
@@ -186,7 +185,8 @@ h1, h2, h3, h4, h5, h6, p {
       width: 100%;
       background-position: center;
       background-size: contain;
-      background-repeat: no-repeat; }
+      background-repeat: no-repeat;
+      margin-bottom: 15px; }
     .landmark-details .details .smTitle {
       font-family: LM;
       font-size: 18px; }

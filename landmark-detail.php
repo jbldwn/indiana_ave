@@ -29,6 +29,11 @@ $row = $query->fetch_assoc();
 
 $row_photos = $query_photos->fetch_assoc();
 
+//check for login status
+$login = '';
+if(isset($_SESSION['login'])){
+    $login = $_SESSION['login'];
+}
 
 $page_title = $row['location_name'];
 require_once('includes/web.php');
@@ -42,14 +47,18 @@ require_once('includes/headerBLK.php');
             <!--Location name-->
             <h1 class="title"><?= $row['location_name']?></h1>
             <!--Ctrl panel to edit Location when logged in.-->
-            <div class="ctrls">
-                <a href="#">
-                    <button class="edit">
-                        <i class="fa-solid fa-pen-to-square fa-sm"></i>
-<!--                        <span>Edit</span>-->
-                    </button>
-                </a>
-            </div>
+            <?php
+                    if($login!=null) {
+                        echo "
+                        <div class='ctrls'>
+                            <a href='#'>
+                                <button class='edit'>
+                                    <i class='fa-solid fa-pen-to-square fa-sm'></i>
+                                </button>
+                            </a>
+                        </div>";
+                    }
+                ?>
         </div>
 
         <!--Photo tied only to location-->
@@ -84,14 +93,18 @@ require_once('includes/headerBLK.php');
                 <a href="#">3</a>
 
                 <!--Ctrl panel to edit chapter when logged in.-->
-                <div class="ctrls">
-                    <a href="#">
-                        <button class="edit">
-                            <i class="fa-solid fa-pen-to-square fa-sm"></i>
-<!--                            <span>Edit</span>-->
-                        </button>
-                    </a>
-                </div>
+                <?php
+                if($login!=null) {
+                    echo "
+                        <div class='ctrls'>
+                            <a href='#'>
+                                <button class='edit'>
+                                    <i class='fa-solid fa-pen-to-square fa-sm'></i>
+                                </button>
+                            </a>
+                        </div>";
+                }
+                ?>
             </div>
         </div>
 

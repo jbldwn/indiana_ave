@@ -22,8 +22,6 @@ if (isset($_SESSION['login'])
     AND isset($_SESSION['role'])
     AND isset($_SESSION['admin_id'])
 ) {
-
-
     $login = $_SESSION['login'];
     $name = $_SESSION['name'];
     $role = $_SESSION['role'];
