@@ -42,7 +42,7 @@ $query = $conn->query($sql);
     </div>
 </section>
 
-<div class="home-sites">
+<div class="home-sites container">
     <h1 id="sites-head">Featured Sites</h1>
 
     <!-- Flickity HTML init -->
